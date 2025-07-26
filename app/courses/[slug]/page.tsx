@@ -24,7 +24,7 @@ const courseData = {
     students: "500+",
     rating: 4.8,
     reviews: 156,
-    image: "/placeholder.svg?height=400&width=600",
+    image: "https://media.geeksforgeeks.org/wp-content/uploads/20240415204701/How-to-Become-a-Python-Full-Stack-Developer.png",
     highlights: [
       "Learn Python, Django, React, and PostgreSQL",
       "Build 5+ real-world projects",

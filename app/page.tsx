@@ -17,7 +17,7 @@ const featuredCourses = [
     duration: "6 months",
     mode: "Online/Offline",
     price: "₹45,000",
-    image: "/placeholder.svg?height=200&width=300",
+    image: "https://media.geeksforgeeks.org/wp-content/uploads/20240415204701/How-to-Become-a-Python-Full-Stack-Developer.png",
   },
   {
     id: "power-bi",
@@ -26,7 +26,7 @@ const featuredCourses = [
     duration: "3 months",
     mode: "Online/Offline",
     price: "₹25,000",
-    image: "/placeholder.svg?height=200&width=300",
+    image: "https://media.geeksforgeeks.org/wp-content/uploads/20240726121444/Data-Analytics-Training-now.webp",
   },
   {
     id: "azure-devops",
@@ -35,15 +35,16 @@ const featuredCourses = [
     duration: "4 months",
     mode: "Online/Offline",
     price: "₹35,000",
-    image: "/placeholder.svg?height=200&width=300",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3Mpx-7k0FvYWzb8n8snbXGKMKM-YWg0Vlsg&s",
   },
 ]
 
 const stats = [
-  { icon: Users, label: "Students Trained", value: "5000+" },
+  { icon: Users, label: "Students Taken Course", value: "15000+" },
+  { icon: Users, label: "Students Trained", value: "13500+" },
   { icon: Award, label: "Placement Rate", value: "100%" },
-  { icon: BookOpen, label: "Courses Offered", value: "15+" },
-  { icon: MapPin, label: "Training Centers", value: "2" },
+  { icon: BookOpen, label: "Expert Trainers", value: "30+" },
+  { icon: MapPin, label: "Hiring partners", value: "100" },
 ]
 
 export default function HomePage() {
@@ -110,7 +111,7 @@ export default function HomePage() {
             >
               <div className="relative z-10">
                 <img
-                  src="https://placehold.co/750x550"
+                  src="https://media.istockphoto.com/id/1830042746/photo/document-management-system-dms-with-arrange-folder-and-files-icons-man-setup-storage-backup.jpg?s=612x612&w=0&k=20&c=t8oAAO16j6fMhleAYJEXm5pSXFIDZrEG6sYJkv_Sdos="
                   alt="Flair Technologies Training"
                   className="rounded-2xl shadow-2xl"
                 />
@@ -124,7 +125,7 @@ export default function HomePage() {
       {/* Stats Section */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 lg:grid-cols-5 gap-8">
             {stats.map((stat, index) => (
               <motion.div
                 key={stat.label}
