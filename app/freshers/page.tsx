@@ -134,9 +134,9 @@ export default function FreshersPage() {
               className="relative"
             >
               <img
-                src="/placeholder.svg?height=500&width=600"
+                src="https://pkrinstitute.in/lp/wp-content/uploads/2024/02/Untitled-design-1.jpg"
                 alt="Freshers Success"
-                className="rounded-2xl shadow-2xl"
+                className="rounded-2xl shadow-2xl "
               />
               <div className="absolute -top-4 -right-4 w-full h-full bg-gradient-to-br from-yellow-400 to-green-500 rounded-2xl -z-10" />
             </motion.div>
