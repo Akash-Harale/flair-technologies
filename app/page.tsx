@@ -10,16 +10,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import {
-  ArrowRight,
-  BookOpen,
-  Users,
-  Award,
-  MapPin,
-  Clock,
-  Monitor,
-  User,
-} from "lucide-react";
+import { ArrowRight, Clock, Monitor } from "lucide-react";
 import Link from "next/link";
 import { Navigation } from "@/components/navigation";
 import { Footer } from "@/components/footer";
@@ -49,8 +40,7 @@ export default function HomePage() {
                   🚀 Transform Your Career in Tech
                 </Badge>
                 <h1 className="text-4xl lg:text-6xl font-bold leading-tight">
-                  Master <span className="text-cyan-300">In-Demand</span> Tech
-                  Skills
+                  {homePage.heroSection.title}
                 </h1>
                 <p className="text-xl text-blue-100 max-w-lg">
                   {homePage.heroSection.description}
@@ -74,18 +64,12 @@ export default function HomePage() {
               </div>
 
               <div className="flex items-center gap-8 pt-4">
-                <div className="text-center">
-                  <div className="text-2xl font-bold">13500+</div>
-                  <div className="text-blue-200 text-sm">Students Placed</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-2xl font-bold">100%</div>
-                  <div className="text-blue-200 text-sm">Placement Rate</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-2xl font-bold">2</div>
-                  <div className="text-blue-200 text-sm">Cities</div>
-                </div>
+                {homePage.heroSection.stats.map((stat, index) => (
+                  <div key={index} className="text-center">
+                    <div className="text-2xl font-bold">{stat.value}</div>
+                    <div className="text-blue-200 text-sm">{stat.label}</div>
+                  </div>
+                ))}
               </div>
             </motion.div>
 
@@ -142,19 +126,14 @@ export default function HomePage() {
             transition={{ duration: 0.6 }}
             className="space-y-6"
           >
-            <Badge className="bg-sky-100 text-sky-700">Know Who We Are</Badge>
+            <Badge className="bg-sky-100 text-sky-700">
+              {homePage.aboutSection.badge}
+            </Badge>
             <h2 className="text-4xl font-bold text-gray-900">
-              About Flair Technologies
+              {homePage.aboutSection.title}
             </h2>
             <p className="text-gray-700 text-lg leading-relaxed">
-              Since 2014, Flair Technologies has grown to become the largest
-              independent IT training institute in Bangalore. We offer
-              cutting-edge technology training, certified instructors,
-              real-world implementation, and consultancy. Whether you’re a
-              multinational or a small business, we bring the right skills,
-              research, and execution strategies. From simple static sites to
-              complex enterprise systems, we help you deliver your message
-              effectively.
+              {homePage.aboutSection.description}
             </p>
             <Link href="/about">
               <Button className="bg-sky-600 hover:bg-sky-700 text-white px-6 py-3 text-lg">
@@ -170,8 +149,8 @@ export default function HomePage() {
             className="relative"
           >
             <img
-              src="https://media.istockphoto.com/id/2042526830/photo/successful-businesswoman-using-laptop-working-in-office-business-technology-corporate-concept.jpg?s=612x612&w=0&k=20&c=-NJyxcMesUAKzzPwoHXC10ZuBHPGa1dRp1gFl2T37o8=" // Replace with your optimized asset or CDN path
-              alt="Students learning in class"
+              src={homePage.aboutSection.image}
+              alt={homePage.aboutSection.imageAlt}
               className="rounded-xl shadow-xl w-full"
             />
             <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
@@ -198,29 +177,16 @@ export default function HomePage() {
             transition={{ duration: 0.6 }}
           >
             <h2 className="text-3xl font-bold text-gray-900 mb-6">
-              The Best Learning Experience
+              {homePage.learningExperienceSection.title}
             </h2>
             <ul className="space-y-4 text-lg text-gray-700">
-              <li className="flex items-start gap-3">
-                <span className="text-green-500 mt-1">✔</span> Learn from the
-                World’s Best Faculty & Industry Experts.
-              </li>
-              <li className="flex items-start gap-3">
-                <span className="text-green-500 mt-1">✔</span> Instructor-led
-                training with practical lab sessions.
-              </li>
-              <li className="flex items-start gap-3">
-                <span className="text-green-500 mt-1">✔</span> Customized
-                learning scaled to your corporate needs.
-              </li>
-              <li className="flex items-start gap-3">
-                <span className="text-green-500 mt-1">✔</span> Real-time
-                projects and certification guidance.
-              </li>
-              <li className="flex items-start gap-3">
-                <span className="text-green-500 mt-1">✔</span> Personalized
-                guidance with 24×7 support.
-              </li>
+              {homePage.learningExperienceSection.features.map(
+                (feature, index) => (
+                  <li key={index} className="flex items-start gap-3">
+                    <span className="text-green-500 mt-1">✔</span> {feature}
+                  </li>
+                )
+              )}
             </ul>
           </motion.div>
 
@@ -231,8 +197,8 @@ export default function HomePage() {
             className="relative"
           >
             <img
-              src="https://flairtechnologies.in/wp-content/uploads/2023/08/about-us.jpg" // Replace with your optimized asset or CDN path
-              alt="Virtual learning session"
+              src={homePage.learningExperienceSection.image}
+              alt={homePage.learningExperienceSection.imageAlt}
               className="rounded-xl shadow-xl w-full"
             />
             <div className="absolute bottom-4 left-4">
@@ -260,43 +226,12 @@ export default function HomePage() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-gray-900">
-              Why <span className="text-sky-600">Flair Technologies</span>
+              {homePage.whyFlairSection.title}
             </h2>
           </motion.div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
-            {[
-              {
-                title: "Expert Trainers",
-                description:
-                  "Instructors are certified and highly qualified with decades of experience in the subject matter.",
-              },
-              {
-                title: "Placement Assistance",
-                description:
-                  "Our Placement Officer will send for Interviews till you Get Placed. 100% assistance is given.",
-              },
-              {
-                title: "Full hands-on Training",
-                description:
-                  "We support any training with more practical classes, so we prefer to give hands-on training.",
-              },
-              {
-                title: "Interview Preparation",
-                description:
-                  "Our Experienced Trainers will help Get your Resume Ready with real case studies and examples.",
-              },
-              {
-                title: "Industry Oriented Training",
-                description:
-                  "Our trainers are highly equipped with experience of over 10+ years and teach to industry standards.",
-              },
-              {
-                title: "Unlimited Lab Support",
-                description:
-                  "Be assured of your success on the certification exam. 100% money-back guarantee otherwise.",
-              },
-            ].map((item, index) => (
+            {homePage.whyFlairSection.items.map((item, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -324,24 +259,12 @@ export default function HomePage() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-gray-900">
-              Benefits Of{" "}
-              <span className="text-sky-600">Flair Technologies</span>
+              {homePage.benefitsSection.title}
             </h2>
           </motion.div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 text-lg text-gray-700">
-            {[
-              "100% Placement Assistance",
-              "Weekdays/Weekend LIVE classes",
-              "One-on-One with Mentors",
-              "Free Demo Classes",
-              "Industry Oriented Projects",
-              "Instructors are from MNC’s",
-              "Lab Sessions",
-              "Doubt Clearance Sessions",
-              "Designed by Industry experts",
-              "Recognized certification",
-            ].map((benefit, index) => (
+            {homePage.benefitsSection.benefits.map((benefit, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 10 }}
@@ -367,8 +290,7 @@ export default function HomePage() {
             className="text-center mb-10"
           >
             <h2 className="text-3xl font-bold text-gray-900">
-              Register Now -{" "}
-              <span className="text-sky-600">Upcoming Batches</span>
+              {homePage.upcomingBatchesSection.title}
             </h2>
           </motion.div>
 
@@ -388,71 +310,7 @@ export default function HomePage() {
                 </tr>
               </thead>
               <tbody className="divide-y divide-gray-200">
-                {[
-                  {
-                    id: 1,
-                    name: "Microsoft Power BI",
-                    mode: "Classroom - BLR",
-                    faculty: "Mr. Veera",
-                    date: "Apr 10, 2024",
-                    time: "08:15 AM",
-                    duration: "45 Hours",
-                  },
-                  {
-                    id: 2,
-                    name: "Alteryx Designer",
-                    mode: "Classroom - BLR",
-                    faculty: "Mr. Suman",
-                    date: "May 01, 2024",
-                    time: "09:00 AM",
-                    duration: "45 Hours",
-                  },
-                  {
-                    id: 3,
-                    name: "Python Fullstack",
-                    mode: "Classroom - BLR",
-                    faculty: "Mr. Venkat",
-                    date: "May 01, 2024",
-                    time: "07:30 AM",
-                    duration: "100 Days",
-                  },
-                  {
-                    id: 4,
-                    name: "Data Analyst - Freshers",
-                    mode: "Classroom - BLR",
-                    faculty: "Mr. Surya",
-                    date: "May 01, 2024",
-                    time: "09:00 AM",
-                    duration: "100 Days",
-                  },
-                  {
-                    id: 5,
-                    name: "SRE Modern DevOps",
-                    mode: "Online",
-                    faculty: "Mr. P R Reddy",
-                    date: "Apr 20, 2024",
-                    time: "07:00 AM",
-                    duration: "100 Days",
-                  },
-                  {
-                    id: 6,
-                    name: "DevOps Workshop",
-                    mode: "Online",
-                    faculty: "Mr. Viswanath",
-                    date: "Apr 22, 2024",
-                    time: "08:15 PM",
-                    duration: "100 Hours",
-                  },
-                  {
-                    id: 7,
-                    name: "Azure with Azure DevOps",
-                    mode: "Online",
-                    faculty: "Mr. Rama Krishna",
-                    date: "May 01, 2024",
-                    time: "08:00 AM",
-                    duration: "100 Hours",
-                  },
-                ].map((batch, index) => (
+                {homePage.upcomingBatchesSection.batches.map((batch, index) => (
                   <tr
                     key={batch.id}
                     className={index % 2 === 0 ? "bg-white" : "bg-gray-100"}
@@ -493,12 +351,10 @@ export default function HomePage() {
               Featured Courses
             </Badge>
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Master <span className="text-sky-600">High-Demand</span> Skills
+              {homePage.featuredCoursesSection.title}
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               {homePage.featuredCoursesSection.description}
-              {/* Choose from our industry-aligned courses designed by experts and
-              delivered by professionals from top MNCs */}
             </p>
           </motion.div>
 
@@ -546,10 +402,6 @@ export default function HomePage() {
                         </div>
                       </div>
                       <div className="flex items-center justify-between">
-                        {/* <div className="text-2xl font-bold text-sky-600">
-                          {course.price}
-                        </div> */}
-                        
                         <Link href={`/courses/${course.id}`}>
                           <Button className="bg-gradient-to-r from-sky-500 to-blue-600 hover:from-sky-600 hover:to-blue-700">
                             Learn More <ArrowRight className="ml-2 h-4 w-4" />
@@ -592,53 +444,15 @@ export default function HomePage() {
             className="text-center mb-16"
           >
             <Badge className="mb-4 bg-blue-100 text-blue-700">
-              Why Choose Flair Technologies
+              {homePage.whyChooseUsSection.badge}
             </Badge>
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Your Success is{" "}
-              <span className="text-blue-600">Our Priority</span>
+              {homePage.whyChooseUsSection.title}
             </h2>
           </motion.div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              {
-                icon: User,
-                title: "Expert Mentors from MNCs",
-                description:
-                  "Learn from industry professionals working in top companies like Google, Microsoft, Amazon",
-              },
-              {
-                icon: Award,
-                title: "100% Placement Assistance",
-                description:
-                  "Guaranteed job placement support with our extensive network of hiring partners",
-              },
-              {
-                icon: BookOpen,
-                title: "Real-World Projects",
-                description:
-                  "Work on live projects and build a portfolio that showcases your skills to employers",
-              },
-              {
-                icon: Users,
-                title: "Small Batch Sizes",
-                description:
-                  "Personalized attention with maximum 15 students per batch for better learning",
-              },
-              {
-                icon: Monitor,
-                title: "Flexible Learning",
-                description:
-                  "Choose between online, offline, or hybrid modes based on your convenience",
-              },
-              {
-                icon: MapPin,
-                title: "Prime Locations",
-                description:
-                  "Conveniently located centers in Bangalore and Hyderabad with modern facilities",
-              },
-            ].map((feature, index) => (
+            {homePage.whyChooseUsSection.features.map((feature, index) => (
               <motion.div
                 key={feature.title}
                 initial={{ opacity: 0, y: 20 }}
@@ -737,12 +551,10 @@ export default function HomePage() {
             className="max-w-4xl mx-auto"
           >
             <h2 className="text-4xl lg:text-5xl font-bold mb-6">
-              Ready to Transform Your Career?
+              {homePage.ctaSection.title}
             </h2>
             <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-              Join thousands of successful professionals who started their tech
-              journey with Flair Technologies. Your dream job is just one course
-              away!
+              {homePage.ctaSection.description}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/contact">

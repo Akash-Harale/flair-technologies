@@ -1,11 +1,26 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import Link from "next/link"
-import { MapPin, Phone, Mail, Facebook, Twitter, Instagram, Linkedin } from "lucide-react"
+import { motion } from "framer-motion";
+import Link from "next/link";
+import {
+  MapPin,
+  Phone,
+  Mail,
+  Facebook,
+  Twitter,
+  Instagram,
+  Linkedin,
+} from "lucide-react";
 
 export function Footer() {
-  const courses = ["Python Full-Stack", "Power BI", "Azure DevOps", "Data Analytics", "Tableau", "Network Protocol"]
+  const courses = [
+    "Python Full-Stack",
+    "Power BI",
+    "Azure DevOps",
+    "Data Analytics",
+    "Tableau",
+    "Network Protocol",
+  ];
 
   const quickLinks = [
     { name: "About Us", href: "/about" },
@@ -13,7 +28,7 @@ export function Footer() {
     { name: "Freshers Program", href: "/freshers" },
     { name: "Services", href: "/services" },
     { name: "Contact", href: "/contact" },
-  ]
+  ];
 
   return (
     <footer className="bg-gray-900 text-white">
@@ -33,20 +48,33 @@ export function Footer() {
               <span className="text-xl font-bold">Flair Technologies</span>
             </div>
             <p className="text-gray-300">
-              Empowering careers through cutting-edge IT training and 100% placement assistance. Transform your future
-              with industry-relevant skills.
+              Empowering careers through cutting-edge IT training and 100%
+              placement assistance. Transform your future with industry-relevant
+              skills.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-sky-400 transition-colors">
+              <a
+                href="#"
+                className="text-gray-400 hover:text-sky-400 transition-colors"
+              >
                 <Facebook className="h-5 w-5" />
               </a>
-              <a href="#" className="text-gray-400 hover:text-sky-400 transition-colors">
+              <a
+                href="#"
+                className="text-gray-400 hover:text-sky-400 transition-colors"
+              >
                 <Twitter className="h-5 w-5" />
               </a>
-              <a href="#" className="text-gray-400 hover:text-sky-400 transition-colors">
+              <a
+                href="#"
+                className="text-gray-400 hover:text-sky-400 transition-colors"
+              >
                 <Instagram className="h-5 w-5" />
               </a>
-              <a href="#" className="text-gray-400 hover:text-sky-400 transition-colors">
+              <a
+                href="#"
+                className="text-gray-400 hover:text-sky-400 transition-colors"
+              >
                 <Linkedin className="h-5 w-5" />
               </a>
             </div>
@@ -63,7 +91,10 @@ export function Footer() {
             <ul className="space-y-2">
               {quickLinks.map((link) => (
                 <li key={link.name}>
-                  <Link href={link.href} className="text-gray-300 hover:text-sky-400 transition-colors">
+                  <Link
+                    href={link.href}
+                    className="text-gray-300 hover:text-sky-400 transition-colors"
+                  >
                     {link.name}
                   </Link>
                 </li>
@@ -83,7 +114,9 @@ export function Footer() {
               {courses.map((course) => (
                 <li key={course}>
                   <Link
-                    href={`/courses/${course.toLowerCase().replace(/\s+/g, "-")}`}
+                    href={`/courses/${course
+                      .toLowerCase()
+                      .replace(/\s+/g, "-")}`}
                     className="text-gray-300 hover:text-sky-400 transition-colors"
                   >
                     {course}
@@ -106,23 +139,29 @@ export function Footer() {
                 <MapPin className="h-5 w-5 text-sky-400 mt-0.5" />
                 <div>
                   <p className="text-gray-300">Bangalore Center:</p>
-                  <p className="text-sm text-gray-400">Koramangala, Bangalore - 560034</p>
+                  <p className="text-sm text-gray-400">
+                    Koramangala, Bangalore - 560034
+                  </p>
                 </div>
               </div>
               <div className="flex items-start space-x-3">
                 <MapPin className="h-5 w-5 text-sky-400 mt-0.5" />
                 <div>
                   <p className="text-gray-300">Hyderabad Center:</p>
-                  <p className="text-sm text-gray-400">HITEC City, Hyderabad - 500081</p>
+                  <p className="text-sm text-gray-400">
+                    HITEC City, Hyderabad - 500081
+                  </p>
                 </div>
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="h-5 w-5 text-sky-400" />
-                <span className="text-gray-300">+91 9876543210</span>
+                <span className="text-gray-300">+91 9749749596</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="h-5 w-5 text-sky-400" />
-                <span className="text-gray-300">info@flairtechnologies.com</span>
+                <span className="text-gray-300">
+                   info@flairtechnologies.in  
+                </span>
               </div>
             </div>
           </motion.div>
@@ -130,10 +169,11 @@ export function Footer() {
 
         <div className="border-t border-gray-800 mt-12 pt-8 text-center">
           <p className="text-gray-400">
-            © 2024 Flair Technologies. All rights reserved. | Privacy Policy | Terms of Service
+            © 2024 Flair Technologies. All rights reserved. | Privacy Policy |
+            Terms of Service
           </p>
         </div>
       </div>
     </footer>
-  )
+  );
 }
