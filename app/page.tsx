@@ -546,9 +546,10 @@ export default function HomePage() {
                         </div>
                       </div>
                       <div className="flex items-center justify-between">
-                        <div className="text-2xl font-bold text-sky-600">
+                        {/* <div className="text-2xl font-bold text-sky-600">
                           {course.price}
-                        </div>
+                        </div> */}
+                        
                         <Link href={`/courses/${course.id}`}>
                           <Button className="bg-gradient-to-r from-sky-500 to-blue-600 hover:from-sky-600 hover:to-blue-700">
                             Learn More <ArrowRight className="ml-2 h-4 w-4" />
