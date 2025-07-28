@@ -1,53 +1,34 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { ArrowRight, BookOpen, Users, Award, MapPin, Clock, Monitor, User } from "lucide-react"
-import Link from "next/link"
-import { Navigation } from "@/components/navigation"
-import { Footer } from "@/components/footer"
-
-const featuredCourses = [
-  {
-    id: "python-fullstack",
-    title: "Python Full-Stack Development",
-    description: "Master Django, React, and modern web development",
-    duration: "6 months",
-    mode: "Online/Offline",
-    price: "₹45,000",
-    image: "https://media.geeksforgeeks.org/wp-content/uploads/20240415204701/How-to-Become-a-Python-Full-Stack-Developer.png",
-  },
-  {
-    id: "power-bi",
-    title: "Power BI & Data Analytics",
-    description: "Transform data into actionable business insights",
-    duration: "3 months",
-    mode: "Online/Offline",
-    price: "₹25,000",
-    image: "https://media.geeksforgeeks.org/wp-content/uploads/20240726121444/Data-Analytics-Training-now.webp",
-  },
-  {
-    id: "azure-devops",
-    title: "Azure DevOps",
-    description: "Master cloud deployment and CI/CD pipelines",
-    duration: "4 months",
-    mode: "Online/Offline",
-    price: "₹35,000",
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3Mpx-7k0FvYWzb8n8snbXGKMKM-YWg0Vlsg&s",
-  },
-]
-
-const stats = [
-  { icon: Users, label: "Students Taken Course", value: "15000+" },
-  { icon: Users, label: "Students Trained", value: "13500+" },
-  { icon: Award, label: "Placement Rate", value: "100%" },
-  { icon: BookOpen, label: "Expert Trainers", value: "30+" },
-  { icon: MapPin, label: "Hiring partners", value: "100" },
-]
+import { motion } from "framer-motion";
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import {
+  ArrowRight,
+  BookOpen,
+  Users,
+  Award,
+  MapPin,
+  Clock,
+  Monitor,
+  User,
+} from "lucide-react";
+import Link from "next/link";
+import { Navigation } from "@/components/navigation";
+import { Footer } from "@/components/footer";
+import { homePage } from "@/app/constant";
+import { TestimonialsCarousel } from "@/components/Testimonials";
+import { useRouter } from "next/navigation";
 
 export default function HomePage() {
+  const navigate = useRouter();
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
       <Navigation />
@@ -64,18 +45,23 @@ export default function HomePage() {
               className="space-y-8"
             >
               <div className="space-y-4">
-                <Badge className="bg-white text-sky-600 hover:bg-gray-100">🚀 Transform Your Career in Tech</Badge>
+                <Badge className="bg-white text-sky-600 hover:bg-gray-100">
+                  🚀 Transform Your Career in Tech
+                </Badge>
                 <h1 className="text-4xl lg:text-6xl font-bold leading-tight">
-                  Master <span className="text-cyan-300">In-Demand</span> Tech Skills
+                  Master <span className="text-cyan-300">In-Demand</span> Tech
+                  Skills
                 </h1>
                 <p className="text-xl text-blue-100 max-w-lg">
-                  Join India's leading IT training institute with 100% placement assistance. Learn from industry experts
-                  and land your dream job in tech.
+                  {homePage.heroSection.description}
                 </p>
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" className="bg-white text-sky-600 hover:bg-gray-100 text-lg px-8">
+                <Button
+                  size="lg"
+                  className="bg-white text-sky-600 hover:bg-gray-100 text-lg px-8"
+                >
                   Enroll Now <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
                 <Button
@@ -89,7 +75,7 @@ export default function HomePage() {
 
               <div className="flex items-center gap-8 pt-4">
                 <div className="text-center">
-                  <div className="text-2xl font-bold">5000+</div>
+                  <div className="text-2xl font-bold">13500+</div>
                   <div className="text-blue-200 text-sm">Students Placed</div>
                 </div>
                 <div className="text-center">
@@ -125,8 +111,8 @@ export default function HomePage() {
       {/* Stats Section */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 lg:grid-cols-5 gap-8">
-            {stats.map((stat, index) => (
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+            {homePage.statsSection.map((stat, index) => (
               <motion.div
                 key={stat.label}
                 initial={{ opacity: 0, y: 20 }}
@@ -137,10 +123,359 @@ export default function HomePage() {
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-sky-500 to-blue-600 rounded-full text-white mb-4">
                   <stat.icon className="h-8 w-8" />
                 </div>
-                <div className="text-3xl font-bold text-gray-900 mb-2">{stat.value}</div>
+                <div className="text-3xl font-bold text-gray-900 mb-2">
+                  {stat.value}
+                </div>
                 <div className="text-gray-600">{stat.label}</div>
               </motion.div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* About Flair Technologies Section */}
+      <section className="py-20 bg-gradient-to-br from-gray-50 to-sky-100">
+        <div className="container mx-auto px-4 grid lg:grid-cols-2 gap-12 items-center">
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+            className="space-y-6"
+          >
+            <Badge className="bg-sky-100 text-sky-700">Know Who We Are</Badge>
+            <h2 className="text-4xl font-bold text-gray-900">
+              About Flair Technologies
+            </h2>
+            <p className="text-gray-700 text-lg leading-relaxed">
+              Since 2014, Flair Technologies has grown to become the largest
+              independent IT training institute in Bangalore. We offer
+              cutting-edge technology training, certified instructors,
+              real-world implementation, and consultancy. Whether you’re a
+              multinational or a small business, we bring the right skills,
+              research, and execution strategies. From simple static sites to
+              complex enterprise systems, we help you deliver your message
+              effectively.
+            </p>
+            <Link href="/about">
+              <Button className="bg-sky-600 hover:bg-sky-700 text-white px-6 py-3 text-lg">
+                Know More
+              </Button>
+            </Link>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="relative"
+          >
+            <img
+              src="https://media.istockphoto.com/id/2042526830/photo/successful-businesswoman-using-laptop-working-in-office-business-technology-corporate-concept.jpg?s=612x612&w=0&k=20&c=-NJyxcMesUAKzzPwoHXC10ZuBHPGa1dRp1gFl2T37o8=" // Replace with your optimized asset or CDN path
+              alt="Students learning in class"
+              className="rounded-xl shadow-xl w-full"
+            />
+            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+              <div className="w-16 h-16 bg-sky-500 rounded-full flex items-center justify-center shadow-lg animate-pulse">
+                <svg
+                  className="w-6 h-6 text-white"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path d="M6 4l10 6-10 6V4z" />
+                </svg>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* The Best Learning Experience Section */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4 grid lg:grid-cols-2 gap-12 items-center">
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+          >
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">
+              The Best Learning Experience
+            </h2>
+            <ul className="space-y-4 text-lg text-gray-700">
+              <li className="flex items-start gap-3">
+                <span className="text-green-500 mt-1">✔</span> Learn from the
+                World’s Best Faculty & Industry Experts.
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-green-500 mt-1">✔</span> Instructor-led
+                training with practical lab sessions.
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-green-500 mt-1">✔</span> Customized
+                learning scaled to your corporate needs.
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-green-500 mt-1">✔</span> Real-time
+                projects and certification guidance.
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-green-500 mt-1">✔</span> Personalized
+                guidance with 24×7 support.
+              </li>
+            </ul>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="relative"
+          >
+            <img
+              src="https://flairtechnologies.in/wp-content/uploads/2023/08/about-us.jpg" // Replace with your optimized asset or CDN path
+              alt="Virtual learning session"
+              className="rounded-xl shadow-xl w-full"
+            />
+            <div className="absolute bottom-4 left-4">
+              <div className="w-14 h-14 bg-sky-500 rounded-full flex items-center justify-center shadow-lg animate-pulse">
+                <svg
+                  className="w-5 h-5 text-white"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path d="M6 4l10 6-10 6V4z" />
+                </svg>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Why Flair Technologies Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-gray-900">
+              Why <span className="text-sky-600">Flair Technologies</span>
+            </h2>
+          </motion.div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+            {[
+              {
+                title: "Expert Trainers",
+                description:
+                  "Instructors are certified and highly qualified with decades of experience in the subject matter.",
+              },
+              {
+                title: "Placement Assistance",
+                description:
+                  "Our Placement Officer will send for Interviews till you Get Placed. 100% assistance is given.",
+              },
+              {
+                title: "Full hands-on Training",
+                description:
+                  "We support any training with more practical classes, so we prefer to give hands-on training.",
+              },
+              {
+                title: "Interview Preparation",
+                description:
+                  "Our Experienced Trainers will help Get your Resume Ready with real case studies and examples.",
+              },
+              {
+                title: "Industry Oriented Training",
+                description:
+                  "Our trainers are highly equipped with experience of over 10+ years and teach to industry standards.",
+              },
+              {
+                title: "Unlimited Lab Support",
+                description:
+                  "Be assured of your success on the certification exam. 100% money-back guarantee otherwise.",
+              },
+            ].map((item, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.4, delay: index * 0.1 }}
+                className="bg-white shadow-lg rounded-xl p-6 border border-gray-100 hover:shadow-xl transition-all duration-300"
+              >
+                <h3 className="text-xl font-semibold text-sky-600 mb-2">
+                  {item.title}
+                </h3>
+                <p className="text-gray-700 text-base">{item.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits Of Flair Technologies Section */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-gray-900">
+              Benefits Of{" "}
+              <span className="text-sky-600">Flair Technologies</span>
+            </h2>
+          </motion.div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 text-lg text-gray-700">
+            {[
+              "100% Placement Assistance",
+              "Weekdays/Weekend LIVE classes",
+              "One-on-One with Mentors",
+              "Free Demo Classes",
+              "Industry Oriented Projects",
+              "Instructors are from MNC’s",
+              "Lab Sessions",
+              "Doubt Clearance Sessions",
+              "Designed by Industry experts",
+              "Recognized certification",
+            ].map((benefit, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.3, delay: index * 0.05 }}
+                className="flex items-start gap-3"
+              >
+                <span className="text-sky-600 mt-1">✔</span>
+                <p>{benefit}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Upcoming Batches Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-10"
+          >
+            <h2 className="text-3xl font-bold text-gray-900">
+              Register Now -{" "}
+              <span className="text-sky-600">Upcoming Batches</span>
+            </h2>
+          </motion.div>
+
+          <div className="overflow-x-auto rounded-lg shadow-lg bg-white">
+            <table className="min-w-full text-sm text-left text-gray-700">
+              <thead className="bg-black text-white">
+                <tr>
+                  <th className="px-4 py-3 font-semibold">#</th>
+                  <th className="px-4 py-3 font-semibold">Course Name</th>
+                  <th className="px-4 py-3 font-semibold">Mode</th>
+                  <th className="px-4 py-3 font-semibold">Faculty</th>
+                  <th className="px-4 py-3 font-semibold">Date</th>
+                  <th className="px-4 py-3 font-semibold">Time</th>
+                  <th className="px-4 py-3 font-semibold">Duration</th>
+                  <th className="px-4 py-3 font-semibold">Course</th>
+                  <th className="px-4 py-3 font-semibold">Register</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-gray-200">
+                {[
+                  {
+                    id: 1,
+                    name: "Microsoft Power BI",
+                    mode: "Classroom - BLR",
+                    faculty: "Mr. Veera",
+                    date: "Apr 10, 2024",
+                    time: "08:15 AM",
+                    duration: "45 Hours",
+                  },
+                  {
+                    id: 2,
+                    name: "Alteryx Designer",
+                    mode: "Classroom - BLR",
+                    faculty: "Mr. Suman",
+                    date: "May 01, 2024",
+                    time: "09:00 AM",
+                    duration: "45 Hours",
+                  },
+                  {
+                    id: 3,
+                    name: "Python Fullstack",
+                    mode: "Classroom - BLR",
+                    faculty: "Mr. Venkat",
+                    date: "May 01, 2024",
+                    time: "07:30 AM",
+                    duration: "100 Days",
+                  },
+                  {
+                    id: 4,
+                    name: "Data Analyst - Freshers",
+                    mode: "Classroom - BLR",
+                    faculty: "Mr. Surya",
+                    date: "May 01, 2024",
+                    time: "09:00 AM",
+                    duration: "100 Days",
+                  },
+                  {
+                    id: 5,
+                    name: "SRE Modern DevOps",
+                    mode: "Online",
+                    faculty: "Mr. P R Reddy",
+                    date: "Apr 20, 2024",
+                    time: "07:00 AM",
+                    duration: "100 Days",
+                  },
+                  {
+                    id: 6,
+                    name: "DevOps Workshop",
+                    mode: "Online",
+                    faculty: "Mr. Viswanath",
+                    date: "Apr 22, 2024",
+                    time: "08:15 PM",
+                    duration: "100 Hours",
+                  },
+                  {
+                    id: 7,
+                    name: "Azure with Azure DevOps",
+                    mode: "Online",
+                    faculty: "Mr. Rama Krishna",
+                    date: "May 01, 2024",
+                    time: "08:00 AM",
+                    duration: "100 Hours",
+                  },
+                ].map((batch, index) => (
+                  <tr
+                    key={batch.id}
+                    className={index % 2 === 0 ? "bg-white" : "bg-gray-100"}
+                  >
+                    <td className="px-4 py-3">{batch.id}</td>
+                    <td className="px-4 py-3 font-medium">{batch.name}</td>
+                    <td className="px-4 py-3">{batch.mode}</td>
+                    <td className="px-4 py-3">{batch.faculty}</td>
+                    <td className="px-4 py-3">{batch.date}</td>
+                    <td className="px-4 py-3">{batch.time}</td>
+                    <td className="px-4 py-3">{batch.duration}</td>
+                    <td className="px-4 py-3 text-sky-600 font-semibold underline cursor-pointer">
+                      View
+                    </td>
+                    <td className="px-4 py-3">
+                      <button className="text-white bg-sky-600 hover:bg-sky-700 px-3 py-1 rounded-md text-sm">
+                        REGISTER
+                      </button>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
           </div>
         </div>
       </section>
@@ -154,63 +489,77 @@ export default function HomePage() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <Badge className="mb-4 bg-sky-100 text-sky-700">Featured Courses</Badge>
+            <Badge className="mb-4 bg-sky-100 text-sky-700">
+              Featured Courses
+            </Badge>
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
               Master <span className="text-sky-600">High-Demand</span> Skills
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Choose from our industry-aligned courses designed by experts and delivered by professionals from top MNCs
+              {homePage.featuredCoursesSection.description}
+              {/* Choose from our industry-aligned courses designed by experts and
+              delivered by professionals from top MNCs */}
             </p>
           </motion.div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {featuredCourses.map((course, index) => (
-              <motion.div
-                key={course.id}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                whileHover={{ y: -5 }}
-                className="group"
-              >
-                <Card className="h-full overflow-hidden border-0 shadow-lg hover:shadow-2xl transition-all duration-300">
-                  <div className="relative overflow-hidden">
-                    <img
-                      src={course.image || "/placeholder.svg"}
-                      alt={course.title}
-                      className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
-                    />
-                    <div className="absolute top-4 right-4">
-                      <Badge className="bg-green-500 text-white">Popular</Badge>
-                    </div>
-                  </div>
-                  <CardHeader>
-                    <CardTitle className="text-xl group-hover:text-sky-600 transition-colors">{course.title}</CardTitle>
-                    <CardDescription className="text-gray-600">{course.description}</CardDescription>
-                  </CardHeader>
-                  <CardContent className="space-y-4">
-                    <div className="flex items-center justify-between text-sm text-gray-500">
-                      <div className="flex items-center gap-1">
-                        <Clock className="h-4 w-4" />
-                        {course.duration}
-                      </div>
-                      <div className="flex items-center gap-1">
-                        <Monitor className="h-4 w-4" />
-                        {course.mode}
+            {homePage.featuredCoursesSection.featuredCourses.map(
+              (course, index) => (
+                <motion.div
+                  key={course.id}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  whileHover={{ y: -5 }}
+                  className="group"
+                >
+                  <Card className="h-full overflow-hidden border-0 shadow-lg hover:shadow-2xl transition-all duration-300">
+                    <div className="relative overflow-hidden">
+                      <img
+                        src={course.image || "/placeholder.svg"}
+                        alt={course.title}
+                        className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                      />
+                      <div className="absolute top-4 right-4">
+                        <Badge className="bg-green-500 text-white">
+                          Popular
+                        </Badge>
                       </div>
                     </div>
-                    <div className="flex items-center justify-between">
-                      <div className="text-2xl font-bold text-sky-600">{course.price}</div>
-                      <Link href={`/courses/${course.id}`}>
-                        <Button className="bg-gradient-to-r from-sky-500 to-blue-600 hover:from-sky-600 hover:to-blue-700">
-                          Learn More <ArrowRight className="ml-2 h-4 w-4" />
-                        </Button>
-                      </Link>
-                    </div>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            ))}
+                    <CardHeader>
+                      <CardTitle className="text-xl group-hover:text-sky-600 transition-colors">
+                        {course.title}
+                      </CardTitle>
+                      <CardDescription className="text-gray-600">
+                        {course.description}
+                      </CardDescription>
+                    </CardHeader>
+                    <CardContent className="space-y-4">
+                      <div className="flex items-center justify-between text-sm text-gray-500">
+                        <div className="flex items-center gap-1">
+                          <Clock className="h-4 w-4" />
+                          {course.duration}
+                        </div>
+                        <div className="flex items-center gap-1">
+                          <Monitor className="h-4 w-4" />
+                          {course.mode}
+                        </div>
+                      </div>
+                      <div className="flex items-center justify-between">
+                        <div className="text-2xl font-bold text-sky-600">
+                          {course.price}
+                        </div>
+                        <Link href={`/courses/${course.id}`}>
+                          <Button className="bg-gradient-to-r from-sky-500 to-blue-600 hover:from-sky-600 hover:to-blue-700">
+                            Learn More <ArrowRight className="ml-2 h-4 w-4" />
+                          </Button>
+                        </Link>
+                      </div>
+                    </CardContent>
+                  </Card>
+                </motion.div>
+              )
+            )}
           </div>
 
           <motion.div
@@ -241,9 +590,12 @@ export default function HomePage() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <Badge className="mb-4 bg-blue-100 text-blue-700">Why Choose Flair Technologies</Badge>
+            <Badge className="mb-4 bg-blue-100 text-blue-700">
+              Why Choose Flair Technologies
+            </Badge>
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Your Success is <span className="text-blue-600">Our Priority</span>
+              Your Success is{" "}
+              <span className="text-blue-600">Our Priority</span>
             </h2>
           </motion.div>
 
@@ -258,27 +610,32 @@ export default function HomePage() {
               {
                 icon: Award,
                 title: "100% Placement Assistance",
-                description: "Guaranteed job placement support with our extensive network of hiring partners",
+                description:
+                  "Guaranteed job placement support with our extensive network of hiring partners",
               },
               {
                 icon: BookOpen,
                 title: "Real-World Projects",
-                description: "Work on live projects and build a portfolio that showcases your skills to employers",
+                description:
+                  "Work on live projects and build a portfolio that showcases your skills to employers",
               },
               {
                 icon: Users,
                 title: "Small Batch Sizes",
-                description: "Personalized attention with maximum 15 students per batch for better learning",
+                description:
+                  "Personalized attention with maximum 15 students per batch for better learning",
               },
               {
                 icon: Monitor,
                 title: "Flexible Learning",
-                description: "Choose between online, offline, or hybrid modes based on your convenience",
+                description:
+                  "Choose between online, offline, or hybrid modes based on your convenience",
               },
               {
                 icon: MapPin,
                 title: "Prime Locations",
-                description: "Conveniently located centers in Bangalore and Hyderabad with modern facilities",
+                description:
+                  "Conveniently located centers in Bangalore and Hyderabad with modern facilities",
               },
             ].map((feature, index) => (
               <motion.div
@@ -291,13 +648,83 @@ export default function HomePage() {
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-blue-500 to-sky-600 rounded-full text-white mb-6 group-hover:scale-110 transition-transform duration-300">
                   <feature.icon className="h-8 w-8" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">{feature.title}</h3>
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                  {feature.title}
+                </h3>
                 <p className="text-gray-600">{feature.description}</p>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
+
+      <div className="py-20 container mx-auto px-4 mt-20 flex flex-col lg:flex-row gap-12 items-start">
+        {/* Testimonials Section */}
+        <TestimonialsCarousel />
+        {/* Demo Booking Form */}
+        <motion.div
+          initial={{ opacity: 0, x: 50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="w-full lg:w-1/2 bg-sky-50 p-6 rounded-xl shadow-md border border-sky-100"
+        >
+          <h3 className="text-2xl font-bold text-sky-700 mb-4">
+            Book a Free Demo Session
+          </h3>
+          <form className="space-y-4">
+            <div>
+              <label className="block text-gray-700 mb-1">Full Name</label>
+              <input
+                type="text"
+                placeholder="Your Name"
+                className="w-full px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-sky-500"
+              />
+            </div>
+            <div>
+              <label className="block text-gray-700 mb-1">Email</label>
+              <input
+                type="email"
+                placeholder="you@example.com"
+                className="w-full px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-sky-500"
+              />
+            </div>
+            <div>
+              <label className="block text-gray-700 mb-1">Phone</label>
+              <input
+                type="tel"
+                placeholder="+91 98765 43210"
+                className="w-full px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-sky-500"
+              />
+            </div>
+            <div>
+              <label className="block text-gray-700 mb-1">
+                Preferred Course
+              </label>
+              <select className="w-full px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-sky-500">
+                <option value="">Select a course</option>
+                <option value="python">Python Fullstack</option>
+                <option value="powerbi">Power BI</option>
+                <option value="devops">DevOps</option>
+              </select>
+            </div>
+            <div>
+              <label className="block text-gray-700 mb-1">Location</label>
+              <select className="w-full px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-sky-500">
+                <option value="">Select location</option>
+                <option value="hyderabad">Hyderabad</option>
+                <option value="bangalore">Bangalore</option>
+                <option value="online">Online</option>
+              </select>
+            </div>
+            <Button
+              type="submit"
+              className="w-full bg-sky-600 hover:bg-sky-700"
+            >
+              Book Demo Now
+            </Button>
+          </form>
+        </motion.div>
+      </div>
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-sky-500 via-blue-500 to-cyan-600 text-white">
@@ -308,14 +735,20 @@ export default function HomePage() {
             transition={{ duration: 0.6 }}
             className="max-w-4xl mx-auto"
           >
-            <h2 className="text-4xl lg:text-5xl font-bold mb-6">Ready to Transform Your Career?</h2>
+            <h2 className="text-4xl lg:text-5xl font-bold mb-6">
+              Ready to Transform Your Career?
+            </h2>
             <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-              Join thousands of successful professionals who started their tech journey with Flair Technologies. Your
-              dream job is just one course away!
+              Join thousands of successful professionals who started their tech
+              journey with Flair Technologies. Your dream job is just one course
+              away!
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/contact">
-                <Button size="lg" className="bg-white text-sky-600 hover:bg-gray-100 text-lg px-8">
+                <Button
+                  size="lg"
+                  className="bg-white text-sky-600 hover:bg-gray-100 text-lg px-8"
+                >
                   Start Your Journey <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
               </Link>
@@ -335,5 +768,5 @@ export default function HomePage() {
 
       <Footer />
     </div>
-  )
+  );
 }
