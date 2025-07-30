@@ -34,7 +34,7 @@ export default function AboutPage() {
                     __html: aboutPage.heroSection.title,
                   }}
                 />
-                <p className="text-xl text-blue-100">
+                <p className="description">
                   {aboutPage.heroSection.description}
                 </p>
               </div>
@@ -389,7 +389,7 @@ export default function AboutPage() {
             <h2 className="text-4xl lg:text-5xl font-bold mb-6">
               {aboutPage.ctaSection.title}
             </h2>
-            <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+            <p className="description mb-8 max-w-2xl mx-auto">
               {aboutPage.ctaSection.description}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

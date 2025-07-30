@@ -22,7 +22,7 @@ export default function BatchesPage() {
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
             <Badge className="mb-4 bg-white text-sky-600">{heroSection.badge}</Badge>
             <h1 className="heading" dangerouslySetInnerHTML={{ __html: heroSection.title }} />
-            <p className="text-xl text-blue-100 max-w-3xl mx-auto">{heroSection.description}</p>
+            <p className="description max-w-3xl mx-auto">{heroSection.description}</p>
           </motion.div>
         </div>
       </section>
@@ -210,7 +210,7 @@ export default function BatchesPage() {
             transition={{ duration: 0.6 }}
           >
             <h2 className="text-4xl font-bold mb-6" dangerouslySetInnerHTML={{ __html: ctaSection.title }} />
-            <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">{ctaSection.description}</p>
+            <p className="description mb-8 max-w-2xl mx-auto">{ctaSection.description}</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               {ctaSection.buttons.map((button, index) => (
                 <Button

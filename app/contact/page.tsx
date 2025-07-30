@@ -35,7 +35,7 @@ export default function ContactPage() {
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
             <Badge className="mb-4 bg-white text-sky-600">{heroSection.badge}</Badge>
             <h1 className="heading" dangerouslySetInnerHTML={{ __html: heroSection.title }} />
-            <p className="text-xl text-blue-100 max-w-3xl mx-auto">{heroSection.description}</p>
+            <p className="description max-w-3xl mx-auto">{heroSection.description}</p>
           </motion.div>
         </div>
       </section>

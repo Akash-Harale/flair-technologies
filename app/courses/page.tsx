@@ -123,7 +123,7 @@ export default function CoursesPage() {
             <h1 className="heading">
               Master <span className="text-cyan-300">In-Demand</span> Tech Skills
             </h1>
-            <p className="text-xl text-blue-100 max-w-3xl mx-auto">
+            <p className="description max-w-3xl mx-auto">
               Choose from our comprehensive range of courses designed by industry experts and delivered by professionals
               from top MNCs
             </p>

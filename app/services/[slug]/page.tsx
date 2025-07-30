@@ -169,7 +169,7 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
           >
             <Badge className="bg-white text-sky-600">Professional Service</Badge>
             <h1 className="heading">{service.title}</h1>
-            <p className="text-xl text-blue-100">{service.description}</p>
+            <p className="description">{service.description}</p>
 
             <div className="grid md:grid-cols-2 gap-4">
               {service.highlights.map((item, index) => (

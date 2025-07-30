@@ -42,7 +42,7 @@ export default function HomePage() {
                 <h1 className="heading">
                   {homePage.heroSection.title}
                 </h1>
-                <p className="text-xl text-blue-100 max-w-lg">
+                <p className="description max-w-lg">
                   {homePage.heroSection.description}
                 </p>
               </div>
@@ -555,7 +555,7 @@ export default function HomePage() {
             <h2 className="text-4xl lg:text-5xl font-bold mb-6">
               {homePage.ctaSection.title}
             </h2>
-            <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+            <p className="description mb-8 max-w-2xl mx-auto">
               {homePage.ctaSection.description}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

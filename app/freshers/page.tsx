@@ -33,7 +33,7 @@ export default function FreshersPage() {
               <div className="space-y-4">
                 <Badge className="bg-white text-sky-600 hover:bg-gray-100">{heroSection.badge}</Badge>
                 <h1 className="heading" dangerouslySetInnerHTML={{ __html: heroSection.title }} />
-                <p className="text-xl text-blue-100 max-w-lg">{heroSection.description}</p>
+                <p className="description max-w-lg">{heroSection.description}</p>
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4">
@@ -230,7 +230,7 @@ export default function FreshersPage() {
               <div className="space-y-4">
                 <Badge className="bg-white text-sky-600">{applicationFormSection.badge}</Badge>
                 <h2 className="text-4xl font-bold leading-tight">{applicationFormSection.title}</h2>
-                <p className="text-xl text-blue-100">{applicationFormSection.description}</p>
+                <p className="description">{applicationFormSection.description}</p>
               </div>
 
               <div className="space-y-4">

@@ -517,7 +517,7 @@ export default function CoursePage({ params }: { params: { slug: string } }) {
                 <h1 className="heading">
                   {course.title}
                 </h1>
-                <p className="text-xl text-blue-100">{course.description}</p>
+                <p className="description">{course.description}</p>
               </div>
 
               <div className="flex items-center gap-6 text-sm">
