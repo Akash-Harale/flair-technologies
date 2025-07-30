@@ -1,4 +1,31 @@
-import { BookOpen, MapPin, Users, User, Award, Monitor, Target, TrendingUp, Lightbulb, GraduationCap, Heart, Star, ArrowRight, Calendar, CheckCircle, Clock, ExternalLink, Phone, Mail, Globe, Send, MessageCircle } from "lucide-react";
+import {
+  BookOpen,
+  MapPin,
+  Users,
+  User,
+  Award,
+  Monitor,
+  Target,
+  TrendingUp,
+  Lightbulb,
+  GraduationCap,
+  Heart,
+  Star,
+  ArrowRight,
+  Calendar,
+  CheckCircle,
+  Clock,
+  ExternalLink,
+  Phone,
+  Mail,
+  Globe,
+  Send,
+  MessageCircle,
+  Facebook,
+  Twitter,
+  Instagram,
+  Linkedin,
+} from "lucide-react";
 
 // Home page constants
 export const homePage = {
@@ -248,7 +275,8 @@ export const homePage = {
 export const aboutPage = {
   heroSection: {
     badge: "🏢 About Flair Technologies",
-    title: "Empowering <span className=\"text-cyan-200\">Careers</span> Through Innovation",
+    title:
+      'Empowering <span className="text-cyan-200">Careers</span> Through Innovation',
     description:
       "Since 2018, we've been transforming lives by bridging the gap between academic learning and industry requirements. Our mission is to create skilled professionals ready for the digital future.",
     stats: [
@@ -273,7 +301,7 @@ export const aboutPage = {
     },
   },
   uniqueFeaturesSection: {
-    title: "Our <span className=\"text-cyan-600\">Distinctive</span> Approach",
+    title: 'Our <span className="text-cyan-600">Distinctive</span> Approach',
     badge: "What Makes Us Unique",
     description:
       "Discover the key pillars that set Flair Technologies apart in the competitive training landscape",
@@ -313,7 +341,7 @@ export const aboutPage = {
     ],
   },
   valuesSection: {
-    title: "What <span className=\"text-sky-600\">Drives</span> Us",
+    title: 'What <span className="text-sky-600">Drives</span> Us',
     badge: "Our Values",
     description:
       "Our core values guide everything we do, from curriculum design to student support",
@@ -345,13 +373,14 @@ export const aboutPage = {
     ],
   },
   milestonesSection: {
-    title: "<span className=\"text-sky-600\">Milestones</span> That Define Us",
+    title: '<span className="text-sky-600">Milestones</span> That Define Us',
     badge: "Our Journey",
     milestones: [
       {
         year: "2018",
         event: "Founded Flair Technologies",
-        description: "Started with a vision to bridge the skill gap in IT industry",
+        description:
+          "Started with a vision to bridge the skill gap in IT industry",
       },
       {
         year: "2019",
@@ -386,7 +415,7 @@ export const aboutPage = {
     ],
   },
   leadershipSection: {
-    title: "Meet Our <span className=\"text-cyan-600\">Leaders</span>",
+    title: 'Meet Our <span className="text-cyan-600">Leaders</span>',
     badge: "Leadership Team",
     description:
       "Experienced professionals leading the way in technology education and career development",
@@ -440,7 +469,8 @@ export const aboutPage = {
       {
         text: "Contact Us",
         href: "/contact",
-        className: "border-white text-white hover:bg-white hover:text-sky-600 text-lg px-8 bg-transparent",
+        className:
+          "border-white text-white hover:bg-white hover:text-sky-600 text-lg px-8 bg-transparent",
         variant: "outline",
       },
     ],
@@ -448,17 +478,19 @@ export const aboutPage = {
 };
 
 // Freshers page constants
-export const freshersPage = { 
+export const freshersPage = {
   heroSection: {
     badge: "🎓 Freshers Special Program",
-    title: "Launch Your <span className=\"text-cyan-200\">Tech Career</span> Today",
+    title:
+      'Launch Your <span className="text-cyan-200">Tech Career</span> Today',
     description:
       "From college graduate to industry professional in just 4-6 months. Join 2000+ freshers who transformed their careers with us.",
     stats: [
       { value: "₹4.5 LPA", label: "Average Package" },
       { value: "96%", label: "Placement Rate" },
     ],
-    image: "https://pkrinstitute.in/lp/wp-content/uploads/2024/02/Untitled-design-1.jpg",
+    image:
+      "https://pkrinstitute.in/lp/wp-content/uploads/2024/02/Untitled-design-1.jpg",
     imageAlt: "Freshers Success",
     buttons: [
       {
@@ -468,7 +500,8 @@ export const freshersPage = {
       },
       {
         text: "Download Brochure",
-        className: "border-white text-white hover:bg-white hover:text-blue-600 text-lg px-8 bg-transparent",
+        className:
+          "border-white text-white hover:bg-white hover:text-blue-600 text-lg px-8 bg-transparent",
         variant: "outline",
       },
     ],
@@ -481,14 +514,19 @@ export const freshersPage = {
   ],
   programsSection: {
     badge: "Freshers Programs",
-    title: "Choose Your <span className=\"text-sky-600\">Career Path</span>",
+    title: 'Choose Your <span className="text-sky-600">Career Path</span>',
     description:
       "Specially designed programs for fresh graduates with zero experience. Start from basics and become job-ready in months.",
     programs: [
       {
         title: "Full-Stack Development Track",
         duration: "6 months",
-        courses: ["Python Fundamentals", "Web Development", "Database Management", "Deployment"],
+        courses: [
+          "Python Fundamentals",
+          "Web Development",
+          "Database Management",
+          "Deployment",
+        ],
         price: "₹45,000",
         placement: "100%",
         description: "Complete full-stack development program for freshers",
@@ -496,24 +534,37 @@ export const freshersPage = {
       {
         title: "Data Analytics Track",
         duration: "4 months",
-        courses: ["Excel & Statistics", "Power BI", "Python for Data", "Tableau"],
+        courses: [
+          "Excel & Statistics",
+          "Power BI",
+          "Python for Data",
+          "Tableau",
+        ],
         price: "₹30,000",
         placement: "95%",
-        description: "Transform data into insights with comprehensive analytics training",
+        description:
+          "Transform data into insights with comprehensive analytics training",
       },
       {
         title: "Cloud & DevOps Track",
         duration: "5 months",
-        courses: ["Linux Basics", "AWS Fundamentals", "Docker & Kubernetes", "CI/CD"],
+        courses: [
+          "Linux Basics",
+          "AWS Fundamentals",
+          "Docker & Kubernetes",
+          "CI/CD",
+        ],
         price: "₹40,000",
         placement: "98%",
-        description: "Master cloud technologies and modern deployment practices",
+        description:
+          "Master cloud technologies and modern deployment practices",
       },
     ],
   },
   testimonialsSection: {
     badge: "Success Stories",
-    title: "From <span className=\"text-sky-600\">Freshers</span> to Professionals",
+    title:
+      'From <span className="text-sky-600">Freshers</span> to Professionals',
     description:
       "Hear from our successful graduates who transformed their careers with our programs",
     testimonials: [
@@ -558,7 +609,8 @@ export const freshersPage = {
     ],
     form: {
       title: "Apply for Freshers Program",
-      description: "Fill out the form below and we'll get back to you within 24 hours",
+      description:
+        "Fill out the form below and we'll get back to you within 24 hours",
       fields: [
         { type: "text", placeholder: "First Name", grid: "col-span-1" },
         { type: "text", placeholder: "Last Name", grid: "col-span-1" },
@@ -582,14 +634,19 @@ export const freshersPage = {
             { value: "online", label: "Online" },
           ],
         },
-        { type: "textarea", placeholder: "Tell us about your background and career goals..." },
+        {
+          type: "textarea",
+          placeholder: "Tell us about your background and career goals...",
+        },
       ],
       submitButton: {
         text: "Submit Application",
-        className: "w-full icon-button-color hover:from-sky-600 hover:to-blue-700 text-lg py-6",
+        className:
+          "w-full icon-button-color hover:from-sky-600 hover:to-blue-700 text-lg py-6",
         icon: ArrowRight,
       },
-      disclaimer: "By submitting this form, you agree to our Terms of Service and Privacy Policy",
+      disclaimer:
+        "By submitting this form, you agree to our Terms of Service and Privacy Policy",
     },
   },
 };
@@ -598,19 +655,25 @@ export const freshersPage = {
 export const batchesPage = {
   heroSection: {
     badge: "🎓 Register Now",
-    title: "Register Now - <span className=\"text-cyan-200\">Upcoming Batches</span>",
+    title:
+      'Register Now - <span className="text-cyan-200">Upcoming Batches</span>',
     description:
       "Join our expert-led training programs and kickstart your career in technology. Choose from our comprehensive range of courses designed for professionals and freshers.",
   },
   statsSection: [
     { icon: User, label: "Expert Trainers", value: "50+", emoji: "👨‍🏫" },
-    { icon: GraduationCap, label: "Students Trained", value: "5000+", emoji: "🎓" },
+    {
+      icon: GraduationCap,
+      label: "Students Trained",
+      value: "5000+",
+      emoji: "🎓",
+    },
     { icon: Award, label: "Placement Support", value: "100%", emoji: "💼" },
     { icon: BookOpen, label: "Upcoming Batches", value: "6", emoji: "📚" },
   ],
   batchesSection: {
     badge: "🚀 Start Learning",
-    title: "Choose Your <span className=\"text-sky-600\">Learning Path</span>",
+    title: 'Choose Your <span className="text-sky-600">Learning Path</span>',
     description:
       "Select from our carefully curated courses and join the next batch to accelerate your career growth",
     batches: [
@@ -687,56 +750,73 @@ export const batchesPage = {
         category: "Cloud DevOps",
       },
     ],
-    categories: ["All", "Data Analytics", "Business Intelligence", "Full-Stack Development", "Data Processing", "DevOps", "Cloud DevOps"],
+    categories: [
+      "All",
+      "Data Analytics",
+      "Business Intelligence",
+      "Full-Stack Development",
+      "Data Processing",
+      "DevOps",
+      "Cloud DevOps",
+    ],
   },
   whyChooseUsSection: {
     badge: "✨ Why Choose Us",
-    title: "What Makes Us <span className=\"text-sky-600\">Different</span>",
+    title: 'What Makes Us <span className="text-sky-600">Different</span>',
     features: [
       {
         emoji: "👨‍💼",
         title: "Industry Expert Trainers",
-        description: "Learn from professionals with 10+ years of real-world experience in their respective domains.",
+        description:
+          "Learn from professionals with 10+ years of real-world experience in their respective domains.",
       },
       {
         emoji: "🏢",
         title: "100% Placement Support",
-        description: "Dedicated placement team with connections to 50+ hiring partners across various industries.",
+        description:
+          "Dedicated placement team with connections to 50+ hiring partners across various industries.",
       },
       {
         emoji: "📚",
         title: "Updated Curriculum",
-        description: "Course content regularly updated to match current industry standards and requirements.",
+        description:
+          "Course content regularly updated to match current industry standards and requirements.",
       },
       {
         emoji: "🤝",
         title: "Hands-on Projects",
-        description: "Work on real-world projects that you can showcase in your portfolio to potential employers.",
+        description:
+          "Work on real-world projects that you can showcase in your portfolio to potential employers.",
       },
       {
         emoji: "💻",
         title: "Flexible Learning",
-        description: "Choose between classroom and online modes based on your convenience and schedule.",
+        description:
+          "Choose between classroom and online modes based on your convenience and schedule.",
       },
       {
         emoji: "🎯",
         title: "Small Batch Size",
-        description: "Limited students per batch ensures personalized attention and better learning outcomes.",
+        description:
+          "Limited students per batch ensures personalized attention and better learning outcomes.",
       },
     ],
   },
   ctaSection: {
-    title: "Ready to Transform Your <span className=\"text-cyan-200\">Career?</span>",
+    title:
+      'Ready to Transform Your <span className="text-cyan-200">Career?</span>',
     description:
       "Don't miss out on these upcoming batches. Limited seats available. Enroll now and secure your future in technology.",
     buttons: [
       {
         text: "Contact Admissions Team",
-        className: "bg-white text-sky-600 hover:bg-gray-100 px-8 py-4 text-lg font-semibold",
+        className:
+          "bg-white text-sky-600 hover:bg-gray-100 px-8 py-4 text-lg font-semibold",
       },
       {
         text: "Download Brochure",
-        className: "bg-white text-sky-600 hover:bg-gray-100 px-8 py-4 text-lg font-semibold",
+        className:
+          "bg-white text-sky-600 hover:bg-gray-100 px-8 py-4 text-lg font-semibold",
       },
     ],
   },
@@ -746,14 +826,15 @@ export const batchesPage = {
 export const contactPage = {
   heroSection: {
     badge: "📞 Get In Touch",
-    title: "Let's Start Your <span className=\"text-cyan-200\">Success Journey</span>",
+    title:
+      'Let\'s Start Your <span className="text-cyan-200">Success Journey</span>',
     description:
       "Have questions about our courses? Ready to enroll? Our expert counselors are here to guide you every step of the way across our global centers.",
   },
   aboutSection: {
     title: "FLAIR TECHNOLOGIES",
     description:
-      "Flair Technologies refers to the process of acquiring and developing skills, knowledge, and expertise in various aspects of information technology. For admissions and details regarding courses please contact us on <span className=\"font-semibold text-sky-600\">+91 974 974 9596</span> | <span className=\"font-semibold text-sky-600\">info@flairtechnologies.in</span>",
+      'Flair Technologies refers to the process of acquiring and developing skills, knowledge, and expertise in various aspects of information technology. For admissions and details regarding courses please contact us on <span className="font-semibold text-sky-600">+91 974 974 9596</span> | <span className="font-semibold text-sky-600">info@flairtechnologies.in</span>',
   },
   contactInfoSection: {
     contactInfo: [
@@ -811,19 +892,22 @@ export const contactPage = {
     buttons: [
       {
         text: "Book Free Demo Session",
-        className: "w-full icon-button-color hover:from-sky-600 hover:to-blue-700 text-lg py-6 text-white hover:text-white",
+        className:
+          "w-full icon-button-color hover:from-sky-600 hover:to-blue-700 text-lg py-6 text-white hover:text-white",
         icon: Calendar,
       },
       {
         text: "Download Course Brochure",
-        className: "border border-gray-500 w-full bg-gradient-to-r hover:from-sky-600 hover:to-blue-700 text-lg py-6 hover:text-white",
+        className:
+          "border border-gray-500 w-full bg-gradient-to-r hover:from-sky-600 hover:to-blue-700 text-lg py-6 hover:text-white",
         variant: "outline",
       },
     ],
   },
   contactFormSection: {
     title: "Send Us a Message",
-    description: "Fill out the form below and we'll get back to you within 24 hours",
+    description:
+      "Fill out the form below and we'll get back to you within 24 hours",
     form: {
       fields: [
         { type: "text", placeholder: "First Name", grid: "col-span-1" },
@@ -856,21 +940,24 @@ export const contactPage = {
         },
         {
           type: "textarea",
-          placeholder: "Tell us more about your background, career goals, or any specific questions you have...",
+          placeholder:
+            "Tell us more about your background, career goals, or any specific questions you have...",
           className: "min-h-[120px]",
         },
       ],
       submitButton: {
         text: "Send Message",
-        className: "w-full icon-button-color hover:from-sky-600 hover:to-blue-700 text-lg py-6",
+        className:
+          "w-full icon-button-color hover:from-sky-600 hover:to-blue-700 text-lg py-6",
         icon: Send,
       },
-      disclaimer: "By submitting this form, you agree to our Terms of Service and Privacy Policy",
+      disclaimer:
+        "By submitting this form, you agree to our Terms of Service and Privacy Policy",
     },
   },
   locationsSection: {
     badge: "🌍 Global Presence",
-    title: "ADMISSIONS & <span className=\"text-cyan-600\">CONTACT</span>",
+    title: 'ADMISSIONS & <span className="text-cyan-600">CONTACT</span>',
     description:
       "Connect with us at any of our three strategic locations across India and the UK",
   },
@@ -882,23 +969,27 @@ export const contactPage = {
       {
         title: "Bangalore Center",
         address: "#05, Vivekananda Layout, Marathahalli, Bangalore - 560037",
-        iframeSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.8267!2d77.6272!3d12.9352!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1670c9b44e6d%3A0x14f808b7e45b616!2sMarathahalli%2C%20Bengaluru%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1234567890",
+        iframeSrc:
+          "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.8267!2d77.6272!3d12.9352!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1670c9b44e6d%3A0x14f808b7e45b616!2sMarathahalli%2C%20Bengaluru%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1234567890",
       },
       {
         title: "Hyderabad Center",
-        address: "501, Sumedh Pride, Vijay Nagar Colony, Kukatpally, Hyderabad - 500072",
-        iframeSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.6!2d78.3872!3d17.4435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb99daeaebd2c7%3A0x1c2b6e4df94db6!2sKukatpally%2C%20Hyderabad%2C%20Telangana!5e0!3m2!1sen!2sin!4v1234567890",
+        address:
+          "501, Sumedh Pride, Vijay Nagar Colony, Kukatpally, Hyderabad - 500072",
+        iframeSrc:
+          "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.6!2d78.3872!3d17.4435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb99daeaebd2c7%3A0x1c2b6e4df94db6!2sKukatpally%2C%20Hyderabad%2C%20Telangana!5e0!3m2!1sen!2sin!4v1234567890",
       },
       {
         title: "London Center",
         address: "297, Suite 2, High Street North, London, E12 6SL",
-        iframeSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2469.123!2d0.0346!3d51.5458!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8a00baf21de75%3A0x52963a5addd52a99!2sHigh%20St%20N%2C%20London%20E12%206SL%2C%20UK!5e0!3m2!1sen!2sin!4v1234567890",
+        iframeSrc:
+          "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2469.123!2d0.0346!3d51.5458!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8a00baf21de75%3A0x52963a5addd52a99!2sHigh%20St%20N%2C%20London%20E12%206SL%2C%20UK!5e0!3m2!1sen!2sin!4v1234567890",
       },
     ],
   },
   faqSection: {
     badge: "FAQ",
-    title: "Frequently Asked <span className=\"text-sky-600\">Questions</span>",
+    title: 'Frequently Asked <span className="text-sky-600">Questions</span>',
     faqs: [
       {
         question: "What are the admission requirements?",
@@ -922,4 +1013,87 @@ export const contactPage = {
       },
     ],
   },
+};
+
+// Footer constants
+export const footer = {
+  companyInfo: {
+    logo: {
+      letter: "F",
+      className:
+        "w-10 h-10 icon-button-color rounded-lg flex items-center justify-center",
+    },
+    name: "Flair Technologies",
+    description:
+      "Empowering careers through cutting-edge IT training and 100% placement assistance. Transform your future with industry-relevant skills.",
+    socialLinks: [
+      {
+        href: "#",
+        icon: Facebook,
+        className: "text-gray-400 hover:text-sky-400 transition-colors",
+        size: "h-5 w-5",
+      },
+      {
+        href: "#",
+        icon: Twitter,
+        className: "text-gray-400 hover:text-sky-400 transition-colors",
+        size: "h-5 w-5",
+      },
+      {
+        href: "#",
+        icon: Instagram,
+        className: "text-gray-400 hover:text-sky-400 transition-colors",
+        size: "h-5 w-5",
+      },
+      {
+        href: "#",
+        icon: Linkedin,
+        className: "text-gray-400 hover:text-sky-400 transition-colors",
+        size: "h-5 w-5",
+      },
+    ],
+  },
+  quickLinks: [
+    { name: "About Us", href: "/about" },
+    { name: "Courses", href: "/courses" },
+    { name: "Freshers Program", href: "/freshers" },
+    { name: "Services", href: "/services" },
+    { name: "Contact", href: "/contact" },
+  ],
+  courses: [
+    "Python FullStack",
+    "Power BI",
+    "Azure DevOps",
+    "Data Analytics",
+    "Tableau",
+    "Network Protocol",
+  ],
+  contactInfo: [
+    {
+      icon: MapPin,
+      title: "Bangalore Center",
+      address: "Koramangala, Bangalore - 560034",
+      iconClass: "h-5 w-5 text-sky-400 mt-0.5",
+    },
+    {
+      icon: MapPin,
+      title: "Hyderabad Center",
+      address: "HITEC City, Hyderabad - 500081",
+      iconClass: "h-5 w-5 text-sky-400 mt-0.5",
+    },
+    {
+      icon: Phone,
+      title: "Phone",
+      value: "+91 9749749596",
+      iconClass: "h-5 w-5 text-sky-400",
+    },
+    {
+      icon: Mail,
+      title: "Email",
+      value: "info@flairtechnologies.in",
+      iconClass: "h-5 w-5 text-sky-400",
+    },
+  ],
+  copyright:
+    "© 2024 Flair Technologies. All rights reserved. | Privacy Policy | Terms of Service",
 };

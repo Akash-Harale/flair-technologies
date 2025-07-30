@@ -2,34 +2,9 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import {
-  MapPin,
-  Phone,
-  Mail,
-  Facebook,
-  Twitter,
-  Instagram,
-  Linkedin,
-} from "lucide-react";
+import { footer } from "@/app/constant";
 
 export function Footer() {
-  const courses = [
-    "Python Full-Stack",
-    "Power BI",
-    "Azure DevOps",
-    "Data Analytics",
-    "Tableau",
-    "Network Protocol",
-  ];
-
-  const quickLinks = [
-    { name: "About Us", href: "/about" },
-    { name: "Courses", href: "/courses" },
-    { name: "Freshers Program", href: "/freshers" },
-    { name: "Services", href: "/services" },
-    { name: "Contact", href: "/contact" },
-  ];
-
   return (
     <footer className="bg-gray-900 text-white">
       <div className="container mx-auto px-4 py-16">
@@ -42,41 +17,18 @@ export function Footer() {
             className="space-y-4"
           >
             <div className="flex items-center space-x-2">
-              <div className="w-10 h-10 icon-button-color rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-xl">F</span>
+              <div className={footer.companyInfo.logo.className}>
+                <span className="text-white font-bold text-xl">{footer.companyInfo.logo.letter}</span>
               </div>
-              <span className="text-xl font-bold">Flair Technologies</span>
+              <span className="text-xl font-bold">{footer.companyInfo.name}</span>
             </div>
-            <p className="text-gray-300">
-              Empowering careers through cutting-edge IT training and 100%
-              placement assistance. Transform your future with industry-relevant
-              skills.
-            </p>
+            <p className="text-gray-300">{footer.companyInfo.description}</p>
             <div className="flex space-x-4">
-              <a
-                href="#"
-                className="text-gray-400 hover:text-sky-400 transition-colors"
-              >
-                <Facebook className="h-5 w-5" />
-              </a>
-              <a
-                href="#"
-                className="text-gray-400 hover:text-sky-400 transition-colors"
-              >
-                <Twitter className="h-5 w-5" />
-              </a>
-              <a
-                href="#"
-                className="text-gray-400 hover:text-sky-400 transition-colors"
-              >
-                <Instagram className="h-5 w-5" />
-              </a>
-              <a
-                href="#"
-                className="text-gray-400 hover:text-sky-400 transition-colors"
-              >
-                <Linkedin className="h-5 w-5" />
-              </a>
+              {footer.companyInfo.socialLinks.map((link, index) => (
+                <a key={index} href={link.href} className={link.className}>
+                  <link.icon className={link.size} />
+                </a>
+              ))}
             </div>
           </motion.div>
 
@@ -89,7 +41,7 @@ export function Footer() {
           >
             <h3 className="text-lg font-semibold">Quick Links</h3>
             <ul className="space-y-2">
-              {quickLinks.map((link) => (
+              {footer.quickLinks.map((link) => (
                 <li key={link.name}>
                   <Link
                     href={link.href}
@@ -111,7 +63,7 @@ export function Footer() {
           >
             <h3 className="text-lg font-semibold">Popular Courses</h3>
             <ul className="space-y-2">
-              {courses.map((course) => (
+              {footer.courses.map((course) => (
                 <li key={course}>
                   <Link
                     href={`/courses/${course
@@ -135,43 +87,21 @@ export function Footer() {
           >
             <h3 className="text-lg font-semibold">Contact Info</h3>
             <div className="space-y-3">
-              <div className="flex items-start space-x-3">
-                <MapPin className="h-5 w-5 text-sky-400 mt-0.5" />
-                <div>
-                  <p className="text-gray-300">Bangalore Center:</p>
-                  <p className="text-sm text-gray-400">
-                    Koramangala, Bangalore - 560034
-                  </p>
+              {footer.contactInfo.map((info, index) => (
+                <div key={index} className="flex items-start space-x-3">
+                  <info.icon className={info.iconClass} />
+                  <div>
+                    <p className="text-gray-300">{info.title}:</p>
+                    <p className="text-sm text-gray-400">{info.address || info.value}</p>
+                  </div>
                 </div>
-              </div>
-              <div className="flex items-start space-x-3">
-                <MapPin className="h-5 w-5 text-sky-400 mt-0.5" />
-                <div>
-                  <p className="text-gray-300">Hyderabad Center:</p>
-                  <p className="text-sm text-gray-400">
-                    HITEC City, Hyderabad - 500081
-                  </p>
-                </div>
-              </div>
-              <div className="flex items-center space-x-3">
-                <Phone className="h-5 w-5 text-sky-400" />
-                <span className="text-gray-300">+91 9749749596</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <Mail className="h-5 w-5 text-sky-400" />
-                <span className="text-gray-300">
-                   info@flairtechnologies.in  
-                </span>
-              </div>
+              ))}
             </div>
           </motion.div>
         </div>
 
         <div className="border-t border-gray-800 mt-12 pt-8 text-center">
-          <p className="text-gray-400">
-            © 2024 Flair Technologies. All rights reserved. | Privacy Policy |
-            Terms of Service
-          </p>
+          <p className="text-gray-400">{footer.copyright}</p>
         </div>
       </div>
     </footer>
