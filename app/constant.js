@@ -1,4 +1,4 @@
-import { BookOpen, MapPin, Users, User, Award, Monitor } from "lucide-react";
+import { BookOpen, MapPin, Users, User, Award, Monitor, Target, TrendingUp, Lightbulb, GraduationCap, Heart, Star, ArrowRight } from "lucide-react";
 
 // Home page constants
 export const homePage = {
@@ -22,7 +22,7 @@ export const homePage = {
     title: "About Flair Technologies",
     badge: "Know Who We Are",
     description:
-      "Since 2014, Flair Technologies has grown to become the largest independent IT training institute in Bangalore. We offer cutting-edge technology training, certified instructors, real-world implementation, and consultancy. Whether you’re a multinational or a small business, we bring the right skills, research, and execution strategies. From simple static sites to complex enterprise systems, we help you deliver your message effectively.",
+      "Since 2018, Flair Technologies has grown to become the largest independent IT training institute in Bangalore. We offer cutting-edge technology training, certified instructors, real-world implementation, and consultancy. Whether you’re a multinational or a small business, we bring the right skills, research, and execution strategies. From simple static sites to complex enterprise systems, we help you deliver your message effectively.",
     image:
       "https://media.istockphoto.com/id/2042526830/photo/successful-businesswoman-using-laptop-working-in-office-business-technology-corporate-concept.jpg?s=612x612&w=0&k=20&c=-NJyxcMesUAKzzPwoHXC10ZuBHPGa1dRp1gFl2T37o8=",
     imageAlt: "Students learning in class",
@@ -239,6 +239,209 @@ export const homePage = {
         price: "₹35,000",
         image:
           "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3Mpx-7k0FvYWzb8n8snbXGKMKM-YWg0Vlsg&s",
+      },
+    ],
+  },
+};
+
+// About page constants
+export const aboutPage = {
+  heroSection: {
+    badge: "🏢 About Flair Technologies",
+    title: "Empowering <span className=\"text-cyan-200\">Careers</span> Through Innovation",
+    description:
+      "Since 2018, we've been transforming lives by bridging the gap between academic learning and industry requirements. Our mission is to create skilled professionals ready for the digital future.",
+    stats: [
+      { value: "15000+", label: "Students Trained" },
+      { value: "6", label: "Years of Excellence" },
+    ],
+    image: "https://www.deazy.com/hubfs/remote%20team%20meeting.png",
+    imageAlt: "Flair Technologies",
+  },
+  missionVisionSection: {
+    mission: {
+      title: "Our Mission",
+      icon: Target,
+      description:
+        "To empower individuals with cutting-edge technical skills and industry knowledge, enabling them to build successful careers in the rapidly evolving technology landscape. We are committed to providing world-class training, mentorship, and placement support to bridge the gap between academic learning and industry requirements.",
+    },
+    vision: {
+      title: "Our Vision",
+      icon: BookOpen,
+      description:
+        "To become India's leading IT training institute, recognized for excellence in education, innovation in teaching methodologies, and outstanding placement records. We envision a future where every student who walks through our doors emerges as a confident, skilled professional ready to make a meaningful impact in the tech industry.",
+    },
+  },
+  uniqueFeaturesSection: {
+    title: "Our <span className=\"text-cyan-600\">Distinctive</span> Approach",
+    badge: "What Makes Us Unique",
+    description:
+      "Discover the key pillars that set Flair Technologies apart in the competitive training landscape",
+    features: [
+      {
+        icon: Lightbulb,
+        title: "INVENTIVE AND LEADERSHIP",
+        description:
+          "Flair Technologies is a leading training organization that caters to the latest technology and innovation. We are also pioneers in providing training in diverse Software fields like Python, Azure Admin, Azure DevOps, DevOps & AWS, Microsoft Power BI, Azure Data Factory, Alteryx, Microsoft Excel (VBA), Power Apps & Automate, Tableau, Testing Tools, C & Network Protocol, Web Development etc… We believe, in offering the finest standards of quality and processes that are constantly updated and adapted to the changing global scenario.",
+        highlight:
+          "We are dedicated to guiding industry professionals and students to competently compete and confirm international standards of quality employee efficiency and productivity.",
+      },
+      {
+        icon: GraduationCap,
+        title: "TRAINING METHODOLOGY",
+        description:
+          "Flair Technologies' unique training methodology is designed to provide the complete spectrum skills in a very interactive and easy to learn manner. Training is delivered by highly core and certified professionals. Our faculty is always with their high spirit to deliver their best. Our training methodology seeks to deal with the whole gamut of new skills and techniques the IT industry requires.",
+        highlight:
+          "Our training methodology is unique and diverse and focuses on every aspect of an individual. We concentrate on every area towards overall development of an individual.",
+      },
+      {
+        icon: Heart,
+        title: "SMOOTH APPROACH TOWARDS CUSTOMER",
+        description:
+          "Most people find themselves at crossroads in their careers. They are having self-seeking goals, values, hard work, and waiting and yet they feel that the matter of career is confusing. Job hopping is another demerit or comes up from intense insecurity. With fluctuating job market, the skills present in an individual need to be further enhanced.",
+        highlight:
+          "We understand the environment fluctuating the job market. Our counselor evaluates the current positive finding in an individual and suggests areas of improvement. Our counselor gives the best remedy to an individual.",
+      },
+      {
+        icon: Star,
+        title: "OUR UNIQUENESS",
+        description:
+          "Our uniqueness replicates in many tangible and nontangible facets, just like our eminent workplace, staff & training methodology. We at Flair Technologies believe in meticulous practices & integrated solution based approach. Altogether this gives our clients a supreme advantage. We have honed our processes through experience and the incorporation of best practices in the training fraternity.",
+        highlight:
+          "Flair Technologies is an incredibly well-equipped training and development organization. We are dedicated to pursuing solutions to problems. Our distinctiveness lies in unmatched courseware, training techniques, and International affiliation with global giants.",
+      },
+    ],
+  },
+  valuesSection: {
+    title: "What <span className=\"text-sky-600\">Drives</span> Us",
+    badge: "Our Values",
+    description:
+      "Our core values guide everything we do, from curriculum design to student support",
+    values: [
+      {
+        icon: Target,
+        title: "Excellence in Education",
+        description:
+          "We strive to deliver the highest quality training with industry-relevant curriculum and hands-on experience.",
+      },
+      {
+        icon: Users,
+        title: "Student-Centric Approach",
+        description:
+          "Every decision we make is focused on student success, from course design to placement assistance.",
+      },
+      {
+        icon: Award,
+        title: "Industry Relevance",
+        description:
+          "Our courses are constantly updated to match current industry demands and emerging technologies.",
+      },
+      {
+        icon: TrendingUp,
+        title: "Continuous Innovation",
+        description:
+          "We embrace new teaching methodologies and technologies to enhance the learning experience.",
+      },
+    ],
+  },
+  milestonesSection: {
+    title: "<span className=\"text-sky-600\">Milestones</span> That Define Us",
+    badge: "Our Journey",
+    milestones: [
+      {
+        year: "2018",
+        event: "Founded Flair Technologies",
+        description: "Started with a vision to bridge the skill gap in IT industry",
+      },
+      {
+        year: "2019",
+        event: "First 100 Students Placed",
+        description: "Achieved 100% placement rate in our first year",
+      },
+      {
+        year: "2020",
+        event: "Expanded to Hyderabad",
+        description: "Opened our second training center to serve more students",
+      },
+      {
+        year: "2021",
+        event: "Launched Online Programs",
+        description: "Adapted to digital learning during pandemic",
+      },
+      {
+        year: "2022",
+        event: "2000+ Students Trained",
+        description: "Crossed the milestone of training 2000+ professionals",
+      },
+      {
+        year: "2023",
+        event: "Industry Partnerships",
+        description: "Partnered with 50+ companies for direct placements",
+      },
+      {
+        year: "2024",
+        event: "5000+ Success Stories",
+        description: "Celebrating 5000+ successful career transformations",
+      },
+    ],
+  },
+  leadershipSection: {
+    title: "Meet Our <span className=\"text-cyan-600\">Leaders</span>",
+    badge: "Leadership Team",
+    description:
+      "Experienced professionals leading the way in technology education and career development",
+    team: [
+      {
+        name: "Rajesh Kumar",
+        role: "Founder & CEO",
+        experience: "15+ years",
+        image: "/placeholder.svg?height=200&width=200",
+        bio: "Former Tech Lead at Microsoft with a passion for education and skill development",
+      },
+      {
+        name: "Priya Sharma",
+        role: "Head of Training",
+        experience: "12+ years",
+        image: "/placeholder.svg?height=200&width=200",
+        bio: "Ex-Amazon engineer specializing in full-stack development and data analytics",
+      },
+      {
+        name: "Arjun Patel",
+        role: "Placement Director",
+        experience: "10+ years",
+        image: "/placeholder.svg?height=200&width=200",
+        bio: "Former HR Director at TCS with extensive industry connections and placement expertise",
+      },
+    ],
+  },
+  flairTechnologiesSection: {
+    title: "We're The Best",
+    description:
+      "Since 2018, Flair Technologies has become the largest independent IT training institute in Bangalore. Flair Technologies offer most advanced technologies than any other training company. Businesses and individuals can choose from the course offerings, delivered by certified experts. We believe that Flair technologies offers excellence at every level, in terms of technical training, project implementation, consultancy, or applying our experience working and research into successful techniques.",
+    image:
+      "https://img.freepik.com/premium-photo/happy-young-african-woman-casually-dressed-standing-isolated-taking-notes-notepad_171337-70180.jpg",
+    imageAlt: "Flair Technologies",
+    button: {
+      text: "View Service",
+      href: "/services",
+    },
+  },
+  ctaSection: {
+    title: "Ready to Join Our Success Story?",
+    description:
+      "Become part of the Flair Technologies family and transform your career with industry-leading training and guaranteed placement support.",
+    buttons: [
+      {
+        text: "Explore Courses",
+        href: "/courses",
+        className: "bg-white text-sky-600 hover:bg-gray-100 text-lg px-8",
+        icon: ArrowRight,
+      },
+      {
+        text: "Contact Us",
+        href: "/contact",
+        className: "border-white text-white hover:bg-white hover:text-sky-600 text-lg px-8 bg-transparent",
+        variant: "outline",
       },
     ],
   },
