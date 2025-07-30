@@ -240,7 +240,7 @@ export default function CoursesPage() {
                     <div className="flex items-center justify-between pt-4">
                       <div className="text-2xl font-bold text-sky-600">{course.price}</div>
                       <Link href={`/courses/${course.id}`}>
-                        <Button className="bg-gradient-to-r from-sky-500 to-blue-600 hover:from-sky-600 hover:to-blue-700">
+                        <Button className="icon-button-color hover:from-sky-600 hover:to-blue-700">
                           Learn More <ArrowRight className="ml-2 h-4 w-4" />
                         </Button>
                       </Link>

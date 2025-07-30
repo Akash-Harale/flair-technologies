@@ -149,7 +149,7 @@ export default function BatchesPage() {
 
                     {/* Action Buttons */}
                     <div className="pt-4 space-y-3 border-t border-gray-100">
-                      <Button className="w-full bg-gradient-to-r from-sky-500 to-blue-600 hover:from-sky-600 hover:to-blue-700 text-white font-semibold py-3">
+                      <Button className="w-full icon-button-color hover:from-sky-600 hover:to-blue-700 text-white font-semibold py-3">
                         ENROLL NOW
                       </Button>
                       <Button 

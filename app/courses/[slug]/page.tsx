@@ -801,7 +801,7 @@ export default function CoursePage({ params }: { params: { slug: string } }) {
                   </div>
 
                   <div className="pt-4 space-y-3">
-                    <Button className="w-full bg-gradient-to-r from-sky-500 to-blue-600 hover:from-sky-600 hover:to-blue-700">
+                    <Button className="w-full icon-button-color hover:from-sky-600 hover:to-blue-700">
                       Enroll Now
                     </Button>
                     <Button variant="outline" className="w-full bg-transparent">

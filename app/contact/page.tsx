@@ -177,7 +177,7 @@ export default function ContactPage() {
               >
                 <Card className="border-0 shadow-xl hover:shadow-2xl transition-all duration-300 h-full bg-white/80 backdrop-blur-sm">
                   <CardHeader className="text-center pb-4">
-                    <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center text-white mx-auto mb-4">
+                    <div className="w-16 h-16 icon-button-color rounded-full flex items-center justify-center text-white mx-auto mb-4">
                       <info.icon className="h-8 w-8" />
                     </div>
                     <CardTitle className="text-xl font-bold text-cyan-600 uppercase tracking-wide">

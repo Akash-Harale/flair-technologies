@@ -88,7 +88,7 @@ export default function FreshersPage() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="text-center"
               >
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-sky-500 to-blue-600 rounded-full text-white mb-4">
+                <div className="inline-flex items-center justify-center w-16 h-16 icon-button-color rounded-full text-white mb-4">
                   <stat.icon className="h-8 w-8" />
                 </div>
                 <div className="text-3xl font-bold text-gray-900 mb-2">{stat.value}</div>
@@ -155,7 +155,7 @@ export default function FreshersPage() {
                       </div>
                     </div>
 
-                    <Button className="w-full bg-gradient-to-r from-sky-500 to-blue-600 hover:from-sky-600 hover:to-blue-700">
+                    <Button className="w-full icon-button-color hover:from-sky-600 hover:to-blue-700">
                       Apply Now <ArrowRight className="ml-2 h-4 w-4" />
                     </Button>
                   </CardContent>

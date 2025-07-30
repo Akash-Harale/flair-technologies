@@ -207,7 +207,7 @@ export default function AboutPage() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="text-center group"
               >
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-sky-500 to-blue-600 rounded-full text-white mb-6 group-hover:scale-110 transition-transform duration-300">
+                <div className="inline-flex items-center justify-center w-16 h-16 icon-button-color rounded-full text-white mb-6 group-hover:scale-110 transition-transform duration-300">
                   <value.icon className="h-8 w-8" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">
@@ -276,7 +276,7 @@ export default function AboutPage() {
                     </div>
 
                     <div className="relative z-10">
-                      <div className="w-4 h-4 bg-gradient-to-r from-sky-500 to-blue-600 rounded-full border-4 border-white shadow-lg"></div>
+                      <div className="w-4 h-4 icon-button-color rounded-full border-4 border-white shadow-lg"></div>
                     </div>
 
                     <div className="w-1/2"></div>

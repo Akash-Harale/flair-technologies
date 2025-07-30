@@ -18,6 +18,10 @@ body {
   @apply bg-gradient-to-r from-sky-500 via-blue-500 to-cyan-600;
 }
 
+.icon-button-color{
+  @apply bg-gradient-to-r from-sky-500 to-blue-600;
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;

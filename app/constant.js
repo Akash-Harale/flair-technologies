@@ -586,7 +586,7 @@ export const freshersPage = {
       ],
       submitButton: {
         text: "Submit Application",
-        className: "w-full bg-gradient-to-r from-sky-500 to-blue-600 hover:from-sky-600 hover:to-blue-700 text-lg py-6",
+        className: "w-full icon-button-color hover:from-sky-600 hover:to-blue-700 text-lg py-6",
         icon: ArrowRight,
       },
       disclaimer: "By submitting this form, you agree to our Terms of Service and Privacy Policy",
@@ -811,12 +811,12 @@ export const contactPage = {
     buttons: [
       {
         text: "Book Free Demo Session",
-        className: "w-full bg-cyan-600 hover:bg-cyan-700 text-lg py-6",
+        className: "w-full icon-button-color hover:from-sky-600 hover:to-blue-700 text-lg py-6 text-white hover:text-white",
         icon: Calendar,
       },
       {
         text: "Download Course Brochure",
-        className: "w-full border-sky-600 text-sky-600 hover:bg-sky-600 hover:text-white text-lg py-6 bg-transparent",
+        className: "border border-gray-500 w-full bg-gradient-to-r hover:from-sky-600 hover:to-blue-700 text-lg py-6 hover:text-white",
         variant: "outline",
       },
     ],
@@ -862,7 +862,7 @@ export const contactPage = {
       ],
       submitButton: {
         text: "Send Message",
-        className: "w-full bg-gradient-to-r from-sky-500 to-blue-600 hover:from-sky-600 hover:to-blue-700 text-lg py-6",
+        className: "w-full icon-button-color hover:from-sky-600 hover:to-blue-700 text-lg py-6",
         icon: Send,
       },
       disclaimer: "By submitting this form, you agree to our Terms of Service and Privacy Policy",

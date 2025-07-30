@@ -37,7 +37,7 @@ export function Navigation() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
-            <div className="w-10 h-10 bg-gradient-to-r from-sky-500 to-blue-600 rounded-lg flex items-center justify-center">
+            <div className="w-10 h-10 icon-button-color rounded-lg flex items-center justify-center">
               <span className="text-white font-bold text-xl">F</span>
             </div>
             <span className="text-xl font-bold text-gray-900">
@@ -164,7 +164,7 @@ export function Navigation() {
             >
               Book Demo
             </Button>
-            <Button className="bg-gradient-to-r from-sky-500 to-blue-600 hover:from-sky-600 hover:to-blue-700">
+            <Button className="icon-button-color hover:from-sky-600 hover:to-blue-700">
               Enroll Now
             </Button>
           </div>
@@ -254,7 +254,7 @@ export function Navigation() {
                 >
                   Book Demo
                 </Button>
-                <Button className="bg-gradient-to-r from-sky-500 to-blue-600 hover:from-sky-600 hover:to-blue-700">
+                <Button className="icon-button-color hover:from-sky-600 hover:to-blue-700">
                   Enroll Now
                 </Button>
               </div>

@@ -104,7 +104,7 @@ export default function HomePage() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="text-center"
               >
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-sky-500 to-blue-600 rounded-full text-white mb-4">
+                <div className="inline-flex items-center justify-center w-16 h-16 icon-button-color rounded-full text-white mb-4">
                   <stat.icon className="h-8 w-8" />
                 </div>
                 <div className="text-3xl font-bold text-gray-900 mb-2">
@@ -136,7 +136,7 @@ export default function HomePage() {
               {homePage.aboutSection.description}
             </p>
             <Link href="/about">
-              <Button className="bg-sky-600 hover:bg-sky-700 text-white px-6 py-3 text-lg">
+              <Button className="icon-button-color mt-3 hover:bg-sky-700 text-white px-6 py-3 text-lg">
                 Know More
               </Button>
             </Link>
@@ -403,7 +403,7 @@ export default function HomePage() {
                       </div>
                       <div className="flex items-center justify-between">
                         <Link href={`/courses/${course.id}`}>
-                          <Button className="bg-gradient-to-r from-sky-500 to-blue-600 hover:from-sky-600 hover:to-blue-700">
+                          <Button className="icon-button-color hover:from-sky-600 hover:to-blue-700">
                             Learn More <ArrowRight className="ml-2 h-4 w-4" />
                           </Button>
                         </Link>
@@ -460,7 +460,7 @@ export default function HomePage() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="text-center group"
               >
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-blue-500 to-sky-600 rounded-full text-white mb-6 group-hover:scale-110 transition-transform duration-300">
+                <div className="inline-flex items-center justify-center w-16 h-16 icon-button-color rounded-full text-white mb-6 group-hover:scale-110 transition-transform duration-300">
                   <feature.icon className="h-8 w-8" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">
@@ -534,7 +534,7 @@ export default function HomePage() {
             </div>
             <Button
               type="submit"
-              className="w-full background hover:bg-sky-700"
+              className="w-full icon-button-color hover:bg-sky-700"
             >
               Book Demo Now
             </Button>
