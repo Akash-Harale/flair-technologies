@@ -25,7 +25,7 @@ export default function HomePage() {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-r from-sky-500 via-blue-500 to-cyan-600 text-white">
+      <section className="relative overflow-hidden background text-white">
         <div className="absolute inset-0 bg-black/20" />
         <div className="relative container mx-auto px-4 py-20 lg:py-32">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -296,7 +296,7 @@ export default function HomePage() {
 
           <div className="overflow-x-auto rounded-lg shadow-lg bg-white">
             <table className="min-w-full text-sm text-left text-gray-700">
-              <thead className="bg-gradient-to-r from-sky-500 via-blue-500 to-cyan-600 text-white">
+              <thead className="background text-white">
                 <tr>
                   <th className="px-4 py-3 font-semibold">#</th>
                   <th className="px-4 py-3 font-semibold">Course Name</th>
@@ -534,7 +534,7 @@ export default function HomePage() {
             </div>
             <Button
               type="submit"
-              className="w-full bg-gradient-to-r from-sky-500 via-blue-500 to-cyan-600 hover:bg-sky-700"
+              className="w-full background hover:bg-sky-700"
             >
               Book Demo Now
             </Button>
@@ -544,7 +544,7 @@ export default function HomePage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-sky-500 via-blue-500 to-cyan-600 text-white">
+      <section className="py-20 background text-white">
         <div className="container mx-auto px-4 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
