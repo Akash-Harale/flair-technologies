@@ -1,4 +1,4 @@
-import { BookOpen, MapPin, Users, User, Award, Monitor, Target, TrendingUp, Lightbulb, GraduationCap, Heart, Star, ArrowRight, Calendar, CheckCircle, Clock, ExternalLink } from "lucide-react";
+import { BookOpen, MapPin, Users, User, Award, Monitor, Target, TrendingUp, Lightbulb, GraduationCap, Heart, Star, ArrowRight, Calendar, CheckCircle, Clock, ExternalLink, Phone, Mail, Globe, Send, MessageCircle } from "lucide-react";
 
 // Home page constants
 export const homePage = {
@@ -737,6 +737,188 @@ export const batchesPage = {
       {
         text: "Download Brochure",
         className: "bg-white text-sky-600 hover:bg-gray-100 px-8 py-4 text-lg font-semibold",
+      },
+    ],
+  },
+};
+
+// Contact page constants
+export const contactPage = {
+  heroSection: {
+    badge: "📞 Get In Touch",
+    title: "Let's Start Your <span className=\"text-cyan-200\">Success Journey</span>",
+    description:
+      "Have questions about our courses? Ready to enroll? Our expert counselors are here to guide you every step of the way across our global centers.",
+  },
+  aboutSection: {
+    title: "FLAIR TECHNOLOGIES",
+    description:
+      "Flair Technologies refers to the process of acquiring and developing skills, knowledge, and expertise in various aspects of information technology. For admissions and details regarding courses please contact us on <span className=\"font-semibold text-sky-600\">+91 974 974 9596</span> | <span className=\"font-semibold text-sky-600\">info@flairtechnologies.in</span>",
+  },
+  contactInfoSection: {
+    contactInfo: [
+      {
+        icon: MapPin,
+        title: "Bangalore Center",
+        details: [
+          "#05, Vivekananda Layout, Marathahalli,",
+          "Bangalore, Karnataka – 560037, India.",
+          "Landmark: Opp: Innovative Multiplex, Behind Biryani Zone",
+        ],
+        phone: "+91 974 974 9596",
+        email: "info@flairtechnologies.in",
+        web: "www.flairtechnologies.in",
+      },
+      {
+        icon: MapPin,
+        title: "Hyderabad Center",
+        details: [
+          "501, Sumedh Pride, Vijay Nagar Colony,",
+          "Kukatpally, Hyderabad – 500072.",
+          "Landmark: Opp: Srikari Natyakala Peetam",
+        ],
+        phone: "+91 93477 91837",
+        email: "info@flairtechnologies.in",
+        web: "www.flairtechnologies.in",
+      },
+      {
+        icon: Globe,
+        title: "London Center",
+        subtitle: "FLAIR TECHNOLOGIES – DATA ARTISANS",
+        details: [
+          "297, Suite 2, High Street",
+          "North, London, E12 6SL.",
+          "Landmark: Opp: Star Lettings",
+        ],
+        phone: "+44 20 7946 0958",
+        email: "info@flairtechnologies.in",
+        web: "www.flairtechnologies.in",
+      },
+    ],
+  },
+  officeHoursSection: {
+    title: "Office Hours",
+    officeHours: [
+      { day: "Monday - Friday", hours: "9:00 AM - 8:00 PM" },
+      { day: "Saturday", hours: "9:00 AM - 6:00 PM" },
+      { day: "Sunday", hours: "10:00 AM - 4:00 PM" },
+    ],
+  },
+  quickActionsSection: {
+    title: "Get in Touch",
+    description:
+      "We're here to help you take the next step in your career. Reach out to us through any of our global locations.",
+    buttons: [
+      {
+        text: "Book Free Demo Session",
+        className: "w-full bg-cyan-600 hover:bg-cyan-700 text-lg py-6",
+        icon: Calendar,
+      },
+      {
+        text: "Download Course Brochure",
+        className: "w-full border-sky-600 text-sky-600 hover:bg-sky-600 hover:text-white text-lg py-6 bg-transparent",
+        variant: "outline",
+      },
+    ],
+  },
+  contactFormSection: {
+    title: "Send Us a Message",
+    description: "Fill out the form below and we'll get back to you within 24 hours",
+    form: {
+      fields: [
+        { type: "text", placeholder: "First Name", grid: "col-span-1" },
+        { type: "text", placeholder: "Last Name", grid: "col-span-1" },
+        { type: "email", placeholder: "Email Address" },
+        { type: "tel", placeholder: "Phone Number" },
+        {
+          type: "select",
+          placeholder: "I'm interested in...",
+          options: [
+            { value: "python", label: "Python Full-Stack Development" },
+            { value: "powerbi", label: "Power BI & Data Analytics" },
+            { value: "azure", label: "Azure DevOps" },
+            { value: "analytics", label: "Data Analytics" },
+            { value: "tableau", label: "Tableau" },
+            { value: "network", label: "Network Protocol" },
+            { value: "freshers", label: "Freshers Program" },
+            { value: "other", label: "Other" },
+          ],
+        },
+        {
+          type: "select",
+          placeholder: "Preferred Location",
+          options: [
+            { value: "bangalore", label: "Bangalore" },
+            { value: "hyderabad", label: "Hyderabad" },
+            { value: "london", label: "London" },
+            { value: "online", label: "Online" },
+          ],
+        },
+        {
+          type: "textarea",
+          placeholder: "Tell us more about your background, career goals, or any specific questions you have...",
+          className: "min-h-[120px]",
+        },
+      ],
+      submitButton: {
+        text: "Send Message",
+        className: "w-full bg-gradient-to-r from-sky-500 to-blue-600 hover:from-sky-600 hover:to-blue-700 text-lg py-6",
+        icon: Send,
+      },
+      disclaimer: "By submitting this form, you agree to our Terms of Service and Privacy Policy",
+    },
+  },
+  locationsSection: {
+    badge: "🌍 Global Presence",
+    title: "ADMISSIONS & <span className=\"text-cyan-600\">CONTACT</span>",
+    description:
+      "Connect with us at any of our three strategic locations across India and the UK",
+  },
+  mapSection: {
+    title: "Visit Our Centers",
+    description:
+      "Come visit us at our state-of-the-art training centers in Bangalore, Hyderabad, and London",
+    maps: [
+      {
+        title: "Bangalore Center",
+        address: "#05, Vivekananda Layout, Marathahalli, Bangalore - 560037",
+        iframeSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.8267!2d77.6272!3d12.9352!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1670c9b44e6d%3A0x14f808b7e45b616!2sMarathahalli%2C%20Bengaluru%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1234567890",
+      },
+      {
+        title: "Hyderabad Center",
+        address: "501, Sumedh Pride, Vijay Nagar Colony, Kukatpally, Hyderabad - 500072",
+        iframeSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.6!2d78.3872!3d17.4435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb99daeaebd2c7%3A0x1c2b6e4df94db6!2sKukatpally%2C%20Hyderabad%2C%20Telangana!5e0!3m2!1sen!2sin!4v1234567890",
+      },
+      {
+        title: "London Center",
+        address: "297, Suite 2, High Street North, London, E12 6SL",
+        iframeSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2469.123!2d0.0346!3d51.5458!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8a00baf21de75%3A0x52963a5addd52a99!2sHigh%20St%20N%2C%20London%20E12%206SL%2C%20UK!5e0!3m2!1sen!2sin!4v1234567890",
+      },
+    ],
+  },
+  faqSection: {
+    badge: "FAQ",
+    title: "Frequently Asked <span className=\"text-sky-600\">Questions</span>",
+    faqs: [
+      {
+        question: "What are the admission requirements?",
+        answer:
+          "We welcome students from all backgrounds. Basic computer knowledge is helpful but not mandatory. We provide foundation courses for complete beginners.",
+      },
+      {
+        question: "Do you provide placement assistance?",
+        answer:
+          "Yes! We offer 100% placement assistance with our network of 50+ hiring partners. Our placement team works closely with students throughout their journey.",
+      },
+      {
+        question: "Are there flexible payment options?",
+        answer:
+          "We offer EMI options, scholarships for deserving students, and flexible payment plans to make quality education accessible.",
+      },
+      {
+        question: "Can I switch between online and offline modes?",
+        answer:
+          "Yes, our hybrid learning model allows you to switch between online and offline modes based on your convenience and schedule.",
       },
     ],
   },
