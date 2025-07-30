@@ -29,7 +29,7 @@ export default function AboutPage() {
                   {aboutPage.heroSection.badge}
                 </Badge>
                 <h1
-                  className="text-4xl lg:text-5xl font-bold leading-tight"
+                  className="heading"
                   dangerouslySetInnerHTML={{
                     __html: aboutPage.heroSection.title,
                   }}
@@ -361,7 +361,7 @@ export default function AboutPage() {
               />
             </div>
             <div>
-              <h1 className="text-4xl font-bold text-cyan-600 mb-4">
+              <h1 className="heading">
                 {aboutPage.flairTechnologiesSection.title}
               </h1>
               <p className="text-gray-700 text-lg mb-6">

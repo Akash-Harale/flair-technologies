@@ -144,7 +144,7 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
       <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
         <Navigation />
         <div className="container mx-auto px-4 py-20 text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">Service Not Found</h1>
+          <h1 className="heading">Service Not Found</h1>
           <p className="text-gray-600 mb-8">The service you're looking for doesn't exist.</p>
           <Link href="/services">
             <Button>View All Services</Button>
@@ -168,7 +168,7 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
             className="space-y-6"
           >
             <Badge className="bg-white text-sky-600">Professional Service</Badge>
-            <h1 className="text-4xl lg:text-5xl font-bold leading-tight">{service.title}</h1>
+            <h1 className="heading">{service.title}</h1>
             <p className="text-xl text-blue-100">{service.description}</p>
 
             <div className="grid md:grid-cols-2 gap-4">

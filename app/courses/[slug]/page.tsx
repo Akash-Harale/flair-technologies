@@ -481,7 +481,7 @@ export default function CoursePage({ params }: { params: { slug: string } }) {
       <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
         <Navigation />
         <div className="container mx-auto px-4 py-20 text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
+          <h1 className="heading">
             Course Not Found
           </h1>
           <p className="text-gray-600 mb-8">
@@ -514,7 +514,7 @@ export default function CoursePage({ params }: { params: { slug: string } }) {
                 <Badge className="bg-white text-sky-600">
                   {course.category} Course
                 </Badge>
-                <h1 className="text-4xl lg:text-5xl font-bold leading-tight">
+                <h1 className="heading">
                   {course.title}
                 </h1>
                 <p className="text-xl text-blue-100">{course.description}</p>

@@ -32,7 +32,7 @@ export default function FreshersPage() {
             >
               <div className="space-y-4">
                 <Badge className="bg-white text-sky-600 hover:bg-gray-100">{heroSection.badge}</Badge>
-                <h1 className="text-4xl lg:text-6xl font-bold leading-tight" dangerouslySetInnerHTML={{ __html: heroSection.title }} />
+                <h1 className="heading" dangerouslySetInnerHTML={{ __html: heroSection.title }} />
                 <p className="text-xl text-blue-100 max-w-lg">{heroSection.description}</p>
               </div>
 

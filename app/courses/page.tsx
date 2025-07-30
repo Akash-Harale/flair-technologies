@@ -120,7 +120,7 @@ export default function CoursesPage() {
         <div className="container mx-auto px-4 text-center">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
             <Badge className="mb-4 bg-white text-sky-600">🎓 Industry-Aligned Courses</Badge>
-            <h1 className="text-4xl lg:text-5xl font-bold mb-6">
+            <h1 className="heading">
               Master <span className="text-cyan-300">In-Demand</span> Tech Skills
             </h1>
             <p className="text-xl text-blue-100 max-w-3xl mx-auto">

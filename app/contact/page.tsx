@@ -34,7 +34,7 @@ export default function ContactPage() {
         <div className="container mx-auto px-4 text-center">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
             <Badge className="mb-4 bg-white text-sky-600">{heroSection.badge}</Badge>
-            <h1 className="text-4xl lg:text-5xl font-bold mb-6" dangerouslySetInnerHTML={{ __html: heroSection.title }} />
+            <h1 className="heading" dangerouslySetInnerHTML={{ __html: heroSection.title }} />
             <p className="text-xl text-blue-100 max-w-3xl mx-auto">{heroSection.description}</p>
           </motion.div>
         </div>

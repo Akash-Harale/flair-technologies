@@ -39,7 +39,7 @@ export default function HomePage() {
                 <Badge className="bg-white text-sky-600 hover:bg-gray-100">
                   🚀 Transform Your Career in Tech
                 </Badge>
-                <h1 className="text-4xl lg:text-6xl font-bold leading-tight">
+                <h1 className="heading">
                   {homePage.heroSection.title}
                 </h1>
                 <p className="text-xl text-blue-100 max-w-lg">
