@@ -296,7 +296,7 @@ export default function HomePage() {
 
           <div className="overflow-x-auto rounded-lg shadow-lg bg-white">
             <table className="min-w-full text-sm text-left text-gray-700">
-              <thead className="bg-black text-white">
+              <thead className="bg-gradient-to-r from-sky-500 via-blue-500 to-cyan-600 text-white">
                 <tr>
                   <th className="px-4 py-3 font-semibold">#</th>
                   <th className="px-4 py-3 font-semibold">Course Name</th>
@@ -473,6 +473,7 @@ export default function HomePage() {
         </div>
       </section>
 
+      <section className="py-20 bg-white ">
       <div className="py-20 container mx-auto px-4 mt-20 flex flex-col lg:flex-row gap-12 items-start">
         {/* Testimonials Section */}
         <TestimonialsCarousel />
@@ -481,7 +482,7 @@ export default function HomePage() {
           initial={{ opacity: 0, x: 50 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="w-full lg:w-1/2 bg-sky-50 p-6 rounded-xl shadow-md border border-sky-100"
+          className="w-full lg:w-1/2  p-6 rounded-xl shadow-md border border-sky-100"
         >
           <h3 className="text-2xl font-bold text-sky-700 mb-4">
             Book a Free Demo Session
@@ -533,13 +534,14 @@ export default function HomePage() {
             </div>
             <Button
               type="submit"
-              className="w-full bg-sky-600 hover:bg-sky-700"
+              className="w-full bg-gradient-to-r from-sky-500 via-blue-500 to-cyan-600 hover:bg-sky-700"
             >
               Book Demo Now
             </Button>
           </form>
         </motion.div>
       </div>
+      </section>
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-sky-500 via-blue-500 to-cyan-600 text-white">
