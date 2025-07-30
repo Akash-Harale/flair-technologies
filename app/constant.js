@@ -1,4 +1,4 @@
-import { BookOpen, MapPin, Users, User, Award, Monitor, Target, TrendingUp, Lightbulb, GraduationCap, Heart, Star, ArrowRight } from "lucide-react";
+import { BookOpen, MapPin, Users, User, Award, Monitor, Target, TrendingUp, Lightbulb, GraduationCap, Heart, Star, ArrowRight, Calendar, CheckCircle } from "lucide-react";
 
 // Home page constants
 export const homePage = {
@@ -292,7 +292,7 @@ export const aboutPage = {
         description:
           "Flair Technologies' unique training methodology is designed to provide the complete spectrum skills in a very interactive and easy to learn manner. Training is delivered by highly core and certified professionals. Our faculty is always with their high spirit to deliver their best. Our training methodology seeks to deal with the whole gamut of new skills and techniques the IT industry requires.",
         highlight:
-          "Our training methodology is unique and diverse and focuses on every aspect of an individual. We concentrate on every area towards overall development of an individual.",
+          "Our training methodology is unique and diverse and focuses on every area towards overall development of an individual.",
       },
       {
         icon: Heart,
@@ -417,7 +417,7 @@ export const aboutPage = {
   flairTechnologiesSection: {
     title: "We're The Best",
     description:
-      "Since 2018, Flair Technologies has become the largest independent IT training institute in Bangalore. Flair Technologies offer most advanced technologies than any other training company. Businesses and individuals can choose from the course offerings, delivered by certified experts. We believe that Flair technologies offers excellence at every level, in terms of technical training, project implementation, consultancy, or applying our experience working and research into successful techniques.",
+      "Since 2018, Flair Technologies has become the largest independent IT training institute in Bangalore. Flair Technologies offer most advanced technologies than any other training company. Businesses and individuals can choose from the course offerings, delivered by certified experts. We believe that Flair Technologies offers excellence at every level, in terms of technical training, project implementation, consultancy, or applying our experience working and research into successful techniques.",
     image:
       "https://img.freepik.com/premium-photo/happy-young-african-woman-casually-dressed-standing-isolated-taking-notes-notepad_171337-70180.jpg",
     imageAlt: "Flair Technologies",
@@ -444,5 +444,152 @@ export const aboutPage = {
         variant: "outline",
       },
     ],
+  },
+};
+
+// Freshers page constants
+export const freshersPage = { 
+  heroSection: {
+    badge: "🎓 Freshers Special Program",
+    title: "Launch Your <span className=\"text-cyan-200\">Tech Career</span> Today",
+    description:
+      "From college graduate to industry professional in just 4-6 months. Join 2000+ freshers who transformed their careers with us.",
+    stats: [
+      { value: "₹4.5 LPA", label: "Average Package" },
+      { value: "96%", label: "Placement Rate" },
+    ],
+    image: "https://pkrinstitute.in/lp/wp-content/uploads/2024/02/Untitled-design-1.jpg",
+    imageAlt: "Freshers Success",
+    buttons: [
+      {
+        text: "Apply Now",
+        className: "bg-white text-sky-600 hover:bg-gray-100 text-lg px-8",
+        icon: ArrowRight,
+      },
+      {
+        text: "Download Brochure",
+        className: "border-white text-white hover:bg-white hover:text-blue-600 text-lg px-8 bg-transparent",
+        variant: "outline",
+      },
+    ],
+  },
+  statsSection: [
+    { icon: Users, label: "Freshers Placed", value: "2000+" },
+    { icon: Award, label: "Average Package", value: "₹4.5 LPA" },
+    { icon: TrendingUp, label: "Salary Hike", value: "300%" },
+    { icon: GraduationCap, label: "Success Rate", value: "96%" },
+  ],
+  programsSection: {
+    badge: "Freshers Programs",
+    title: "Choose Your <span className=\"text-sky-600\">Career Path</span>",
+    description:
+      "Specially designed programs for fresh graduates with zero experience. Start from basics and become job-ready in months.",
+    programs: [
+      {
+        title: "Full-Stack Development Track",
+        duration: "6 months",
+        courses: ["Python Fundamentals", "Web Development", "Database Management", "Deployment"],
+        price: "₹45,000",
+        placement: "100%",
+        description: "Complete full-stack development program for freshers",
+      },
+      {
+        title: "Data Analytics Track",
+        duration: "4 months",
+        courses: ["Excel & Statistics", "Power BI", "Python for Data", "Tableau"],
+        price: "₹30,000",
+        placement: "95%",
+        description: "Transform data into insights with comprehensive analytics training",
+      },
+      {
+        title: "Cloud & DevOps Track",
+        duration: "5 months",
+        courses: ["Linux Basics", "AWS Fundamentals", "Docker & Kubernetes", "CI/CD"],
+        price: "₹40,000",
+        placement: "98%",
+        description: "Master cloud technologies and modern deployment practices",
+      },
+    ],
+  },
+  testimonialsSection: {
+    badge: "Success Stories",
+    title: "From <span className=\"text-sky-600\">Freshers</span> to Professionals",
+    description:
+      "Hear from our successful graduates who transformed their careers with our programs",
+    testimonials: [
+      {
+        name: "Priya Sharma",
+        role: "Software Developer at TCS",
+        image: "/placeholder.svg?height=80&width=80",
+        content:
+          "Flair Technologies transformed my career! From a fresher with no coding experience to landing a job at TCS in just 6 months. The mentorship and placement support were exceptional.",
+        rating: 5,
+        course: "Python Full-Stack",
+      },
+      {
+        name: "Rahul Patel",
+        role: "Data Analyst at Wipro",
+        image: "/placeholder.svg?height=80&width=80",
+        content:
+          "The Power BI course was exactly what I needed. The instructors were patient, and the real-world projects helped me build confidence. Got placed within 2 weeks of completion!",
+        rating: 5,
+        course: "Power BI & Analytics",
+      },
+      {
+        name: "Sneha Reddy",
+        role: "DevOps Engineer at Infosys",
+        image: "/placeholder.svg?height=80&width=80",
+        content:
+          "As a mechanical engineering graduate, I was worried about switching to IT. But Flair's Azure DevOps program made the transition smooth. Now I'm working at Infosys!",
+        rating: 5,
+        course: "Azure DevOps",
+      },
+    ],
+  },
+  applicationFormSection: {
+    badge: "🚀 Limited Seats Available",
+    title: "Ready to Start Your Tech Journey?",
+    description:
+      "Apply now for our next batch starting this month. Don't miss this opportunity to transform your career!",
+    features: [
+      "Free career counseling session",
+      "Flexible payment options available",
+      "100% placement assistance guarantee",
+    ],
+    form: {
+      title: "Apply for Freshers Program",
+      description: "Fill out the form below and we'll get back to you within 24 hours",
+      fields: [
+        { type: "text", placeholder: "First Name", grid: "col-span-1" },
+        { type: "text", placeholder: "Last Name", grid: "col-span-1" },
+        { type: "email", placeholder: "Email Address" },
+        { type: "tel", placeholder: "Phone Number" },
+        {
+          type: "select",
+          placeholder: "Select Program",
+          options: [
+            { value: "fullstack", label: "Full-Stack Development Track" },
+            { value: "analytics", label: "Data Analytics Track" },
+            { value: "cloud", label: "Cloud & DevOps Track" },
+          ],
+        },
+        {
+          type: "select",
+          placeholder: "Preferred Location",
+          options: [
+            { value: "bangalore", label: "Bangalore" },
+            { value: "hyderabad", label: "Hyderabad" },
+            { value: "online", label: "Online" },
+          ],
+        },
+        { type: "textarea", placeholder: "Tell us about your background and career goals..." },
+      ],
+      submitButton: {
+        text: "Submit Application",
+        className: "w-full bg-gradient-to-r from-sky-500 to-blue-600 hover:from-sky-600 hover:to-blue-700 text-lg py-6",
+        icon: ArrowRight,
+      },
+      disclaimer: "By submitting this form, you agree to our Terms of Service and Privacy Policy",
+    },
   },
 };
