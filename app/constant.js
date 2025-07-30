@@ -1,4 +1,4 @@
-import { BookOpen, MapPin, Users, User, Award, Monitor, Target, TrendingUp, Lightbulb, GraduationCap, Heart, Star, ArrowRight, Calendar, CheckCircle } from "lucide-react";
+import { BookOpen, MapPin, Users, User, Award, Monitor, Target, TrendingUp, Lightbulb, GraduationCap, Heart, Star, ArrowRight, Calendar, CheckCircle, Clock, ExternalLink } from "lucide-react";
 
 // Home page constants
 export const homePage = {
@@ -591,5 +591,153 @@ export const freshersPage = {
       },
       disclaimer: "By submitting this form, you agree to our Terms of Service and Privacy Policy",
     },
+  },
+};
+
+// Batches page constants
+export const batchesPage = {
+  heroSection: {
+    badge: "🎓 Register Now",
+    title: "Register Now - <span className=\"text-cyan-200\">Upcoming Batches</span>",
+    description:
+      "Join our expert-led training programs and kickstart your career in technology. Choose from our comprehensive range of courses designed for professionals and freshers.",
+  },
+  statsSection: [
+    { icon: User, label: "Expert Trainers", value: "50+", emoji: "👨‍🏫" },
+    { icon: GraduationCap, label: "Students Trained", value: "5000+", emoji: "🎓" },
+    { icon: Award, label: "Placement Support", value: "100%", emoji: "💼" },
+    { icon: BookOpen, label: "Upcoming Batches", value: "6", emoji: "📚" },
+  ],
+  batchesSection: {
+    badge: "🚀 Start Learning",
+    title: "Choose Your <span className=\"text-sky-600\">Learning Path</span>",
+    description:
+      "Select from our carefully curated courses and join the next batch to accelerate your career growth",
+    batches: [
+      {
+        id: 1,
+        title: "Data Analyst Freshers",
+        icon: "📊",
+        iconBg: "bg-green-500",
+        duration: "100 Days - Daily 2 Hours",
+        faculty: "Mr. Surya & Mr. Veera",
+        newBatch: "September 18, 2024 @ 09:00 AM",
+        sessions: "Monday to Saturday Sessions",
+        mode: "Classroom - Bangalore",
+        category: "Data Analytics",
+      },
+      {
+        id: 2,
+        title: "Microsoft Power BI",
+        icon: "📈",
+        iconBg: "bg-yellow-500",
+        duration: "45 Hours",
+        faculty: "Mr. Veera",
+        newBatch: "September 23, 2024 @ 08:00 AM",
+        sessions: "Monday to Saturday Sessions",
+        mode: "Classroom - Bangalore",
+        category: "Business Intelligence",
+      },
+      {
+        id: 3,
+        title: "Python FS Freshers",
+        icon: "🐍",
+        iconBg: "bg-blue-500",
+        duration: "100 Days - Daily 2 Hours",
+        faculty: "Mr. Venkat & Mr. Siva",
+        newBatch: "September 16, 2024 @ 07:30 AM",
+        sessions: "Monday to Saturday Sessions",
+        mode: "Classroom - Bangalore",
+        category: "Full-Stack Development",
+      },
+      {
+        id: 4,
+        title: "Alteryx",
+        icon: "🔄",
+        iconBg: "bg-blue-600",
+        duration: "45 Hours",
+        faculty: "Mr. Suman",
+        newBatch: "September 20, 2024 @ 10:00 AM",
+        sessions: "Monday to Saturday Sessions",
+        mode: "Classroom - Bangalore",
+        category: "Data Processing",
+      },
+      {
+        id: 5,
+        title: "SRE Modern DevOps",
+        icon: "⚙️",
+        iconBg: "bg-purple-600",
+        duration: "100 Days - Daily 2 Hours",
+        faculty: "Mr. Reddy",
+        newBatch: "September 06, 2024 @ 05:00 PM",
+        sessions: "Monday to Friday Sessions",
+        mode: "Online",
+        category: "DevOps",
+      },
+      {
+        id: 6,
+        title: "Azure DevOps",
+        icon: "☁️",
+        iconBg: "bg-blue-700",
+        duration: "100 Hours",
+        faculty: "Mr. Ramakrishna",
+        newBatch: "September 16, 2024 @ 09:00 AM",
+        sessions: "Monday to Saturday Sessions",
+        mode: "Online",
+        category: "Cloud DevOps",
+      },
+    ],
+    categories: ["All", "Data Analytics", "Business Intelligence", "Full-Stack Development", "Data Processing", "DevOps", "Cloud DevOps"],
+  },
+  whyChooseUsSection: {
+    badge: "✨ Why Choose Us",
+    title: "What Makes Us <span className=\"text-sky-600\">Different</span>",
+    features: [
+      {
+        emoji: "👨‍💼",
+        title: "Industry Expert Trainers",
+        description: "Learn from professionals with 10+ years of real-world experience in their respective domains.",
+      },
+      {
+        emoji: "🏢",
+        title: "100% Placement Support",
+        description: "Dedicated placement team with connections to 50+ hiring partners across various industries.",
+      },
+      {
+        emoji: "📚",
+        title: "Updated Curriculum",
+        description: "Course content regularly updated to match current industry standards and requirements.",
+      },
+      {
+        emoji: "🤝",
+        title: "Hands-on Projects",
+        description: "Work on real-world projects that you can showcase in your portfolio to potential employers.",
+      },
+      {
+        emoji: "💻",
+        title: "Flexible Learning",
+        description: "Choose between classroom and online modes based on your convenience and schedule.",
+      },
+      {
+        emoji: "🎯",
+        title: "Small Batch Size",
+        description: "Limited students per batch ensures personalized attention and better learning outcomes.",
+      },
+    ],
+  },
+  ctaSection: {
+    title: "Ready to Transform Your <span className=\"text-cyan-200\">Career?</span>",
+    description:
+      "Don't miss out on these upcoming batches. Limited seats available. Enroll now and secure your future in technology.",
+    buttons: [
+      {
+        text: "Contact Admissions Team",
+        className: "bg-white text-sky-600 hover:bg-gray-100 px-8 py-4 text-lg font-semibold",
+      },
+      {
+        text: "Download Brochure",
+        className: "bg-white text-sky-600 hover:bg-gray-100 px-8 py-4 text-lg font-semibold",
+      },
+    ],
   },
 };
