@@ -473,8 +473,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="py-20 bg-white ">
-      <div className="py-20 container mx-auto px-4 mt-20 flex flex-col lg:flex-row gap-12 items-start">
+      <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+      <div className="py-20  container mx-auto px-4 mt-20 flex flex-col lg:flex-row gap-12 items-start">
         {/* Testimonials Section */}
         <TestimonialsCarousel />
         {/* Demo Booking Form */}
@@ -482,12 +482,12 @@ export default function HomePage() {
           initial={{ opacity: 0, x: 50 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="w-full lg:w-1/2  p-6 rounded-xl shadow-md border border-sky-100"
+          className="w-full bg-white lg:w-1/2  p-6 rounded-xl shadow-md border border-sky-100"
         >
           <h3 className="text-2xl font-bold text-sky-700 mb-4">
             Book a Free Demo Session
           </h3>
-          <form className="space-y-4">
+          <form className="space-y-4 ">
             <div>
               <label className="block text-gray-700 mb-1">Full Name</label>
               <input
