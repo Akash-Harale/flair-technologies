@@ -29,7 +29,7 @@ const experts = [
     name: "Veera",
     skill: "Microsoft Power BI",
     experience: "10 Years Experience",
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQALM1bXxc7CwvWCf60DpQmnqQgSeko4pWoZQ&s",
+    image: "https://res.cloudinary.com/hevo/images/c_scale,w_448,h_252,dpr_2.625/f_webp,q_auto:best/v1685882496/hevo-learn-1/microsoft-power-bi-logo_151265f430f/microsoft-power-bi-logo_151265f430f.png?_i=AA",
   },
     {
     name: "Veera",
@@ -53,7 +53,7 @@ const experts = [
     name: "Veera",
     skill: "Microsoft Power BI",
     experience: "10 Years Experience",
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQALM1bXxc7CwvWCf60DpQmnqQgSeko4pWoZQ&s",
+    image: "https://res.cloudinary.com/hevo/images/c_scale,w_448,h_252,dpr_2.625/f_webp,q_auto:best/v1685882496/hevo-learn-1/microsoft-power-bi-logo_151265f430f/microsoft-power-bi-logo_151265f430f.png?_i=AA",
   },
 ];
 
