@@ -17,6 +17,7 @@ import { Footer } from "@/components/footer";
 import { homePage } from "@/app/constant";
 import { TestimonialsCarousel } from "@/components/Testimonials";
 import { useRouter } from "next/navigation";
+import { ExpertsCarousel } from "@/components/ExpertsCarousel";
 
 export default function HomePage() {
   const navigate = useRouter();
@@ -335,6 +336,7 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+      <ExpertsCarousel />
 
       {/* Featured Courses */}
       <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
