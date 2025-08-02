@@ -39,9 +39,7 @@ export default function HomePage() {
                 <Badge className="bg-white text-sky-600 hover:bg-gray-100">
                   🚀 Transform Your Career in Tech
                 </Badge>
-                <h1 className="heading">
-                  {homePage.heroSection.title}
-                </h1>
+                <h1 className="heading">{homePage.heroSection.title}</h1>
                 <p className="description max-w-lg">
                   {homePage.heroSection.description}
                 </p>
@@ -473,74 +471,74 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
-      <div className="py-20  container mx-auto px-4 mt-20 flex flex-col lg:flex-row gap-12 items-start">
-        {/* Testimonials Section */}
-        <TestimonialsCarousel />
-        {/* Demo Booking Form */}
-        <motion.div
-          initial={{ opacity: 0, x: 50 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="w-full bg-white lg:w-1/2  p-6 rounded-xl shadow-md border border-sky-100"
-        >
-          <h3 className="text-2xl font-bold text-sky-700 mb-4">
-            Book a Free Demo Session
-          </h3>
-          <form className="space-y-4 ">
-            <div>
-              <label className="block text-gray-700 mb-1">Full Name</label>
-              <input
-                type="text"
-                placeholder="Your Name"
-                className="w-full px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-sky-500"
-              />
-            </div>
-            <div>
-              <label className="block text-gray-700 mb-1">Email</label>
-              <input
-                type="email"
-                placeholder="you@example.com"
-                className="w-full px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-sky-500"
-              />
-            </div>
-            <div>
-              <label className="block text-gray-700 mb-1">Phone</label>
-              <input
-                type="tel"
-                placeholder="+91 98765 43210"
-                className="w-full px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-sky-500"
-              />
-            </div>
-            <div>
-              <label className="block text-gray-700 mb-1">
-                Preferred Course
-              </label>
-              <select className="w-full px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-sky-500">
-                <option value="">Select a course</option>
-                <option value="python">Python Fullstack</option>
-                <option value="powerbi">Power BI</option>
-                <option value="devops">DevOps</option>
-              </select>
-            </div>
-            <div>
-              <label className="block text-gray-700 mb-1">Location</label>
-              <select className="w-full px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-sky-500">
-                <option value="">Select location</option>
-                <option value="hyderabad">Hyderabad</option>
-                <option value="bangalore">Bangalore</option>
-                <option value="online">Online</option>
-              </select>
-            </div>
-            <Button
-              type="submit"
-              className="w-full icon-button-color hover:bg-sky-700"
-            >
-              Book Demo Now
-            </Button>
-          </form>
-        </motion.div>
-      </div>
+      <section className=" pb-20 pt-10">
+        <div className="  container mx-auto px-4 mt-10 flex flex-col lg:flex-row gap-12 items-start">
+          {/* Testimonials Section */}
+          <TestimonialsCarousel />
+          {/* Demo Booking Form */}
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="w-full bg-white lg:w-1/2  p-6 rounded-xl shadow-md border border-sky-100"
+          >
+            <h3 className="text-2xl font-bold text-sky-700 mb-4">
+              Book a Free Demo Session
+            </h3>
+            <form className="space-y-4 ">
+              <div>
+                <label className="block text-gray-700 mb-1">Full Name</label>
+                <input
+                  type="text"
+                  placeholder="Your Name"
+                  className="w-full px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-sky-500"
+                />
+              </div>
+              <div>
+                <label className="block text-gray-700 mb-1">Email</label>
+                <input
+                  type="email"
+                  placeholder="you@example.com"
+                  className="w-full px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-sky-500"
+                />
+              </div>
+              <div>
+                <label className="block text-gray-700 mb-1">Phone</label>
+                <input
+                  type="tel"
+                  placeholder="+91 98765 43210"
+                  className="w-full px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-sky-500"
+                />
+              </div>
+              <div>
+                <label className="block text-gray-700 mb-1">
+                  Preferred Course
+                </label>
+                <select className="w-full px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-sky-500">
+                  <option value="">Select a course</option>
+                  <option value="python">Python Fullstack</option>
+                  <option value="powerbi">Power BI</option>
+                  <option value="devops">DevOps</option>
+                </select>
+              </div>
+              <div>
+                <label className="block text-gray-700 mb-1">Location</label>
+                <select className="w-full px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-sky-500">
+                  <option value="">Select location</option>
+                  <option value="hyderabad">Hyderabad</option>
+                  <option value="bangalore">Bangalore</option>
+                  <option value="online">Online</option>
+                </select>
+              </div>
+              <Button
+                type="submit"
+                className="w-full icon-button-color hover:bg-sky-700"
+              >
+                Book Demo Now
+              </Button>
+            </form>
+          </motion.div>
+        </div>
       </section>
 
       {/* CTA Section */}

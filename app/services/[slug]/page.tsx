@@ -2,13 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+
 import { Badge } from "@/components/ui/badge";
 import Link from "next/link";
 import { Navigation } from "@/components/navigation";
@@ -19,8 +13,6 @@ import {
   servicesData,
   TrainingAdditionalInfo,
 } from "@/app/constant";
-
-
 
 export default function ServicePage({ params }: { params: { slug: string } }) {
   const service = servicesData[params.slug as keyof typeof servicesData];
