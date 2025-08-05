@@ -2,13 +2,17 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Button } from "../ui/button";
 
-const BookADemoForm = () => {
+type propsType = {
+  btnName?: string;
+};
+
+const BookADemoForm = (props: propsType) => {
   return (
     <motion.div
       initial={{ opacity: 0, x: 50 }}
       whileInView={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.6, delay: 0.2 }}
-      className="w-full bg-white lg:w-1/2  p-6 rounded-xl shadow-md border border-sky-100"
+      className="w-full bg-white p-6 rounded-xl shadow-md border border-sky-100"
     >
       <div>
         <h3 className="text-2xl font-bold text-sky-700 mb-4">
@@ -61,7 +65,7 @@ const BookADemoForm = () => {
             type="submit"
             className="w-full icon-button-color hover:bg-sky-700"
           >
-            Book Demo Now
+            {props.btnName || "Book Demo"}
           </Button>
         </form>
       </div>
