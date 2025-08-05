@@ -478,7 +478,7 @@ export default function HomePage() {
         <div className="  container mx-auto px-4 mt-10 flex flex-col lg:flex-row gap-12 items-start">
           {/* Testimonials Section */}
           <TestimonialsCarousel />
-          <div className="w-1/2">
+          <div className="w-full lg:w-1/2">
             <BookADemoForm btnName="Book a Demo" />
           </div>
         </div>
