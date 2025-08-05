@@ -176,14 +176,14 @@ const [openCategories, setOpenCategories] = useState<Record<string, boolean>>({}
             >
               Freshers Program
             </Link>
-            <Link
+            {/* <Link
               href="/batches"
               className={`text-gray-700 hover:text-sky-600 transition-colors text-base font-medium ${
                 pathname === "/batches" ? "text-sky-600 font-semibold" : ""
               }`}
             >
               Batches
-            </Link>
+            </Link> */}
             <Link
               href="/contact"
               className={`text-gray-700 hover:text-sky-600 transition-colors text-base font-medium ${
