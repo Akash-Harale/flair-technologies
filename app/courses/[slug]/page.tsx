@@ -33,6 +33,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { EnrollDialog } from "@/components/EnrollDialog";
 
 // This would typically come from a database or API
 const courseData = {
@@ -542,12 +543,11 @@ export default function CoursePage({ params }: { params: { slug: string } }) {
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button
-                  size="lg"
+                <EnrollDialog
+                  buttonText={`Enroll Now - ${course.price}`}
                   className="bg-white text-sky-600 hover:bg-gray-100 text-lg px-8"
-                >
-                  Enroll Now - {course.price}
-                </Button>
+                  size="lg"
+                />
                 <Button
                   size="lg"
                   variant="outline"
@@ -682,7 +682,7 @@ export default function CoursePage({ params }: { params: { slug: string } }) {
                       >
                         <AccordionTrigger className="px-6 py-4 bg-gradient-to-r from-slate-50 to-blue-50 hover:bg-gradient-to-r hover:from-sky-100 hover:to-blue-100 transition-all duration-300 rounded-lg">
                           <div className="flex items-center justify-between w-full">
-                            <span className="text-lg   font-bold text-gray-900">
+                            <span className="text-lg font-bold text-gray-900">
                               Module {index + 1}: {module.module}
                             </span>
                             <div className="flex items-center gap-3">
@@ -824,10 +824,14 @@ export default function CoursePage({ params }: { params: { slug: string } }) {
                   </div>
 
                   <div className="pt-4 space-y-3">
-                    <Button className="w-full icon-button-color hover:from-sky-600 hover:to-blue-700">
-                      Enroll Now
-                    </Button>
-                    <Button variant="outline" className="w-full bg-transparent">
+                    <EnrollDialog
+                      buttonText="Enroll Now"
+                      className="w-full icon-button-color hover:from-sky-600 hover:to-blue-700"
+                    />
+                    <Button
+                      variant="outline"
+                      className="w-full bg-transparent"
+                    >
                       Book Free Demo
                     </Button>
                     <Button variant="ghost" className="w-full">
