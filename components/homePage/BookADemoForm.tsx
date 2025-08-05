@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { Button } from "../ui/button";
 
 type propsType = {
+  formHeading?: string;
   btnName?: string;
 };
 
@@ -16,7 +17,7 @@ const BookADemoForm = (props: propsType) => {
     >
       <div>
         <h3 className="text-2xl font-bold text-sky-700 mb-4">
-          Book a Free Demo Session
+          {props.formHeading || `Book a Free Demo Session`}
         </h3>
         <form className="space-y-4 ">
           <div>
