@@ -544,6 +544,7 @@ export default function CoursePage({ params }: { params: { slug: string } }) {
 
               <div className="flex flex-col sm:flex-row gap-4">
                 <EnrollDialog
+                  formHeading="Enroll in Course"
                   buttonText={`Enroll Now - ${course.price}`}
                   className="bg-white text-sky-600 hover:bg-gray-100 text-lg px-8"
                   size="lg"
@@ -825,15 +826,15 @@ export default function CoursePage({ params }: { params: { slug: string } }) {
 
                   <div className="pt-4 space-y-3">
                     <EnrollDialog
+                      formHeading="Enroll in Course"
                       buttonText="Enroll Now"
                       className="w-full icon-button-color hover:from-sky-600 hover:to-blue-700"
                     />
-                    <Button
-                      variant="outline"
-                      className="w-full bg-transparent"
-                    >
-                      Book Free Demo
-                    </Button>
+                    <EnrollDialog
+                      buttonText="Book Free Demo"
+                      variant="ghost"
+                      className="w-full bg-transparent text-black border border-sky-500"
+                    />
                     <Button variant="ghost" className="w-full">
                       <Download className="mr-2 h-4 w-4" />
                       Download Brochure
