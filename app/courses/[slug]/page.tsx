@@ -22,10 +22,17 @@ import {
   BookOpen,
   Target,
   Calendar,
+  ChevronDown,
 } from "lucide-react";
 import Link from "next/link";
 import { Navigation } from "@/components/navigation";
 import { Footer } from "@/components/footer";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
 // This would typically come from a database or API
 const courseData = {
@@ -354,7 +361,8 @@ const courseData = {
     students: "350+",
     rating: 4.7,
     reviews: 95,
-    image: "https://solutionsreview.com/business-intelligence/files/2021/08/Tableau-Courses-for-Beginners.jpg",
+    image:
+      "https://solutionsreview.com/business-intelligence/files/2021/08/Tableau-Courses-for-Beginners.jpg",
     highlights: [
       "Create interactive dashboards",
       "Data blending and preparation",
@@ -481,9 +489,7 @@ export default function CoursePage({ params }: { params: { slug: string } }) {
       <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
         <Navigation />
         <div className="container mx-auto px-4 py-20 text-center">
-          <h1 className="heading">
-            Course Not Found
-          </h1>
+          <h1 className="heading">Course Not Found</h1>
           <p className="text-gray-600 mb-8">
             The course you're looking for doesn't exist.
           </p>
@@ -514,9 +520,7 @@ export default function CoursePage({ params }: { params: { slug: string } }) {
                 <Badge className="bg-white text-sky-600">
                   {course.category} Course
                 </Badge>
-                <h1 className="heading">
-                  {course.title}
-                </h1>
+                <h1 className="heading">{course.title}</h1>
                 <p className="description">{course.description}</p>
               </div>
 
@@ -669,33 +673,52 @@ export default function CoursePage({ params }: { params: { slug: string } }) {
                 </TabsContent>
 
                 <TabsContent value="syllabus" className="space-y-6">
-                  {course.syllabus.map((module, index) => (
-                    <Card key={index}>
-                      <CardHeader>
-                        <div className="flex items-center justify-between">
-                          <CardTitle className="text-lg">
-                            Module {index + 1}: {module.module}
-                          </CardTitle>
-                          <Badge variant="outline">{module.duration}</Badge>
-                        </div>
-                      </CardHeader>
-                      <CardContent>
-                        <div className="grid md:grid-cols-2 gap-2">
-                          {module.topics.map((topic, topicIndex) => (
-                            <div
-                              key={topicIndex}
-                              className="flex items-center gap-2"
-                            >
-                              <CheckCircle className="h-4 w-4 text-green-500" />
-                              <span className="text-sm text-gray-700">
-                                {topic}
-                              </span>
+                  <Accordion type="single" collapsible className="w-full">
+                    {course.syllabus.map((module, index) => (
+                      <AccordionItem
+                        key={index}
+                        value={`module-${index}`}
+                        className="mb-4 border border-gray-200 rounded-lg shadow-sm bg-white"
+                      >
+                        <AccordionTrigger className="px-6 py-4 bg-gradient-to-r from-slate-50 to-blue-50 hover:bg-gradient-to-r hover:from-sky-100 hover:to-blue-100 transition-all duration-300 rounded-lg">
+                          <div className="flex items-center justify-between w-full">
+                            <span className="text-lg   font-bold text-gray-900">
+                              Module {index + 1}: {module.module}
+                            </span>
+                            <div className="flex items-center gap-3">
+                              <Badge
+                                variant="outline"
+                                className="border-sky-600 text-sky-600"
+                              >
+                                {module.duration}
+                              </Badge>
+                              <ChevronDown className="h-5 w-5 text-sky-600 transition-transform duration-200" />
                             </div>
-                          ))}
-                        </div>
-                      </CardContent>
-                    </Card>
-                  ))}
+                          </div>
+                        </AccordionTrigger>
+                        <AccordionContent className="px-6 py-4">
+                          <motion.div
+                            initial={{ opacity: 0, height: 0 }}
+                            animate={{ opacity: 1, height: "auto" }}
+                            transition={{ duration: 0.3 }}
+                            className="grid md:grid-cols-2 gap-3"
+                          >
+                            {module.topics.map((topic, topicIndex) => (
+                              <div
+                                key={topicIndex}
+                                className="flex items-center gap-2"
+                              >
+                                <CheckCircle className="h-4 w-4 text-green-500" />
+                                <span className="text-sm text-gray-700">
+                                  {topic}
+                                </span>
+                              </div>
+                            ))}
+                          </motion.div>
+                        </AccordionContent>
+                      </AccordionItem>
+                    ))}
+                  </Accordion>
                 </TabsContent>
 
                 <TabsContent value="instructor">
