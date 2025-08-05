@@ -395,7 +395,7 @@ export function Navigation() {
                 Contact
               </Link>
               <div className="flex flex-col space-y-2 pt-4">
-                <Button
+                {/* <Button
                   variant="outline"
                   className="border-sky-600 text-sky-600 hover:bg-sky-600 hover:text-white bg-transparent text-sm font-medium py-2"
                 >
@@ -403,7 +403,7 @@ export function Navigation() {
                 </Button>
                 <Button className="bg-sky-600 hover:bg-sky-700 text-white text-sm font-medium py-2">
                   Enroll Now
-                </Button>
+                </Button> */}
               </div>
             </div>
           </motion.div>
