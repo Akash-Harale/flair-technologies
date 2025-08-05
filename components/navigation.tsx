@@ -15,12 +15,15 @@ import {
   DropdownMenuSubTrigger,
 } from "@/components/ui/dropdown-menu";
 import { usePathname } from "next/navigation";
+import { EnrollDialog } from "./EnrollDialog";
 
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
   const [isCoursesOpen, setIsCoursesOpen] = useState(false);
   const [isWhyUsOpen, setIsWhyUsOpen] = useState(false);
-const [openCategories, setOpenCategories] = useState<Record<string, boolean>>({});
+  const [openCategories, setOpenCategories] = useState<Record<string, boolean>>(
+    {}
+  );
 
   const pathname = usePathname();
 
@@ -41,9 +44,7 @@ const [openCategories, setOpenCategories] = useState<Record<string, boolean>>({}
     },
     {
       name: "Cloud",
-      courses: [
-        { name: "Azure DevOps", href: "/courses/azure-devops" },
-      ],
+      courses: [{ name: "Azure DevOps", href: "/courses/azure-devops" }],
     },
     {
       name: "Networking",
@@ -60,9 +61,11 @@ const [openCategories, setOpenCategories] = useState<Record<string, boolean>>({}
     { name: "IT Outsourcing", href: "/services/it-outsourcing" },
   ];
 
-  const allCourseHrefs = courseCategories.flatMap(category => category.courses.map(course => course.href));
+  const allCourseHrefs = courseCategories.flatMap((category) =>
+    category.courses.map((course) => course.href)
+  );
 
-  const toggleCategory = (categoryName:string) => {
+  const toggleCategory = (categoryName: string) => {
     setOpenCategories((prev) => ({
       ...prev,
       [categoryName]: !prev[categoryName],
@@ -128,7 +131,9 @@ const [openCategories, setOpenCategories] = useState<Record<string, boolean>>({}
                   <DropdownMenuSub key={category.name}>
                     <DropdownMenuSubTrigger
                       className={`px-3 py-2 rounded-md text-sm ${
-                        category.courses.some((course) => pathname === course.href)
+                        category.courses.some(
+                          (course) => pathname === course.href
+                        )
                           ? "text-sky-600 font-semibold bg-sky-50"
                           : "text-gray-700 hover:text-sky-600 hover:bg-sky-50"
                       } transition-colors`}
@@ -196,15 +201,18 @@ const [openCategories, setOpenCategories] = useState<Record<string, boolean>>({}
 
           {/* CTA Buttons */}
           <div className="hidden md:flex items-center space-x-4">
-            <Button
-              variant="outline"
-              className="border-sky-600 text-sky-600 hover:bg-sky-600 hover:text-white bg-transparent text-sm font-medium px-4 py-2"
-            >
-              Book Demo
-            </Button>
-            <Button className="bg-sky-600 hover:bg-sky-700 text-white text-sm font-medium px-4 py-2">
-              Enroll Now
-            </Button>
+            <EnrollDialog
+              buttonText={`Book Demo `}
+              className="border border-sky-600 text-sky-600 hover:bg-sky-600 hover:text-white bg-transparent text-sm font-medium px-4 py-2"
+              size="lg"
+            />
+
+            <EnrollDialog
+              formHeading="Enroll Now"
+              buttonText={`Enroll Now `}
+              className="bg-sky-600 text-white hover:bg-sky-700 text-lg px-8"
+              size="lg"
+            />
           </div>
 
           {/* Mobile menu button */}
@@ -229,7 +237,9 @@ const [openCategories, setOpenCategories] = useState<Record<string, boolean>>({}
               <Link
                 href="/"
                 className={`text-gray-700 hover:text-sky-600 transition-colors py-3 text-base font-medium ${
-                  pathname === "/" ? "text-sky-600 font-semibold bg-sky-50 rounded-md px-2" : ""
+                  pathname === "/"
+                    ? "text-sky-600 font-semibold bg-sky-50 rounded-md px-2"
+                    : ""
                 }`}
               >
                 Home
@@ -262,7 +272,9 @@ const [openCategories, setOpenCategories] = useState<Record<string, boolean>>({}
                       key={service.href}
                       href={service.href}
                       className={`text-gray-700 hover:text-sky-600 transition-colors py-2 text-sm ${
-                        pathname === service.href ? "text-sky-600 font-semibold" : ""
+                        pathname === service.href
+                          ? "text-sky-600 font-semibold"
+                          : ""
                       }`}
                     >
                       {service.name}
@@ -294,11 +306,16 @@ const [openCategories, setOpenCategories] = useState<Record<string, boolean>>({}
                   className="pl-4 flex flex-col space-y-2 bg-white rounded-md border border-gray-100 p-2"
                 >
                   {courseCategories.map((category) => (
-                    <div key={category.name} className="flex flex-col space-y-1">
+                    <div
+                      key={category.name}
+                      className="flex flex-col space-y-1"
+                    >
                       <button
                         onClick={() => toggleCategory(category.name)}
                         className={`flex items-center justify-between text-gray-600 hover:text-sky-600 transition-colors py-2 text-sm font-medium ${
-                          category.courses.some((course) => pathname === course.href)
+                          category.courses.some(
+                            (course) => pathname === course.href
+                          )
                             ? "text-sky-600 font-semibold"
                             : ""
                         }`}
@@ -323,7 +340,9 @@ const [openCategories, setOpenCategories] = useState<Record<string, boolean>>({}
                               key={course.href}
                               href={course.href}
                               className={`text-gray-700 hover:text-sky-600 transition-colors py-1 text-sm ${
-                                pathname === course.href ? "text-sky-600 font-semibold" : ""
+                                pathname === course.href
+                                  ? "text-sky-600 font-semibold"
+                                  : ""
                               }`}
                             >
                               {course.name}
@@ -336,7 +355,9 @@ const [openCategories, setOpenCategories] = useState<Record<string, boolean>>({}
                   <Link
                     href="/courses"
                     className={`text-gray-700 hover:text-sky-600 transition-colors py-2 text-sm font-medium ${
-                      pathname === "/courses" ? "text-sky-600 font-semibold" : ""
+                      pathname === "/courses"
+                        ? "text-sky-600 font-semibold"
+                        : ""
                     }`}
                   >
                     View All Courses
@@ -346,7 +367,9 @@ const [openCategories, setOpenCategories] = useState<Record<string, boolean>>({}
               <Link
                 href="/freshers"
                 className={`text-gray-700 hover:text-sky-600 transition-colors py-3 text-base font-medium ${
-                  pathname === "/freshers" ? "text-sky-600 font-semibold bg-sky-50 rounded-md px-2" : ""
+                  pathname === "/freshers"
+                    ? "text-sky-600 font-semibold bg-sky-50 rounded-md px-2"
+                    : ""
                 }`}
               >
                 Freshers Program
@@ -354,7 +377,9 @@ const [openCategories, setOpenCategories] = useState<Record<string, boolean>>({}
               <Link
                 href="/batches"
                 className={`text-gray-700 hover:text-sky-600 transition-colors py-3 text-base font-medium ${
-                  pathname === "/batches" ? "text-sky-600 font-semibold bg-sky-50 rounded-md px-2" : ""
+                  pathname === "/batches"
+                    ? "text-sky-600 font-semibold bg-sky-50 rounded-md px-2"
+                    : ""
                 }`}
               >
                 Batches
@@ -362,7 +387,9 @@ const [openCategories, setOpenCategories] = useState<Record<string, boolean>>({}
               <Link
                 href="/contact"
                 className={`text-gray-700 hover:text-sky-600 transition-colors py-3 text-base font-medium ${
-                  pathname === "/contact" ? "text-sky-600 font-semibold bg-sky-50 rounded-md px-2" : ""
+                  pathname === "/contact"
+                    ? "text-sky-600 font-semibold bg-sky-50 rounded-md px-2"
+                    : ""
                 }`}
               >
                 Contact
@@ -384,4 +411,4 @@ const [openCategories, setOpenCategories] = useState<Record<string, boolean>>({}
       </div>
     </nav>
   );
-} 
+}
