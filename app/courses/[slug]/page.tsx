@@ -22,7 +22,6 @@ import {
   BookOpen,
   Target,
   Calendar,
-  ChevronDown,
 } from "lucide-react";
 import Link from "next/link";
 import { Navigation } from "@/components/navigation";
@@ -693,7 +692,6 @@ export default function CoursePage({ params }: { params: { slug: string } }) {
                               >
                                 {module.duration}
                               </Badge>
-                              <ChevronDown className="h-5 w-5 text-sky-600 transition-transform duration-200" />
                             </div>
                           </div>
                         </AccordionTrigger>
