@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { Menu, X, ChevronDown, ChevronRight } from "lucide-react";
+import { Menu, X, ChevronDown, ChevronRight, Phone } from "lucide-react";
 import Link from "next/link";
 import {
   DropdownMenu,
@@ -201,16 +201,16 @@ export function Navigation() {
 
           {/* CTA Buttons */}
           <div className="hidden md:flex items-center space-x-4">
+            <a
+              href="tel:+919749749596"
+              className="flex items-center border border-sky-600 text-sky-600 bg-transparent text-base font-medium py-2 px-2 rounded-md transition-colors"
+            >
+              <Phone className=" w-5 mr-2" />
+              +91 9749749596
+            </a>
             <EnrollDialog
               buttonText={`Book Demo `}
-              className="border border-sky-600 text-sky-600 hover:bg-sky-600 hover:text-white bg-transparent text-sm font-medium px-4 py-2"
-              size="lg"
-            />
-
-            <EnrollDialog
-              formHeading="Enroll Now"
-              buttonText={`Enroll Now `}
-              className="bg-sky-600 text-white hover:bg-sky-700 text-lg px-8"
+              className="bg-sky-600 border border-sky-600 text-white hover:bg-sky-600 hover:text-white  text-sm font-medium px-4 py-2"
               size="lg"
             />
           </div>
