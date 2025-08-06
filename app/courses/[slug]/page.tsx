@@ -65,23 +65,43 @@ const courseData = {
         topics: [
           {
             name: "Python Syntax",
-            content: "Learn the basics of Python programming, including variables, data types, and control structures.",
+            content: [
+              "Learn the basics of Python programming, including variables, data types, and control structures.",
+              "Understand Python's syntax rules and conventions.",
+              "Practice writing simple Python scripts.",
+            ],
           },
           {
             name: "Data Structures",
-            content: "Understand lists, dictionaries, sets, and tuples for efficient data handling.",
+            content: [
+              "Understand lists, dictionaries, sets, and tuples for efficient data handling.",
+              "Implement common data structure operations.",
+              "Explore advanced data structures like stacks and queues.",
+            ],
           },
           {
             name: "OOP Concepts",
-            content: "Master object-oriented programming principles like classes, objects, and inheritance.",
+            content: [
+              "Master object-oriented programming principles like classes, objects, and inheritance.",
+              "Learn encapsulation and polymorphism.",
+              "Build small projects using OOP principles.",
+            ],
           },
           {
             name: "File Handling",
-            content: "Explore reading and writing files in Python for data persistence.",
+            content: [
+              "Explore reading and writing files in Python for data persistence.",
+              "Work with different file formats like CSV and JSON.",
+              "Implement file operations in real-world scenarios.",
+            ],
           },
           {
             name: "Exception Handling",
-            content: "Learn to manage errors and exceptions to build robust applications.",
+            content: [
+              "Learn to manage errors and exceptions to build robust applications.",
+              "Understand try-except blocks and custom exceptions.",
+              "Practice debugging techniques for error handling.",
+            ],
           },
         ],
       },
@@ -91,23 +111,48 @@ const courseData = {
         topics: [
           {
             name: "Django Framework",
-            content: "Introduction to Django, setting up projects, and understanding MVC architecture.",
+            content: [
+              "Introduction to Django, setting up projects, and understanding MVC architecture.",
+              "Configure Django settings and project structure.",
+              "Explore Django's admin interface for rapid development.",
+              "Build a simple Django application from scratch.",
+            ],
           },
           {
             name: "Models & Database",
-            content: "Create and manage database models using Django ORM.",
+            content: [
+              "Create and manage database models using Django ORM.",
+              "Understand database migrations and schema updates.",
+              "Implement relationships between models.",
+              "Query databases efficiently using ORM methods.",
+            ],
           },
           {
             name: "Views & Templates",
-            content: "Build dynamic views and templates for web applications.",
+            content: [
+              "Build dynamic views and templates for web applications.",
+              "Create reusable templates with Django's template engine.",
+              "Implement URL routing and view logic.",
+              "Style templates with basic CSS integration.",
+            ],
           },
           {
             name: "Forms & Authentication",
-            content: "Implement user authentication and form handling in Django.",
+            content: [
+              "Implement user authentication and form handling in Django.",
+              "Create custom forms and validate user input.",
+              "Set up user registration and login systems.",
+              "Implement password reset functionality.",
+            ],
           },
           {
             name: "REST APIs",
-            content: "Develop RESTful APIs using Django REST Framework.",
+            content: [
+              "Develop RESTful APIs using Django REST Framework.",
+              "Understand serialization and API endpoints.",
+              "Implement authentication for APIs.",
+              "Test APIs using tools like Postman.",
+            ],
           },
         ],
       },
@@ -117,23 +162,43 @@ const courseData = {
         topics: [
           {
             name: "React Components",
-            content: "Create reusable UI components with React.",
+            content: [
+              "Create reusable UI components with React.",
+              "Understand component-based architecture.",
+              "Build functional and class components.",
+            ],
           },
           {
             name: "State Management",
-            content: "Manage application state using React's state and context.",
+            content: [
+              "Manage application state using React's state and context.",
+              "Implement global state with Context API.",
+              "Explore state management libraries like Redux.",
+            ],
           },
           {
             name: "Hooks",
-            content: "Utilize React Hooks for functional components.",
+            content: [
+              "Utilize React Hooks for functional components.",
+              "Master useState and useEffect hooks.",
+              "Create custom hooks for reusable logic.",
+            ],
           },
           {
             name: "Routing",
-            content: "Implement client-side routing with React Router.",
+            content: [
+              "Implement client-side routing with React Router.",
+              "Set up nested routes and protected routes.",
+              "Handle route parameters and query strings.",
+            ],
           },
           {
             name: "API Integration",
-            content: "Connect React applications to backend APIs.",
+            content: [
+              "Connect React applications to backend APIs.",
+              "Use Axios or Fetch for HTTP requests.",
+              "Handle asynchronous data fetching and error states.",
+            ],
           },
         ],
       },
@@ -143,23 +208,43 @@ const courseData = {
         topics: [
           {
             name: "PostgreSQL",
-            content: "Learn to design and query PostgreSQL databases.",
+            content: [
+              "Learn to design and query PostgreSQL databases.",
+              "Write complex SQL queries.",
+              "Optimize database performance.",
+            ],
           },
           {
             name: "Database Design",
-            content: "Understand database normalization and schema design.",
+            content: [
+              "Understand database normalization and schema design.",
+              "Create ER diagrams for database planning.",
+              "Implement indexing for query optimization.",
+            ],
           },
           {
             name: "AWS Deployment",
-            content: "Deploy applications using AWS services like EC2 and S3.",
+            content: [
+              "Deploy applications using AWS services like EC2 and S3.",
+              "Configure AWS security groups and IAM roles.",
+              "Set up load balancers for scalability.",
+            ],
           },
           {
             name: "Docker",
-            content: "Containerize applications with Docker for consistency.",
+            content: [
+              "Containerize applications with Docker for consistency.",
+              "Create Dockerfiles and manage containers.",
+              "Use Docker Compose for multi-container apps.",
+            ],
           },
           {
             name: "CI/CD Pipeline",
-            content: "Set up continuous integration and deployment pipelines.",
+            content: [
+              "Set up continuous integration and deployment pipelines.",
+              "Integrate with GitHub Actions or Jenkins.",
+              "Automate testing and deployment processes.",
+            ],
           },
         ],
       },
@@ -169,23 +254,43 @@ const courseData = {
         topics: [
           {
             name: "Project Planning",
-            content: "Plan and design a full-stack application project.",
+            content: [
+              "Plan and design a full-stack application project.",
+              "Create project specifications and requirements.",
+              "Develop a project timeline and milestones.",
+            ],
           },
           {
             name: "Full-Stack Application",
-            content: "Build a complete application integrating frontend and backend.",
+            content: [
+              "Build a complete application integrating frontend and backend.",
+              "Implement a full-stack workflow with Django and React.",
+              "Ensure cross-browser compatibility.",
+            ],
           },
           {
             name: "Testing",
-            content: "Implement unit and integration tests for the application.",
+            content: [
+              "Implement unit and integration tests for the application.",
+              "Use testing frameworks like Jest and Pytest.",
+              "Perform end-to-end testing.",
+            ],
           },
           {
             name: "Documentation",
-            content: "Create comprehensive project documentation.",
+            content: [
+              "Create comprehensive project documentation.",
+              "Write API documentation using tools like Swagger.",
+              "Document code and architecture decisions.",
+            ],
           },
           {
             name: "Presentation",
-            content: "Present the project to stakeholders and peers.",
+            content: [
+              "Present the project to stakeholders and peers.",
+              "Prepare a project demo and slides.",
+              "Handle Q&A sessions effectively.",
+            ],
           },
         ],
       },
@@ -234,19 +339,35 @@ const courseData = {
         topics: [
           {
             name: "Power BI Basics",
-            content: "Overview of Power BI interface and functionalities.",
+            content: [
+              "Overview of Power BI interface and functionalities.",
+              "Navigate Power BI Desktop and Service.",
+              "Set up a Power BI workspace.",
+            ],
           },
           {
             name: "Data Import",
-            content: "Import data from various sources into Power BI.",
+            content: [
+              "Import data from various sources into Power BI.",
+              "Connect to Excel, CSV, and databases.",
+              "Manage data source connections.",
+            ],
           },
           {
             name: "Visualization Types",
-            content: "Explore different visualization types like charts and graphs.",
+            content: [
+              "Explore different visualization types like charts and graphs.",
+              "Create bar, line, and pie charts.",
+              "Customize visualizations for better insights.",
+            ],
           },
           {
             name: "Report Creation",
-            content: "Build interactive reports with Power BI.",
+            content: [
+              "Build interactive reports with Power BI.",
+              "Design report layouts and themes.",
+              "Add interactive elements like slicers.",
+            ],
           },
         ],
       },
@@ -256,19 +377,37 @@ const courseData = {
         topics: [
           {
             name: "Relationships",
-            content: "Create and manage relationships between data tables.",
+            content: [
+              "Create and manage relationships between data tables.",
+              "Understand primary and foreign keys.",
+              "Configure relationship cardinality.",
+              "Resolve common relationship issues.",
+            ],
           },
           {
             name: "DAX Functions",
-            content: "Learn Data Analysis Expressions for advanced calculations.",
+            content: [
+              "Learn Data Analysis Expressions for advanced calculations.",
+              "Use common DAX functions like SUM, AVERAGE, and COUNT.",
+              "Create calculated tables with DAX.",
+              "Explore time intelligence functions.",
+            ],
           },
           {
             name: "Calculated Columns",
-            content: "Create calculated columns for dynamic data.",
+            content: [
+              "Create calculated columns for dynamic data.",
+              "Use DAX to build custom columns.",
+              "Apply conditional logic in columns.",
+            ],
           },
           {
             name: "Measures",
-            content: "Develop measures for aggregated data analysis.",
+            content: [
+              "Develop measures for aggregated data analysis.",
+              "Create measures for KPIs and metrics.",
+              "Optimize measures for performance.",
+            ],
           },
         ],
       },
@@ -278,19 +417,35 @@ const courseData = {
         topics: [
           {
             name: "Power Query",
-            content: "Transform data using Power Query Editor.",
+            content: [
+              "Transform data using Power Query Editor.",
+              "Apply data cleaning and transformation steps.",
+              "Merge and append queries.",
+            ],
           },
           {
             name: "Data Transformation",
-            content: "Clean and reshape data for analysis.",
+            content: [
+              "Clean and reshape data for analysis.",
+              "Handle missing values and outliers.",
+              "Pivot and unpivot data structures.",
+            ],
           },
           {
             name: "Custom Visuals",
-            content: "Create and use custom visuals for enhanced reporting.",
+            content: [
+              "Create and use custom visuals for enhanced reporting.",
+              "Import visuals from AppSource.",
+              "Customize visual properties and styles.",
+            ],
           },
           {
             name: "Integration",
-            content: "Integrate Power BI with other tools and services.",
+            content: [
+              "Integrate Power BI with other tools and services.",
+              "Connect to Microsoft Azure services.",
+              "Embed Power BI reports in applications.",
+            ],
           },
         ],
       },
@@ -300,19 +455,35 @@ const courseData = {
         topics: [
           {
             name: "Power BI Service",
-            content: "Publish reports to Power BI Service.",
+            content: [
+              "Publish reports to Power BI Service.",
+              "Manage workspaces and datasets.",
+              "Schedule data refreshes.",
+            ],
           },
           {
             name: "Dashboards",
-            content: "Create and manage dashboards for insights.",
+            content: [
+              "Create and manage dashboards for insights.",
+              "Pin visuals to dashboards.",
+              "Customize dashboard layouts.",
+            ],
           },
           {
             name: "Sharing & Collaboration",
-            content: "Share reports and dashboards with teams.",
+            content: [
+              "Share reports and dashboards with teams.",
+              "Set up sharing permissions.",
+              "Collaborate using Power BI workspaces.",
+            ],
           },
           {
             name: "Security",
-            content: "Implement row-level security and access controls.",
+            content: [
+              "Implement row-level security and access controls.",
+              "Configure user roles and permissions.",
+              "Secure sensitive data in reports.",
+            ],
           },
         ],
       },
@@ -360,19 +531,35 @@ const courseData = {
         topics: [
           {
             name: "Azure Boards",
-            content: "Manage work items and track project progress.",
+            content: [
+              "Manage work items and track project progress.",
+              "Create and customize Kanban boards.",
+              "Track tasks using Agile methodologies.",
+            ],
           },
           {
             name: "Repos",
-            content: "Use Azure Repos for version control.",
+            content: [
+              "Use Azure Repos for version control.",
+              "Manage Git repositories and branches.",
+              "Implement pull requests and code reviews.",
+            ],
           },
           {
             name: "Pipelines",
-            content: "Set up build and release pipelines.",
+            content: [
+              "Set up build and release pipelines.",
+              "Configure YAML-based pipelines.",
+              "Automate build processes.",
+            ],
           },
           {
             name: "Artifacts",
-            content: "Manage and share packages with Azure Artifacts.",
+            content: [
+              "Manage and share packages with Azure Artifacts.",
+              "Publish and consume NuGet packages.",
+              "Integrate artifacts with pipelines.",
+            ],
           },
         ],
       },
@@ -382,19 +569,37 @@ const courseData = {
         topics: [
           {
             name: "Build Pipelines",
-            content: "Create and optimize build pipelines for automation.",
+            content: [
+              "Create and optimize build pipelines for automation.",
+              "Configure triggers for continuous integration.",
+              "Integrate testing in build pipelines.",
+              "Optimize build performance.",
+            ],
           },
           {
             name: "Release Pipelines",
-            content: "Configure release pipelines for deployment.",
+            content: [
+              "Configure release pipelines for deployment.",
+              "Set up multi-stage deployments.",
+              "Implement approval gates.",
+              "Automate release processes.",
+            ],
           },
           {
             name: "Testing",
-            content: "Integrate automated testing in pipelines.",
+            content: [
+              "Integrate automated testing in pipelines.",
+              "Use unit and integration tests.",
+              "Analyze test results and coverage.",
+            ],
           },
           {
             name: "Deployment Strategies",
-            content: "Implement blue-green and canary deployments.",
+            content: [
+              "Implement blue-green and canary deployments.",
+              "Understand deployment rollback strategies.",
+              "Monitor deployment health.",
+            ],
           },
         ],
       },
@@ -404,19 +609,35 @@ const courseData = {
         topics: [
           {
             name: "IaC with Terraform",
-            content: "Use Terraform for infrastructure as code.",
+            content: [
+              "Use Terraform for infrastructure as code.",
+              "Write Terraform scripts for Azure resources.",
+              "Manage infrastructure versioning.",
+            ],
           },
           {
             name: "Monitoring",
-            content: "Set up monitoring with Azure Monitor.",
+            content: [
+              "Set up monitoring with Azure Monitor.",
+              "Configure alerts and dashboards.",
+              "Analyze application performance metrics.",
+            ],
           },
           {
             name: "Security",
-            content: "Implement security practices in DevOps.",
+            content: [
+              "Implement security practices in DevOps.",
+              "Secure pipelines with role-based access.",
+              "Scan code for vulnerabilities.",
+            ],
           },
           {
             name: "Azure Test Plans",
-            content: "Plan and execute tests with Azure Test Plans.",
+            content: [
+              "Plan and execute tests with Azure Test Plans.",
+              "Create test cases and suites.",
+              "Track test results and defects.",
+            ],
           },
         ],
       },
@@ -426,15 +647,27 @@ const courseData = {
         topics: [
           {
             name: "End-to-End DevOps Workflow",
-            content: "Build a complete DevOps workflow.",
+            content: [
+              "Build a complete DevOps workflow.",
+              "Integrate all Azure DevOps services.",
+              "Deploy a sample application.",
+            ],
           },
           {
             name: "Optimization",
-            content: "Optimize pipelines for performance.",
+            content: [
+              "Optimize pipelines for performance.",
+              "Reduce build and deployment times.",
+              "Implement caching strategies.",
+            ],
           },
           {
             name: "Documentation",
-            content: "Document the DevOps processes and tools.",
+            content: [
+              "Document the DevOps processes and tools.",
+              "Create runbooks for operations.",
+              "Document pipeline configurations.",
+            ],
           },
         ],
       },
@@ -482,19 +715,35 @@ const courseData = {
         topics: [
           {
             name: "Data Collection",
-            content: "Gather data from various sources for analysis.",
+            content: [
+              "Gather data from various sources for analysis.",
+              "Work with APIs and web scraping.",
+              "Handle structured and unstructured data.",
+            ],
           },
           {
             name: "Cleaning",
-            content: "Clean and preprocess data for accuracy.",
+            content: [
+              "Clean and preprocess data for accuracy.",
+              "Handle missing values and duplicates.",
+              "Standardize data formats.",
+            ],
           },
           {
             name: "Exploratory Data Analysis",
-            content: "Perform EDA to uncover patterns and insights.",
+            content: [
+              "Perform EDA to uncover patterns and insights.",
+              "Use statistical summaries and visualizations.",
+              "Identify correlations and trends.",
+            ],
           },
           {
             name: "Visualization",
-            content: "Create visualizations using Matplotlib and Seaborn.",
+            content: [
+              "Create visualizations using Matplotlib and Seaborn.",
+              "Design interactive plots with Plotly.",
+              "Customize charts for presentations.",
+            ],
           },
         ],
       },
@@ -504,19 +753,35 @@ const courseData = {
         topics: [
           {
             name: "Python for Data",
-            content: "Use Python libraries like Pandas and NumPy.",
+            content: [
+              "Use Python libraries like Pandas and NumPy.",
+              "Perform data manipulation with Pandas.",
+              "Optimize numerical computations with NumPy.",
+            ],
           },
           {
             name: "R Programming",
-            content: "Learn R for statistical analysis.",
+            content: [
+              "Learn R for statistical analysis.",
+              "Use R packages like dplyr and ggplot2.",
+              "Write efficient R scripts.",
+            ],
           },
           {
             name: "SQL Queries",
-            content: "Write SQL queries for data extraction.",
+            content: [
+              "Write SQL queries for data extraction.",
+              "Perform joins and aggregations.",
+              "Optimize SQL queries for performance.",
+            ],
           },
           {
             name: "Libraries",
-            content: "Explore data analysis libraries like Scikit-learn.",
+            content: [
+              "Explore data analysis libraries like Scikit-learn.",
+              "Implement basic machine learning models.",
+              "Use libraries for data visualization.",
+            ],
           },
         ],
       },
@@ -526,15 +791,27 @@ const courseData = {
         topics: [
           {
             name: "Machine Learning Basics",
-            content: "Introduction to machine learning algorithms.",
+            content: [
+              "Introduction to machine learning algorithms.",
+              "Understand supervised and unsupervised learning.",
+              "Implement simple models like linear regression.",
+            ],
           },
           {
             name: "Statistical Methods",
-            content: "Apply statistical techniques for data analysis.",
+            content: [
+              "Apply statistical techniques for data analysis.",
+              "Perform hypothesis testing.",
+              "Use statistical distributions for modeling.",
+            ],
           },
           {
             name: "Predictive Models",
-            content: "Build predictive models for forecasting.",
+            content: [
+              "Build predictive models for forecasting.",
+              "Evaluate model performance metrics.",
+              "Tune model hyperparameters.",
+            ],
           },
         ],
       },
@@ -544,15 +821,27 @@ const courseData = {
         topics: [
           {
             name: "Analytics Project",
-            content: "Execute a complete data analytics project.",
+            content: [
+              "Execute a complete data analytics project.",
+              "Define project scope and objectives.",
+              "Analyze real-world datasets.",
+            ],
           },
           {
             name: "Presentation",
-            content: "Present findings to stakeholders.",
+            content: [
+              "Present findings to stakeholders.",
+              "Create compelling data stories.",
+              "Use visualizations in presentations.",
+            ],
           },
           {
             name: "Tools Integration",
-            content: "Integrate analytics tools for deployment.",
+            content: [
+              "Integrate analytics tools for deployment.",
+              "Automate data pipelines.",
+              "Deploy models to production environments.",
+            ],
           },
         ],
       },
@@ -600,19 +889,35 @@ const courseData = {
         topics: [
           {
             name: "Introduction to Tableau",
-            content: "Understand Tableau's interface and capabilities.",
+            content: [
+              "Understand Tableau's interface and capabilities.",
+              "Navigate Tableau Desktop and Public.",
+              "Set up a Tableau workspace.",
+            ],
           },
           {
             name: "Data Connection",
-            content: "Connect Tableau to various data sources.",
+            content: [
+              "Connect Tableau to various data sources.",
+              "Import data from Excel, SQL, and cloud services.",
+              "Manage data source connections.",
+            ],
           },
           {
             name: "Basic Charts",
-            content: "Create basic charts like bar and line charts.",
+            content: [
+              "Create basic charts like bar and line charts.",
+              "Customize chart properties and styles.",
+              "Add annotations to charts.",
+            ],
           },
           {
             name: "Filters",
-            content: "Apply filters for interactive data exploration.",
+            content: [
+              "Apply filters for interactive data exploration.",
+              "Create quick filters and context filters.",
+              "Use filter hierarchies.",
+            ],
           },
         ],
       },
@@ -622,19 +927,35 @@ const courseData = {
         topics: [
           {
             name: "Advanced Visuals",
-            content: "Create complex visualizations like heatmaps.",
+            content: [
+              "Create complex visualizations like heatmaps.",
+              "Design treemaps and scatter plots.",
+              "Customize visual interactions.",
+            ],
           },
           {
             name: "Calculations",
-            content: "Use calculated fields for custom metrics.",
+            content: [
+              "Use calculated fields for custom metrics.",
+              "Write Tableau calculations for analytics.",
+              "Apply table calculations.",
+            ],
           },
           {
             name: "Parameters",
-            content: "Implement parameters for dynamic visuals.",
+            content: [
+              "Implement parameters for dynamic visuals.",
+              "Create interactive controls with parameters.",
+              "Use parameters in calculations.",
+            ],
           },
           {
             name: "Dashboards",
-            content: "Build interactive dashboards for insights.",
+            content: [
+              "Build interactive dashboards for insights.",
+              "Design responsive dashboard layouts.",
+              "Add actions for interactivity.",
+            ],
           },
         ],
       },
@@ -644,19 +965,35 @@ const courseData = {
         topics: [
           {
             name: "Data Blending",
-            content: "Blend data from multiple sources.",
+            content: [
+              "Blend data from multiple sources.",
+              "Understand primary and secondary data sources.",
+              "Resolve data blending issues.",
+            ],
           },
           {
             name: "Level of Detail (LOD)",
-            content: "Use LOD expressions for detailed analysis.",
+            content: [
+              "Use LOD expressions for detailed analysis.",
+              "Implement FIXED, INCLUDE, and EXCLUDE LODs.",
+              "Optimize LOD calculations.",
+            ],
           },
           {
             name: "Storytelling",
-            content: "Create data stories for presentations.",
+            content: [
+              "Create data stories for presentations.",
+              "Design story points for narrative flow.",
+              "Use annotations in stories.",
+            ],
           },
           {
             name: "Publishing",
-            content: "Publish dashboards to Tableau Server.",
+            content: [
+              "Publish dashboards to Tableau Server.",
+              "Manage permissions and user access.",
+              "Schedule data refreshes.",
+            ],
           },
         ],
       },
@@ -704,19 +1041,35 @@ const courseData = {
         topics: [
           {
             name: "OSI Model",
-            content: "Understand the OSI model and its layers.",
+            content: [
+              "Understand the OSI model and its layers.",
+              "Explore each layer's functions and protocols.",
+              "Compare OSI with TCP/IP model.",
+            ],
           },
           {
             name: "TCP/IP Basics",
-            content: "Learn the fundamentals of TCP/IP protocols.",
+            content: [
+              "Learn the fundamentals of TCP/IP protocols.",
+              "Understand packet structure and headers.",
+              "Analyze TCP/IP communication flow.",
+            ],
           },
           {
             name: "IP Addressing",
-            content: "Configure IP addresses and subnets.",
+            content: [
+              "Configure IP addresses and subnets.",
+              "Understand IPv4 and IPv6 addressing.",
+              "Implement static and dynamic addressing.",
+            ],
           },
           {
             name: "Subnetting",
-            content: "Master subnetting for network design.",
+            content: [
+              "Master subnetting for network design.",
+              "Calculate subnet masks and ranges.",
+              "Design efficient subnet architectures.",
+            ],
           },
         ],
       },
@@ -726,23 +1079,44 @@ const courseData = {
         topics: [
           {
             name: "HTTP/HTTPS",
-            content: "Explore HTTP and HTTPS for web communication.",
+            content: [
+              "Explore HTTP and HTTPS for web communication.",
+              "Understand request-response cycles.",
+              "Implement secure communication with HTTPS.",
+              "Analyze HTTP headers and status codes.",
+            ],
           },
           {
             name: "FTP",
-            content: "Understand File Transfer Protocol operations.",
+            content: [
+              "Understand File Transfer Protocol operations.",
+              "Set up FTP servers and clients.",
+              "Secure FTP with SFTP and FTPS.",
+            ],
           },
           {
             name: "SMTP",
-            content: "Learn email transmission with SMTP.",
+            content: [
+              "Learn email transmission with SMTP.",
+              "Configure SMTP servers for email delivery.",
+              "Troubleshoot email delivery issues.",
+            ],
           },
           {
             name: "DNS",
-            content: "Configure and troubleshoot DNS services.",
+            content: [
+              "Configure and troubleshoot DNS services.",
+              "Understand DNS resolution process.",
+              "Set up DNS records like A, CNAME, and MX.",
+            ],
           },
           {
             name: "DHCP",
-            content: "Implement DHCP for automatic IP allocation.",
+            content: [
+              "Implement DHCP for automatic IP allocation.",
+              "Configure DHCP scopes and options.",
+              "Troubleshoot DHCP-related issues.",
+            ],
           },
         ],
       },
@@ -752,19 +1126,35 @@ const courseData = {
         topics: [
           {
             name: "Network Security",
-            content: "Implement security measures for networks.",
+            content: [
+              "Implement security measures for networks.",
+              "Configure firewalls and intrusion detection.",
+              "Understand encryption protocols.",
+            ],
           },
           {
             name: "Protocol Analysis",
-            content: "Analyze network traffic with tools like Wireshark.",
+            content: [
+              "Analyze network traffic with tools like Wireshark.",
+              "Capture and interpret packets.",
+              "Identify network anomalies.",
+            ],
           },
           {
             name: "Troubleshooting Tools",
-            content: "Use tools for network diagnostics.",
+            content: [
+              "Use tools for network diagnostics.",
+              "Perform ping, traceroute, and netstat analysis.",
+              "Diagnose connectivity issues.",
+            ],
           },
           {
             name: "VPNs",
-            content: "Set up virtual private networks for security.",
+            content: [
+              "Set up virtual private networks for security.",
+              "Configure site-to-site and remote-access VPNs.",
+              "Troubleshoot VPN connectivity.",
+            ],
           },
         ],
       },
@@ -774,15 +1164,27 @@ const courseData = {
         topics: [
           {
             name: "VoIP",
-            content: "Implement Voice over IP protocols.",
+            content: [
+              "Implement Voice over IP protocols.",
+              "Configure VoIP systems like SIP.",
+              "Optimize VoIP call quality.",
+            ],
           },
           {
             name: "Wireless Protocols",
-            content: "Configure wireless network protocols.",
+            content: [
+              "Configure wireless network protocols.",
+              "Understand Wi-Fi standards like 802.11.",
+              "Secure wireless networks.",
+            ],
           },
           {
             name: "Network Optimization",
-            content: "Optimize network performance and latency.",
+            content: [
+              "Optimize network performance and latency.",
+              "Implement QoS policies.",
+              "Monitor network bandwidth usage.",
+            ],
           },
         ],
       },
@@ -1024,7 +1426,11 @@ export default function CoursePage({ params }: { params: { slug: string } }) {
                             transition={{ duration: 0.3 }}
                             className="space-y-4"
                           >
-                            <Accordion type="single" collapsible className="w-full">
+                            <Accordion
+                              type="single"
+                              collapsible
+                              className="w-full"
+                            >
                               {module.topics.map((topic, topicIndex) => (
                                 <AccordionItem
                                   key={topicIndex}
@@ -1040,9 +1446,11 @@ export default function CoursePage({ params }: { params: { slug: string } }) {
                                     </div>
                                   </AccordionTrigger>
                                   <AccordionContent className="px-4 py-2">
-                                    <p className="text-sm text-gray-600">
-                                      {topic.content}
-                                    </p>
+                                    <ul className="list-disc pl-5 space-y-1 text-sm text-gray-600">
+                                      {topic.content.map((item, itemIndex) => (
+                                        <li key={itemIndex}>{item}</li>
+                                      ))}
+                                    </ul>
                                   </AccordionContent>
                                 </AccordionItem>
                               ))}
