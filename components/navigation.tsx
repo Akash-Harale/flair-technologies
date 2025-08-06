@@ -374,7 +374,7 @@ export function Navigation() {
               >
                 Freshers Program
               </Link>
-              <Link
+              {/* <Link
                 href="/batches"
                 className={`text-gray-700 hover:text-sky-600 transition-colors py-3 text-base font-medium ${
                   pathname === "/batches"
@@ -383,7 +383,7 @@ export function Navigation() {
                 }`}
               >
                 Batches
-              </Link>
+              </Link> */}
               <Link
                 href="/contact"
                 className={`text-gray-700 hover:text-sky-600 transition-colors py-3 text-base font-medium ${
