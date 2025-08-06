@@ -63,55 +63,130 @@ const courseData = {
         module: "Python Fundamentals",
         duration: "4 weeks",
         topics: [
-          "Python Syntax",
-          "Data Structures",
-          "OOP Concepts",
-          "File Handling",
-          "Exception Handling",
+          {
+            name: "Python Syntax",
+            content: "Learn the basics of Python programming, including variables, data types, and control structures.",
+          },
+          {
+            name: "Data Structures",
+            content: "Understand lists, dictionaries, sets, and tuples for efficient data handling.",
+          },
+          {
+            name: "OOP Concepts",
+            content: "Master object-oriented programming principles like classes, objects, and inheritance.",
+          },
+          {
+            name: "File Handling",
+            content: "Explore reading and writing files in Python for data persistence.",
+          },
+          {
+            name: "Exception Handling",
+            content: "Learn to manage errors and exceptions to build robust applications.",
+          },
         ],
       },
       {
         module: "Web Development with Django",
         duration: "6 weeks",
         topics: [
-          "Django Framework",
-          "Models & Database",
-          "Views & Templates",
-          "Forms & Authentication",
-          "REST APIs",
+          {
+            name: "Django Framework",
+            content: "Introduction to Django, setting up projects, and understanding MVC architecture.",
+          },
+          {
+            name: "Models & Database",
+            content: "Create and manage database models using Django ORM.",
+          },
+          {
+            name: "Views & Templates",
+            content: "Build dynamic views and templates for web applications.",
+          },
+          {
+            name: "Forms & Authentication",
+            content: "Implement user authentication and form handling in Django.",
+          },
+          {
+            name: "REST APIs",
+            content: "Develop RESTful APIs using Django REST Framework.",
+          },
         ],
       },
       {
         module: "Frontend with React",
         duration: "6 weeks",
         topics: [
-          "React Components",
-          "State Management",
-          "Hooks",
-          "Routing",
-          "API Integration",
+          {
+            name: "React Components",
+            content: "Create reusable UI components with React.",
+          },
+          {
+            name: "State Management",
+            content: "Manage application state using React's state and context.",
+          },
+          {
+            name: "Hooks",
+            content: "Utilize React Hooks for functional components.",
+          },
+          {
+            name: "Routing",
+            content: "Implement client-side routing with React Router.",
+          },
+          {
+            name: "API Integration",
+            content: "Connect React applications to backend APIs.",
+          },
         ],
       },
       {
         module: "Database & Deployment",
         duration: "4 weeks",
         topics: [
-          "PostgreSQL",
-          "Database Design",
-          "AWS Deployment",
-          "Docker",
-          "CI/CD Pipeline",
+          {
+            name: "PostgreSQL",
+            content: "Learn to design and query PostgreSQL databases.",
+          },
+          {
+            name: "Database Design",
+            content: "Understand database normalization and schema design.",
+          },
+          {
+            name: "AWS Deployment",
+            content: "Deploy applications using AWS services like EC2 and S3.",
+          },
+          {
+            name: "Docker",
+            content: "Containerize applications with Docker for consistency.",
+          },
+          {
+            name: "CI/CD Pipeline",
+            content: "Set up continuous integration and deployment pipelines.",
+          },
         ],
       },
       {
         module: "Capstone Project",
         duration: "4 weeks",
         topics: [
-          "Project Planning",
-          "Full-Stack Application",
-          "Testing",
-          "Documentation",
-          "Presentation",
+          {
+            name: "Project Planning",
+            content: "Plan and design a full-stack application project.",
+          },
+          {
+            name: "Full-Stack Application",
+            content: "Build a complete application integrating frontend and backend.",
+          },
+          {
+            name: "Testing",
+            content: "Implement unit and integration tests for the application.",
+          },
+          {
+            name: "Documentation",
+            content: "Create comprehensive project documentation.",
+          },
+          {
+            name: "Presentation",
+            content: "Present the project to stakeholders and peers.",
+          },
         ],
       },
     ],
@@ -157,40 +232,88 @@ const courseData = {
         module: "Introduction to Power BI",
         duration: "2 weeks",
         topics: [
-          "Power BI Basics",
-          "Data Import",
-          "Visualization Types",
-          "Report Creation",
+          {
+            name: "Power BI Basics",
+            content: "Overview of Power BI interface and functionalities.",
+          },
+          {
+            name: "Data Import",
+            content: "Import data from various sources into Power BI.",
+          },
+          {
+            name: "Visualization Types",
+            content: "Explore different visualization types like charts and graphs.",
+          },
+          {
+            name: "Report Creation",
+            content: "Build interactive reports with Power BI.",
+          },
         ],
       },
       {
         module: "Data Modeling",
         duration: "3 weeks",
         topics: [
-          "Relationships",
-          "DAX Functions",
-          "Calculated Columns",
-          "Measures",
+          {
+            name: "Relationships",
+            content: "Create and manage relationships between data tables.",
+          },
+          {
+            name: "DAX Functions",
+            content: "Learn Data Analysis Expressions for advanced calculations.",
+          },
+          {
+            name: "Calculated Columns",
+            content: "Create calculated columns for dynamic data.",
+          },
+          {
+            name: "Measures",
+            content: "Develop measures for aggregated data analysis.",
+          },
         ],
       },
       {
         module: "Advanced Analytics",
         duration: "2 weeks",
         topics: [
-          "Power Query",
-          "Data Transformation",
-          "Custom Visuals",
-          "Integration",
+          {
+            name: "Power Query",
+            content: "Transform data using Power Query Editor.",
+          },
+          {
+            name: "Data Transformation",
+            content: "Clean and reshape data for analysis.",
+          },
+          {
+            name: "Custom Visuals",
+            content: "Create and use custom visuals for enhanced reporting.",
+          },
+          {
+            name: "Integration",
+            content: "Integrate Power BI with other tools and services.",
+          },
         ],
       },
       {
         module: "Deployment & Sharing",
         duration: "2 weeks",
         topics: [
-          "Power BI Service",
-          "Dashboards",
-          "Sharing & Collaboration",
-          "Security",
+          {
+            name: "Power BI Service",
+            content: "Publish reports to Power BI Service.",
+          },
+          {
+            name: "Dashboards",
+            content: "Create and manage dashboards for insights.",
+          },
+          {
+            name: "Sharing & Collaboration",
+            content: "Share reports and dashboards with teams.",
+          },
+          {
+            name: "Security",
+            content: "Implement row-level security and access controls.",
+          },
         ],
       },
     ],
@@ -234,32 +357,86 @@ const courseData = {
       {
         module: "Azure DevOps Basics",
         duration: "3 weeks",
-        topics: ["Azure Boards", "Repos", "Pipelines", "Artifacts"],
+        topics: [
+          {
+            name: "Azure Boards",
+            content: "Manage work items and track project progress.",
+          },
+          {
+            name: "Repos",
+            content: "Use Azure Repos for version control.",
+          },
+          {
+            name: "Pipelines",
+            content: "Set up build and release pipelines.",
+          },
+          {
+            name: "Artifacts",
+            content: "Manage and share packages with Azure Artifacts.",
+          },
+        ],
       },
       {
         module: "CI/CD Implementation",
         duration: "5 weeks",
         topics: [
-          "Build Pipelines",
-          "Release Pipelines",
-          "Testing",
-          "Deployment Strategies",
+          {
+            name: "Build Pipelines",
+            content: "Create and optimize build pipelines for automation.",
+          },
+          {
+            name: "Release Pipelines",
+            content: "Configure release pipelines for deployment.",
+          },
+          {
+            name: "Testing",
+            content: "Integrate automated testing in pipelines.",
+          },
+          {
+            name: "Deployment Strategies",
+            content: "Implement blue-green and canary deployments.",
+          },
         ],
       },
       {
         module: "Advanced Tools",
         duration: "3 weeks",
         topics: [
-          "IaC with Terraform",
-          "Monitoring",
-          "Security",
-          "Azure Test Plans",
+          {
+            name: "IaC with Terraform",
+            content: "Use Terraform for infrastructure as code.",
+          },
+          {
+            name: "Monitoring",
+            content: "Set up monitoring with Azure Monitor.",
+          },
+          {
+            name: "Security",
+            content: "Implement security practices in DevOps.",
+          },
+          {
+            name: "Azure Test Plans",
+            content: "Plan and execute tests with Azure Test Plans.",
+          },
         ],
       },
       {
         module: "Capstone Project",
         duration: "3 weeks",
-        topics: ["End-to-End DevOps Workflow", "Optimization", "Documentation"],
+        topics: [
+          {
+            name: "End-to-End DevOps Workflow",
+            content: "Build a complete DevOps workflow.",
+          },
+          {
+            name: "Optimization",
+            content: "Optimize pipelines for performance.",
+          },
+          {
+            name: "Documentation",
+            content: "Document the DevOps processes and tools.",
+          },
+        ],
       },
     ],
     instructor: {
@@ -303,35 +480,81 @@ const courseData = {
         module: "Data Analysis Basics",
         duration: "4 weeks",
         topics: [
-          "Data Collection",
-          "Cleaning",
-          "Exploratory Data Analysis",
-          "Visualization",
+          {
+            name: "Data Collection",
+            content: "Gather data from various sources for analysis.",
+          },
+          {
+            name: "Cleaning",
+            content: "Clean and preprocess data for accuracy.",
+          },
+          {
+            name: "Exploratory Data Analysis",
+            content: "Perform EDA to uncover patterns and insights.",
+          },
+          {
+            name: "Visualization",
+            content: "Create visualizations using Matplotlib and Seaborn.",
+          },
         ],
       },
       {
         module: "Programming for Analytics",
         duration: "6 weeks",
         topics: [
-          "Python for Data",
-          "R Programming",
-          "SQL Queries",
-          "Libraries",
+          {
+            name: "Python for Data",
+            content: "Use Python libraries like Pandas and NumPy.",
+          },
+          {
+            name: "R Programming",
+            content: "Learn R for statistical analysis.",
+          },
+          {
+            name: "SQL Queries",
+            content: "Write SQL queries for data extraction.",
+          },
+          {
+            name: "Libraries",
+            content: "Explore data analysis libraries like Scikit-learn.",
+          },
         ],
       },
       {
         module: "Advanced Analytics",
         duration: "4 weeks",
         topics: [
-          "Machine Learning Basics",
-          "Statistical Methods",
-          "Predictive Models",
+          {
+            name: "Machine Learning Basics",
+            content: "Introduction to machine learning algorithms.",
+          },
+          {
+            name: "Statistical Methods",
+            content: "Apply statistical techniques for data analysis.",
+          },
+          {
+            name: "Predictive Models",
+            content: "Build predictive models for forecasting.",
+          },
         ],
       },
       {
         module: "Project & Deployment",
         duration: "3 weeks",
-        topics: ["Analytics Project", "Presentation", "Tools Integration"],
+        topics: [
+          {
+            name: "Analytics Project",
+            content: "Execute a complete data analytics project.",
+          },
+          {
+            name: "Presentation",
+            content: "Present findings to stakeholders.",
+          },
+          {
+            name: "Tools Integration",
+            content: "Integrate analytics tools for deployment.",
+          },
+        ],
       },
     ],
     instructor: {
@@ -375,30 +598,66 @@ const courseData = {
         module: "Tableau Basics",
         duration: "2 weeks",
         topics: [
-          "Introduction to Tableau",
-          "Data Connection",
-          "Basic Charts",
-          "Filters",
+          {
+            name: "Introduction to Tableau",
+            content: "Understand Tableau's interface and capabilities.",
+          },
+          {
+            name: "Data Connection",
+            content: "Connect Tableau to various data sources.",
+          },
+          {
+            name: "Basic Charts",
+            content: "Create basic charts like bar and line charts.",
+          },
+          {
+            name: "Filters",
+            content: "Apply filters for interactive data exploration.",
+          },
         ],
       },
       {
         module: "Data Visualization",
         duration: "3 weeks",
         topics: [
-          "Advanced Visuals",
-          "Calculations",
-          "Parameters",
-          "Dashboards",
+          {
+            name: "Advanced Visuals",
+            content: "Create complex visualizations like heatmaps.",
+          },
+          {
+            name: "Calculations",
+            content: "Use calculated fields for custom metrics.",
+          },
+          {
+            name: "Parameters",
+            content: "Implement parameters for dynamic visuals.",
+          },
+          {
+            name: "Dashboards",
+            content: "Build interactive dashboards for insights.",
+          },
         ],
       },
       {
         module: "Advanced Features",
         duration: "2 weeks",
         topics: [
-          "Data Blending",
-          "Level of Detail (LOD)",
-          "Storytelling",
-          "Publishing",
+          {
+            name: "Data Blending",
+            content: "Blend data from multiple sources.",
+          },
+          {
+            name: "Level of Detail (LOD)",
+            content: "Use LOD expressions for detailed analysis.",
+          },
+          {
+            name: "Storytelling",
+            content: "Create data stories for presentations.",
+          },
+          {
+            name: "Publishing",
+            content: "Publish dashboards to Tableau Server.",
+          },
         ],
       },
     ],
@@ -442,27 +701,90 @@ const courseData = {
       {
         module: "Network Fundamentals",
         duration: "3 weeks",
-        topics: ["OSI Model", "TCP/IP Basics", "IP Addressing", "Subnetting"],
+        topics: [
+          {
+            name: "OSI Model",
+            content: "Understand the OSI model and its layers.",
+          },
+          {
+            name: "TCP/IP Basics",
+            content: "Learn the fundamentals of TCP/IP protocols.",
+          },
+          {
+            name: "IP Addressing",
+            content: "Configure IP addresses and subnets.",
+          },
+          {
+            name: "Subnetting",
+            content: "Master subnetting for network design.",
+          },
+        ],
       },
       {
         module: "Core Protocols",
         duration: "5 weeks",
-        topics: ["HTTP/HTTPS", "FTP", "SMTP", "DNS", "DHCP"],
+        topics: [
+          {
+            name: "HTTP/HTTPS",
+            content: "Explore HTTP and HTTPS for web communication.",
+          },
+          {
+            name: "FTP",
+            content: "Understand File Transfer Protocol operations.",
+          },
+          {
+            name: "SMTP",
+            content: "Learn email transmission with SMTP.",
+          },
+          {
+            name: "DNS",
+            content: "Configure and troubleshoot DNS services.",
+          },
+          {
+            name: "DHCP",
+            content: "Implement DHCP for automatic IP allocation.",
+          },
+        ],
       },
       {
         module: "Security & Troubleshooting",
         duration: "3 weeks",
         topics: [
-          "Network Security",
-          "Protocol Analysis",
-          "Troubleshooting Tools",
-          "VPNs",
+          {
+            name: "Network Security",
+            content: "Implement security measures for networks.",
+          },
+          {
+            name: "Protocol Analysis",
+            content: "Analyze network traffic with tools like Wireshark.",
+          },
+          {
+            name: "Troubleshooting Tools",
+            content: "Use tools for network diagnostics.",
+          },
+          {
+            name: "VPNs",
+            content: "Set up virtual private networks for security.",
+          },
         ],
       },
       {
         module: "Advanced Networking",
         duration: "3 weeks",
-        topics: ["VoIP", "Wireless Protocols", "Network Optimization"],
+        topics: [
+          {
+            name: "VoIP",
+            content: "Implement Voice over IP protocols.",
+          },
+          {
+            name: "Wireless Protocols",
+            content: "Configure wireless network protocols.",
+          },
+          {
+            name: "Network Optimization",
+            content: "Optimize network performance and latency.",
+          },
+        ],
       },
     ],
     instructor: {
@@ -700,19 +1022,31 @@ export default function CoursePage({ params }: { params: { slug: string } }) {
                             initial={{ opacity: 0, height: 0 }}
                             animate={{ opacity: 1, height: "auto" }}
                             transition={{ duration: 0.3 }}
-                            className="grid md:grid-cols-2 gap-3"
+                            className="space-y-4"
                           >
-                            {module.topics.map((topic, topicIndex) => (
-                              <div
-                                key={topicIndex}
-                                className="flex items-center gap-2"
-                              >
-                                <CheckCircle className="h-4 w-4 text-green-500" />
-                                <span className="text-sm text-gray-700">
-                                  {topic}
-                                </span>
-                              </div>
-                            ))}
+                            <Accordion type="single" collapsible className="w-full">
+                              {module.topics.map((topic, topicIndex) => (
+                                <AccordionItem
+                                  key={topicIndex}
+                                  value={`topic-${index}-${topicIndex}`}
+                                  className="border-b border-gray-200"
+                                >
+                                  <AccordionTrigger className="py-2 px-4 hover:bg-gray-50">
+                                    <div className="flex items-center gap-2">
+                                      <CheckCircle className="h-4 w-4 text-green-500" />
+                                      <span className="text-sm font-semibold text-gray-700">
+                                        {topic.name}
+                                      </span>
+                                    </div>
+                                  </AccordionTrigger>
+                                  <AccordionContent className="px-4 py-2">
+                                    <p className="text-sm text-gray-600">
+                                      {topic.content}
+                                    </p>
+                                  </AccordionContent>
+                                </AccordionItem>
+                              ))}
+                            </Accordion>
                           </motion.div>
                         </AccordionContent>
                       </AccordionItem>
