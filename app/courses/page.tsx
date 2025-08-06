@@ -64,7 +64,8 @@ const allCourses = [
   {
     id: "azure-devops",
     title: "Azure DevOps",
-    description: "Master cloud deployment, CI/CD pipelines, and Azure services",
+    description:
+      "Master cloud deployment, CI/CD pipelines, and Azure services CI/CD pipelines, and Azure services",
     duration: "4 months",
     mode: "Online/Offline",
     level: "Intermediate to Advanced",
@@ -91,7 +92,8 @@ const allCourses = [
   {
     id: "tableau",
     title: "Tableau Data Visualization",
-    description: "Create stunning visualizations and interactive dashboards",
+    description:
+      "Create stunning visualizations and interactive dashboards CI/CD pipelines, and Azure services",
     duration: "2 months",
     mode: "Online/Offline",
     level: "Beginner to Intermediate",
@@ -104,7 +106,8 @@ const allCourses = [
   {
     id: "network-protocol",
     title: "Network Protocol & Security",
-    description: "Master networking fundamentals, protocols, and cybersecurity",
+    description:
+      "Master networking fundamentals, protocols, and cybersecurity CI/CD pipelines, and Azure services",
     duration: "4 months",
     mode: "Online/Offline",
     level: "Intermediate to Advanced",
@@ -285,11 +288,14 @@ export default function CoursesPage() {
                       <EnrollDialog
                         formHeading="Enroll Now"
                         buttonText={`Enroll Now `}
-                        className="border border-sky-600 text-sky-600 hover:bg-sky-600 hover:text-white bg-transparent text-sm font-medium px-4 py-2"
+                        className="icon-button-color hover:from-sky-600 hover:to-blue-700 hover:bg-sky-600 hover:text-white text-sm font-medium px-4 py-2"
                         size="lg"
                       />
                       <Link href={`/courses/${course.id}`}>
-                        <Button className="icon-button-color hover:from-sky-600 hover:to-blue-700">
+                        <Button
+                          className="border border-sky-600 text-sky-600 hover:bg-sky-600 hover:text-white bg-transparent text-sm font-medium px-4 py-2"
+                          size={"lg"}
+                        >
                           Learn More <ArrowRight className="ml-2 h-4 w-4" />
                         </Button>
                       </Link>
