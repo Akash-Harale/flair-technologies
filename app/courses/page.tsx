@@ -1,22 +1,43 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import { motion } from "framer-motion"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { Input } from "@/components/ui/input"
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import { Clock, Monitor, Users, Search, Filter, ArrowRight } from "lucide-react"
-import Link from "next/link"
-import { Navigation } from "@/components/navigation"
-import { Footer } from "@/components/footer"
+import { useState } from "react";
+import { motion } from "framer-motion";
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Input } from "@/components/ui/input";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+import {
+  Clock,
+  Monitor,
+  Users,
+  Search,
+  Filter,
+  ArrowRight,
+} from "lucide-react";
+import Link from "next/link";
+import { Navigation } from "@/components/navigation";
+import { Footer } from "@/components/footer";
+import { EnrollDialog } from "@/components/EnrollDialog";
 
 const allCourses = [
   {
     id: "python-fullstack",
     title: "Python Full-Stack Development",
-    description: "Master Django, React, and modern web development with hands-on projects",
+    description:
+      "Master Django, React, and modern web development with hands-on projects",
     duration: "6 months",
     mode: "Online/Offline",
     level: "Beginner to Advanced",
@@ -29,7 +50,8 @@ const allCourses = [
   {
     id: "power-bi",
     title: "Power BI & Data Analytics",
-    description: "Transform data into actionable business insights with Microsoft Power BI",
+    description:
+      "Transform data into actionable business insights with Microsoft Power BI",
     duration: "3 months",
     mode: "Online/Offline",
     level: "Beginner to Intermediate",
@@ -55,7 +77,8 @@ const allCourses = [
   {
     id: "data-analytics",
     title: "Data Analytics with Python",
-    description: "Learn data analysis, visualization, and machine learning fundamentals",
+    description:
+      "Learn data analysis, visualization, and machine learning fundamentals",
     duration: "5 months",
     mode: "Online/Offline",
     level: "Beginner to Advanced",
@@ -91,25 +114,27 @@ const allCourses = [
     rating: 4.7,
     image: "/placeholder.svg?height=200&width=300",
   },
-]
+];
 
 export default function CoursesPage() {
-  const [searchTerm, setSearchTerm] = useState("")
-  const [selectedCategory, setSelectedCategory] = useState("all")
-  const [selectedMode, setSelectedMode] = useState("all")
+  const [searchTerm, setSearchTerm] = useState("");
+  const [selectedCategory, setSelectedCategory] = useState("all");
+  const [selectedMode, setSelectedMode] = useState("all");
 
-  const categories = ["all", "Development", "Analytics", "Cloud", "Networking"]
-  const modes = ["all", "Online", "Offline", "Online/Offline"]
+  const categories = ["all", "Development", "Analytics", "Cloud", "Networking"];
+  const modes = ["all", "Online", "Offline", "Online/Offline"];
 
   const filteredCourses = allCourses.filter((course) => {
     const matchesSearch =
       course.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      course.description.toLowerCase().includes(searchTerm.toLowerCase())
-    const matchesCategory = selectedCategory === "all" || course.category === selectedCategory
-    const matchesMode = selectedMode === "all" || course.mode.includes(selectedMode)
+      course.description.toLowerCase().includes(searchTerm.toLowerCase());
+    const matchesCategory =
+      selectedCategory === "all" || course.category === selectedCategory;
+    const matchesMode =
+      selectedMode === "all" || course.mode.includes(selectedMode);
 
-    return matchesSearch && matchesCategory && matchesMode
-  })
+    return matchesSearch && matchesCategory && matchesMode;
+  });
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
@@ -118,14 +143,21 @@ export default function CoursesPage() {
       {/* Hero Section */}
       <section className="background text-white py-20">
         <div className="container mx-auto px-4 text-center">
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
-            <Badge className="mb-4 bg-white text-sky-600">🎓 Industry-Aligned Courses</Badge>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+          >
+            <Badge className="mb-4 bg-white text-sky-600">
+              🎓 Industry-Aligned Courses
+            </Badge>
             <h1 className="heading">
-              Master <span className="text-cyan-300">In-Demand</span> Tech Skills
+              Master <span className="text-cyan-300">In-Demand</span> Tech
+              Skills
             </h1>
             <p className="description max-w-3xl mx-auto">
-              Choose from our comprehensive range of courses designed by industry experts and delivered by professionals
-              from top MNCs
+              Choose from our comprehensive range of courses designed by
+              industry experts and delivered by professionals from top MNCs
             </p>
           </motion.div>
         </div>
@@ -151,7 +183,10 @@ export default function CoursesPage() {
                 <span className="text-sm text-gray-600">Filter by:</span>
               </div>
 
-              <Select value={selectedCategory} onValueChange={setSelectedCategory}>
+              <Select
+                value={selectedCategory}
+                onValueChange={setSelectedCategory}
+              >
                 <SelectTrigger className="w-40">
                   <SelectValue placeholder="Category" />
                 </SelectTrigger>
@@ -208,16 +243,24 @@ export default function CoursesPage() {
                       className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
                     />
                     <div className="absolute top-4 left-4">
-                      <Badge className="bg-sky-500 text-white">{course.category}</Badge>
+                      <Badge className="bg-sky-500 text-white">
+                        {course.category}
+                      </Badge>
                     </div>
                     <div className="absolute top-4 right-4">
-                      <Badge className="bg-green-500 text-white">★ {course.rating}</Badge>
+                      <Badge className="bg-green-500 text-white">
+                        ★ {course.rating}
+                      </Badge>
                     </div>
                   </div>
 
                   <CardHeader>
-                    <CardTitle className="text-xl group-hover:text-sky-600 transition-colors">{course.title}</CardTitle>
-                    <CardDescription className="text-gray-600">{course.description}</CardDescription>
+                    <CardTitle className="text-xl group-hover:text-sky-600 transition-colors">
+                      {course.title}
+                    </CardTitle>
+                    <CardDescription className="text-gray-600">
+                      {course.description}
+                    </CardDescription>
                   </CardHeader>
 
                   <CardContent className="space-y-4">
@@ -238,7 +281,13 @@ export default function CoursesPage() {
                     </div>
 
                     <div className="flex items-center justify-between pt-4">
-                      <div className="text-2xl font-bold text-sky-600">{course.price}</div>
+                      {/* <div className="text-2xl font-bold text-sky-600">{course.price}</div> */}
+                      <EnrollDialog
+                        formHeading="Enroll Now"
+                        buttonText={`Enroll Now `}
+                        className="border border-sky-600 text-sky-600 hover:bg-sky-600 hover:text-white bg-transparent text-sm font-medium px-4 py-2"
+                        size="lg"
+                      />
                       <Link href={`/courses/${course.id}`}>
                         <Button className="icon-button-color hover:from-sky-600 hover:to-blue-700">
                           Learn More <ArrowRight className="ml-2 h-4 w-4" />
@@ -253,12 +302,14 @@ export default function CoursesPage() {
 
           {filteredCourses.length === 0 && (
             <div className="text-center py-16">
-              <p className="text-gray-500 text-lg">No courses found matching your criteria.</p>
+              <p className="text-gray-500 text-lg">
+                No courses found matching your criteria.
+              </p>
               <Button
                 onClick={() => {
-                  setSearchTerm("")
-                  setSelectedCategory("all")
-                  setSelectedMode("all")
+                  setSearchTerm("");
+                  setSelectedCategory("all");
+                  setSelectedMode("all");
                 }}
                 className="mt-4"
                 variant="outline"
@@ -272,5 +323,5 @@ export default function CoursesPage() {
 
       <Footer />
     </div>
-  )
+  );
 }
