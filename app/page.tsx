@@ -19,6 +19,7 @@ import { TestimonialsCarousel } from "@/components/Testimonials";
 import { useRouter } from "next/navigation";
 import { ExpertsCarousel } from "@/components/ExpertsCarousel";
 import BookADemoForm from "@/components/homePage/BookADemoForm";
+import UpcomingBatchesSection from "@/components/homePage/UpcomingBatchesSection";
 
 export default function HomePage() {
   const navigate = useRouter();
@@ -116,6 +117,7 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+      <UpcomingBatchesSection />
 
       {/* About Flair Technologies Section */}
       <section className="py-20 bg-gradient-to-br from-gray-50 to-sky-100">
