@@ -1,5 +1,4 @@
 "use client";
-
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -20,7 +19,6 @@ export default function UpcomingBatchesSection() {
             {homePage.upcomingBatchesSection.title}
           </h2>
         </motion.div>
-
         <div className="overflow-x-auto rounded-lg shadow-lg bg-white">
           <table className="min-w-full text-sm text-left text-gray-700">
             <thead className="background text-white">
@@ -43,7 +41,12 @@ export default function UpcomingBatchesSection() {
                   <td className="px-4 py-3">{batch.id}</td>
                   <td className="px-4 py-3 font-medium">{batch.name}</td>
                   <td className="px-4 py-3">{batch.mode}</td>
-                  <td className="px-4 py-3">{`${batch.date} ${batch.time}`}</td>
+                  <td className="px-4 py-3">
+                    <div className="flex flex-col sm:flex-row sm:gap-2">
+                      <span className="whitespace-nowrap">{batch.date}</span>
+                      <span className="whitespace-nowrap text-xs sm:text-sm text-gray-600">{batch.time}</span>
+                    </div>
+                  </td>
                   <td className="px-4 py-3">{batch.duration}</td>
                   <td className="px-4 py-3 text-sky-600 font-semibold underline cursor-pointer">
                     View
