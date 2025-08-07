@@ -1268,7 +1268,7 @@ export default function CoursePage({ params }: { params: { slug: string } }) {
               <div className="flex flex-col sm:flex-row gap-4">
                 <EnrollDialog
                   formHeading="Enroll in Course"
-                  buttonText={`Enroll Now - ${course.price}`}
+                  buttonText={`Enroll Now`}
                   className="bg-white text-sky-600 hover:bg-gray-100 text-lg px-8"
                   size="lg"
                 />
@@ -1295,7 +1295,7 @@ export default function CoursePage({ params }: { params: { slug: string } }) {
                 alt={course.title}
                 className="rounded-2xl shadow-2xl h-[350px]"
               />
-              <div className="absolute -bottom-6 -left-6 bg-white text-gray-900 p-4 rounded-xl shadow-lg">
+              {/* <div className="absolute -bottom-6 -left-6 bg-white text-gray-900 p-4 rounded-xl shadow-lg">
                 <div className="text-2xl font-bold text-sky-600">
                   {course.price}
                 </div>
@@ -1305,7 +1305,7 @@ export default function CoursePage({ params }: { params: { slug: string } }) {
                 <div className="text-sm text-green-600">
                   25% OFF Limited Time
                 </div>
-              </div>
+              </div> */}
             </motion.div>
           </div>
         </div>
@@ -1537,7 +1537,7 @@ export default function CoursePage({ params }: { params: { slug: string } }) {
                   <CardTitle>Course Information</CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-4">
-                  <div className="flex items-center justify-between">
+                  {/* <div className="flex items-center justify-between">
                     <span className="text-gray-600">Price</span>
                     <div className="text-right">
                       <div className="text-2xl font-bold text-blue-600">
@@ -1547,7 +1547,7 @@ export default function CoursePage({ params }: { params: { slug: string } }) {
                         {course.originalPrice}
                       </div>
                     </div>
-                  </div>
+                  </div> */}
 
                   <div className="flex items-center justify-between">
                     <span className="text-gray-600">Duration</span>
