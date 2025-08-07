@@ -1321,7 +1321,7 @@ export default function CoursePage({ params }: { params: { slug: string } }) {
                 <TabsList className="grid w-full grid-cols-4">
                   <TabsTrigger value="overview">Overview</TabsTrigger>
                   <TabsTrigger value="syllabus">Syllabus</TabsTrigger>
-                  <TabsTrigger value="instructor">Instructor</TabsTrigger>
+                  {/* <TabsTrigger value="instructor">Instructor</TabsTrigger> */}
                   <TabsTrigger value="projects">Projects</TabsTrigger>
                 </TabsList>
 
