@@ -2,8 +2,7 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Button } from "@/components/ui/button";
-import { Menu, X, ChevronDown, ChevronRight, Phone } from "lucide-react";
+import { Menu, X, ChevronDown, ChevronRight } from "lucide-react";
 import Link from "next/link";
 import {
   DropdownMenu,
@@ -181,14 +180,6 @@ export function Navigation() {
             >
               Freshers Program
             </Link>
-            {/* <Link
-              href="/batches"
-              className={`text-gray-700 hover:text-sky-600 transition-colors text-base font-medium ${
-                pathname === "/batches" ? "text-sky-600 font-semibold" : ""
-              }`}
-            >
-              Batches
-            </Link> */}
             <Link
               href="/contact"
               className={`text-gray-700 hover:text-sky-600 transition-colors text-base font-medium ${
@@ -197,6 +188,25 @@ export function Navigation() {
             >
               Contact
             </Link>
+            {/* faculty */}
+            <DropdownMenu>
+              <DropdownMenuTrigger
+                className={`flex items-center text-gray-700 hover:text-sky-600 transition-colors text-base font-medium `}
+              >
+                Faculty
+                <ChevronDown className="ml-2 h-4 w-4" />
+              </DropdownMenuTrigger>
+              <DropdownMenuContent className=" bg-white shadow-lg rounded-md border border-gray-100 p-2">
+                <DropdownMenuItem asChild>
+                  <Link
+                    href={"/member"}
+                    className={`w-full  rounded-md text-sm `}
+                  >
+                    Become a Mentor
+                  </Link>
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
           </div>
 
           {/* CTA Buttons */}
@@ -205,7 +215,6 @@ export function Navigation() {
               href="tel:+919749749596"
               className="flex items-center border border-sky-600 text-sky-600 bg-transparent text-base font-medium py-2 px-2 rounded-md transition-colors"
             >
-              <Phone className=" w-5 mr-2" />
               +91 9749749596
             </a>
             <EnrollDialog
@@ -374,16 +383,7 @@ export function Navigation() {
               >
                 Freshers Program
               </Link>
-              {/* <Link
-                href="/batches"
-                className={`text-gray-700 hover:text-sky-600 transition-colors py-3 text-base font-medium ${
-                  pathname === "/batches"
-                    ? "text-sky-600 font-semibold bg-sky-50 rounded-md px-2"
-                    : ""
-                }`}
-              >
-                Batches
-              </Link> */}
+
               <Link
                 href="/contact"
                 className={`text-gray-700 hover:text-sky-600 transition-colors py-3 text-base font-medium ${
@@ -394,17 +394,26 @@ export function Navigation() {
               >
                 Contact
               </Link>
-              <div className="flex flex-col space-y-2 pt-4">
-                {/* <Button
-                  variant="outline"
-                  className="border-sky-600 text-sky-600 hover:bg-sky-600 hover:text-white bg-transparent text-sm font-medium py-2"
+              {/* faculty */}
+              <DropdownMenu>
+                <DropdownMenuTrigger
+                  className={`flex items-center text-gray-700 hover:text-sky-600 transition-colors text-base font-medium `}
                 >
-                  Book Demo
-                </Button>
-                <Button className="bg-sky-600 hover:bg-sky-700 text-white text-sm font-medium py-2">
-                  Enroll Now
-                </Button> */}
-              </div>
+                  Faculty
+                  <ChevronDown className="ml-2 h-4 w-4" />
+                </DropdownMenuTrigger>
+                <DropdownMenuContent className=" bg-white shadow-lg rounded-md border border-gray-100 p-2">
+                  <DropdownMenuItem asChild>
+                    <Link
+                      href={"/member"}
+                      className={`w-full  rounded-md text-sm `}
+                    >
+                      Become a Mentor
+                    </Link>
+                  </DropdownMenuItem>
+                </DropdownMenuContent>
+              </DropdownMenu>
+              <div className="flex flex-col space-y-2 pt-4"></div>
             </div>
           </motion.div>
         )}
