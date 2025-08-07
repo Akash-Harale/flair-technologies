@@ -163,9 +163,9 @@ export default function FreshersPage() {
                       <Badge className="bg-green-500 text-white">
                         {program.placement} Placement
                       </Badge>
-                      <div className="text-2xl font-bold text-green-600">
+                      {/* <div className="text-2xl font-bold text-green-600">
                         {program.price}
-                      </div>
+                      </div> */}
                     </div>
                     <CardTitle className="text-xl group-hover:text-green-600 transition-colors">
                       {program.title}
