@@ -69,7 +69,7 @@ export function ExpertsCarousel() {
           slidesPerView={1}
           spaceBetween={30}
           autoplay={{ delay: 3000 }}
-          pagination={{ clickable: true }}
+          // pagination={{ clickable: true }}
           modules={[Pagination, Autoplay]}
           breakpoints={{
             640: { slidesPerView: 2 },

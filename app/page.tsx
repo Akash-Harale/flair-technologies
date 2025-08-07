@@ -337,7 +337,6 @@ export default function HomePage() {
           </div>
         </div>
       </section> */}
-      <ExpertsCarousel />
 
       {/* Featured Courses */}
       <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
@@ -483,6 +482,8 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      <ExpertsCarousel />
 
       {/* CTA Section */}
       <section className="py-20 background text-white">
