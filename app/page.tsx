@@ -86,7 +86,7 @@ export default function HomePage() {
                   className="rounded-2xl shadow-2xl"
                 />
               </div>
-              <div className="absolute -top-4 -right-4 w-full h-full bg-gradient-to-br from-yellow-400 to-orange-500 rounded-2xl -z-10" />
+              {/* <div className="absolute -top-4 -right-4 w-full h-full bg-gradient-to-br from-yellow-400 to-orange-500 rounded-2xl -z-10" /> */}
             </motion.div>
           </div>
         </div>
