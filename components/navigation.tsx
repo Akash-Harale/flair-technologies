@@ -15,6 +15,8 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { usePathname } from "next/navigation";
 import { EnrollDialog } from "./EnrollDialog";
+import { Button } from "./ui/button";
+import { NavigationDemoBtn } from "./NavigationDemoBtn";
 
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
@@ -213,14 +215,14 @@ export function Navigation() {
           <div className="hidden md:flex items-center space-x-4">
             <a
               href="tel:+919749749596"
-              className="flex items-center border border-sky-600 text-sky-600 bg-transparent text-base font-medium py-2 px-2 rounded-md transition-colors"
+              className="flex items-center border border-sky-600 text-sky-600 bg-transparent text-base font-medium py-1.5 px-2 rounded-md transition-colors"
             >
               +91 9749749596
             </a>
-            <EnrollDialog
-              buttonText={`Book Demo `}
-              className="bg-sky-600 border border-sky-600 text-white hover:bg-sky-600 hover:text-white  text-sm font-medium px-4 py-2"
-              size="lg"
+
+            <NavigationDemoBtn
+              buttonText="Book Demo"
+              className="bg-sky-600 border border-sky-600 text-white hover:bg-sky-700 hover:text-white text-sm font-medium px-4 py-2"
             />
           </div>
 
