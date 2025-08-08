@@ -149,7 +149,7 @@ export default function MentorPage() {
 
               <div className="grid grid-cols-2 sm:w-full md:w-1/2 pt-4">
                 {heroSection.stats.map((stat, index) => (
-                  <div key={index} className="text-center">
+                  <div key={index} className="text-left">
                     <div className="text-3xl font-bold">{stat.value}</div>
                     <div className="text-blue-200 text-sm">{stat.label}</div>
                   </div>
