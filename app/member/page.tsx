@@ -97,6 +97,13 @@ export default function MentorPage() {
     applicationFormSection,
   } = mentorPage;
 
+  const handleApplyNowClick = () => {
+    const applicationSection = document.querySelector("#application-form");
+    if (applicationSection) {
+      applicationSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
       <Navigation />
@@ -104,7 +111,7 @@ export default function MentorPage() {
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-r from-sky-400 via-blue-500 to-cyan-500 text-white">
         <div className="absolute inset-0 bg-black/20" />
-        <div className="relative container mx-auto px-4 py-10  ">
+        <div className="relative container mx-auto px-4 py-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <motion.div
               initial={{ opacity: 0, x: -50 }}
@@ -130,8 +137,9 @@ export default function MentorPage() {
                   <Button
                     key={index}
                     size="lg"
-                    variant={"outline"}
+                    variant="outline"
                     className={button.className}
+                    onClick={handleApplyNowClick}
                   >
                     {button.text}{" "}
                     {button.icon && <button.icon className="ml-2 h-5 w-5" />}
@@ -158,9 +166,8 @@ export default function MentorPage() {
               <img
                 src="https://media.licdn.com/dms/image/v2/D4E12AQEntY-HYP5bkw/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1702652374533?e=2147483647&v=beta&t=h8Aihfs4wJE-5GH1N90gQUac4UYUaz-kNwfDJIYvsME"
                 alt={heroSection.imageAlt}
-                className="rounded-2xl shadow-2xl lg:w-[750px]  lg:h-[500px]"
+                className="rounded-2xl shadow-2xl lg:w-[750px] lg:h-[500px]"
               />
-              {/* <div className="absolute -top-4 -right-4 w-full h-full bg-gradient-to-br from-yellow-400 to-green-500 rounded-2xl -z-10" /> */}
             </motion.div>
           </div>
         </div>
@@ -234,7 +241,7 @@ export default function MentorPage() {
               <div className="space-y-4">
                 {applicationFormSection.features.map((feature, index) => (
                   <div key={index} className="flex items-center gap-3">
-                    <CheckCircle className="h-5 w-5 text-green-400" />
+                    <CheckCircle className="h-5 w-5 text-white" />
                     <span>{feature}</span>
                   </div>
                 ))}
@@ -246,7 +253,7 @@ export default function MentorPage() {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              <Card className="bg-white text-gray-900">
+              <Card id="application-form" className="bg-white text-gray-900">
                 <CardHeader>
                   <CardTitle className="text-2xl text-center">
                     {applicationFormSection.form.title}
