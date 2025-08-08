@@ -20,6 +20,8 @@ import { useRouter } from "next/navigation";
 import { ExpertsCarousel } from "@/components/ExpertsCarousel";
 import BookADemoForm from "@/components/homePage/BookADemoForm";
 import UpcomingBatchesSection from "@/components/homePage/UpcomingBatchesSection";
+import { EnrollDialog } from "@/components/EnrollDialog";
+import { NavigationDemoBtn } from "@/components/NavigationDemoBtn";
 
 export default function HomePage() {
   const navigate = useRouter();
@@ -49,19 +51,29 @@ export default function HomePage() {
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button
+                {/* <Button
                   size="lg"
                   className="bg-white text-sky-600 hover:bg-gray-100 text-lg px-8"
                 >
                   Enroll Now <ArrowRight className="ml-2 h-5 w-5" />
-                </Button>
-                <Button
+                </Button> */}
+                <EnrollDialog
+                  buttonText={`Enroll Now`}
+                  className="bg-white text-sky-600 hover:bg-gray-100 text-lg px-8"
+                  size="lg"
+                />
+                {/* <Button
                   size="lg"
                   variant="outline"
                   className="border-white text-white hover:bg-white hover:text-sky-600 text-lg px-8 bg-transparent"
                 >
                   Book Free Demo
-                </Button>
+                </Button> */}
+                <NavigationDemoBtn
+                  size="lg"
+                  buttonText="Book Free Demo"
+                  className="bg-transpartent text-white border border-white hover:bg-gray-100 hover:text-sky-600 text-lg px-8"
+                />
               </div>
 
               <div className="flex items-center gap-8 pt-4">

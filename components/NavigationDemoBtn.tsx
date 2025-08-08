@@ -6,23 +6,26 @@ import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
-import { X } from "lucide-react";
 
 interface EnrollDialogProps {
   buttonText: string;
   className?: string;
+  size?: "default" | "sm" | "lg";
 }
 
 export function NavigationDemoBtn({
   buttonText,
   className,
+  size,
 }: EnrollDialogProps) {
   const [tab, setTab] = useState("general");
 
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Button className={className}>{buttonText}</Button>
+        <Button className={className} size={size || "sm"}>
+          {buttonText}
+        </Button>
       </DialogTrigger>
       <DialogContent className="max-w-2xl w-full p-6 rounded-xl bg-white shadow-lg border border-gray-200">
         <div className="flex justify-between items-center mb-4">
