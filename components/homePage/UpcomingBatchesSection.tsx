@@ -1,11 +1,27 @@
 "use client";
 import { motion } from "framer-motion";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
 import { homePage } from "@/app/constant";
 import { EnrollDialog } from "../EnrollDialog";
+import { Calendar, Clock, Timer, CheckCircle2, XCircle } from "lucide-react";
 
-export default function UpcomingBatchesSection() {
+export default function UpcomingBatchesTable() {
+  const techLogos: Record<string, string> = {
+    "Microsoft Power BI":
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzt9YhmDCCNxLzB2BVpTJvvcYnzIcwIXdr_g&s",
+    "Alteryx Designer":
+      "https://community.alteryx.com/t5/image/serverpage/image-id/259688iF6C1C4BD0BC11851?v=v2",
+    "Python Fullstack":
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1200px-Python-logo-notext.svg.png",
+    "Data Analyst - Freshers":
+      "https://static.vecteezy.com/system/resources/previews/026/513/688/non_2x/data-analytics-logo-design-growth-arrow-logo-design-for-data-finance-investment-vector.jpg",
+    "SRE Modern DevOps":
+      "https://images.seeklogo.com/logo-png/42/1/devops-logo-png_seeklogo-423085.png",
+    "DevOps Workshop":
+      "https://images.seeklogo.com/logo-png/42/1/devops-logo-png_seeklogo-423085.png",
+    "Azure with Azure DevOps":
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5oYBDyTlsQEl2M_B-GqF1PPryFy1H-34ZeA&s",
+  };
+
   return (
     <section className="py-20 bg-gray-50">
       <div className="container mx-auto px-4">
@@ -15,48 +31,58 @@ export default function UpcomingBatchesSection() {
           transition={{ duration: 0.6 }}
           className="text-center mb-10"
         >
-          <h2 className="text-3xl font-bold text-gray-900">
+          <h2 className="text-3xl font-bold text-sky-600">
             {homePage.upcomingBatchesSection.title}
           </h2>
         </motion.div>
         <div className="overflow-x-auto rounded-lg shadow-lg bg-white">
-          <table className="min-w-full text-sm text-left text-gray-700">
-            <thead className="background text-white">
+          <table className="min-w-full text-lg text-left text-gray-700">
+            <thead className="bg-gray-200">
               <tr>
-                <th className="px-4 py-3 font-semibold">#</th>
-                <th className="px-4 py-3 font-semibold">Course Name</th>
-                <th className="px-4 py-3 font-semibold">Mode</th>
-                <th className="px-4 py-3 font-semibold">Date & Time</th>
-                <th className="px-4 py-3 font-semibold">Duration</th>
                 <th className="px-4 py-3 font-semibold">Course</th>
-                <th className="px-4 py-3 font-semibold">Enroll</th>
+                <th className="px-4 py-3 font-semibold">Mode</th>
+                <th className="px-4 py-3 font-semibold">Date</th>
+                <th className="px-4 py-3 font-semibold">Duration</th>
+                <th className="px-4 py-3 font-semibold text-center w-72">
+                  Action
+                </th>
               </tr>
             </thead>
             <tbody className="divide-y divide-gray-200">
               {homePage.upcomingBatchesSection.batches.map((batch, index) => (
                 <tr
                   key={batch.id}
-                  className={index % 2 === 0 ? "bg-white" : "bg-gray-100"}
+                  className={index % 2 === 0 ? "bg-white" : "bg-white"}
                 >
-                  <td className="px-4 py-3">{batch.id}</td>
-                  <td className="px-4 py-3 font-medium">{batch.name}</td>
+                  <td className="px-4 py-3 flex items-center gap-2 font-medium">
+                    {techLogos[batch.name] && (
+                      <img
+                        src={techLogos[batch.name]}
+                        alt={`${batch.name} logo`}
+                        className="w-6 h-6 rounded-full"
+                      />
+                    )}
+                    {batch.name}
+                  </td>
                   <td className="px-4 py-3">{batch.mode}</td>
-                  <td className="px-4 py-3">
-                    <div className="flex flex-col sm:flex-row sm:gap-2">
-                      <span className="whitespace-nowrap">{batch.date}</span>
-                      <span className="whitespace-nowrap text-xs sm:text-sm text-gray-600">{batch.time}</span>
-                    </div>
-                  </td>
+                  <td className="px-4 py-3">{batch.date}</td>
                   <td className="px-4 py-3">{batch.duration}</td>
-                  <td className="px-4 py-3 text-sky-600 font-semibold underline cursor-pointer">
-                    View
-                  </td>
-                  <td className="px-4 py-2">
+
+                  <td className="flex justify-between items-center px-4 w-72 py-2">
+                    <a
+                      href="/my-course.pdf"
+                      download
+                      className="text-blue-500 hover:underline cursor-pointer"
+                    >
+                      view
+                    </a>
+
                     <EnrollDialog
                       formHeading="Enroll in Course"
                       buttonText="Enroll Now"
-                      className="bg-sky-600 border border-sky-600 text-white hover:bg-sky-700 hover:text-white  font-medium px-4 "
+                      className="bg-white border text-lg border-gray-400 text-gray-600 hover:bg-gray-200 hover:text-black font-medium px-4"
                     />
+                    <CheckCircle2 className="w-5 h-5 text-green-500" />
                   </td>
                 </tr>
               ))}
