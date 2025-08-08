@@ -61,7 +61,7 @@ export default function FreshersPage() {
                 </p>
               </div>
 
-              <div className="flex flex-col sm:flex-row gap-4">
+              {/* <div className="flex flex-col sm:flex-row gap-4">
                 {heroSection.buttons.map((button, index) => (
                   <Button
                     key={index}
@@ -73,11 +73,11 @@ export default function FreshersPage() {
                     {button.icon && <button.icon className="ml-2 h-5 w-5" />}
                   </Button>
                 ))}
-              </div>
+              </div> */}
 
               <div className="grid grid-cols-2 sm:w-full md:w-1/2 pt-4">
                 {heroSection.stats.map((stat, index) => (
-                  <div key={index} className="text-center">
+                  <div key={index} >
                     <div className="text-3xl font-bold">{stat.value}</div>
                     <div className="text-blue-200 text-sm">{stat.label}</div>
                   </div>
