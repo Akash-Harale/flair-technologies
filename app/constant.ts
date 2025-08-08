@@ -261,7 +261,7 @@ export const homePage = {
       {
         id: 2,
         name: "Alteryx Designer",
-        mode: "Classroom - BLR",
+        mode: "Classroom - HYD",
         faculty: "Mr. Suman",
         date: "May 01, 2024",
         time: "09:00 AM",
@@ -279,7 +279,7 @@ export const homePage = {
       {
         id: 4,
         name: "Data Analyst - Freshers",
-        mode: "Classroom - BLR",
+        mode: "Offline",
         faculty: "Mr. Surya",
         date: "May 01, 2024",
         time: "09:00 AM",
