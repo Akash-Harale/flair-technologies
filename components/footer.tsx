@@ -17,10 +17,11 @@ export function Footer() {
             className="space-y-4"
           >
             <div className="flex items-center space-x-2">
-              <div className={footer.companyInfo.logo.className}>
-                <span className="text-white font-bold text-xl">{footer.companyInfo.logo.letter}</span>
-              </div>
-              <span className="text-xl font-bold">{footer.companyInfo.name}</span>
+             <img 
+             src="/flair-tech-logo-2.png"
+              alt="Flair Technologies Logo"
+              className=" h-16"
+             />
             </div>
             <p className="text-gray-300">{footer.companyInfo.description}</p>
             <div className="flex space-x-4">
