@@ -40,7 +40,7 @@ export default function FreshersPage() {
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-r from-sky-400 via-blue-500 to-cyan-500 text-white">
         <div className="absolute inset-0 bg-black/20" />
-        <div className="relative container mx-auto px-4 py-20 ">
+        <div className="relative container mx-auto px-4 py-32">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <motion.div
               initial={{ opacity: 0, x: -50 }}
@@ -60,24 +60,38 @@ export default function FreshersPage() {
                   {heroSection.description}
                 </p>
               </div>
+              <div className="flex flex-col sm:flex-row gap-4">
+  {heroSection.buttons.map((button, index) => (
+    <Button
+      key={index}
+      size="lg"
+      className={button.className}
+      onClick={() => {
+        if (button.text === "Download Brochure") {
+          const link = document.createElement("a");
+          link.href = "/my-course.pdf"; // file in public folder
+          link.download = "my-course.pdf";
+          document.body.appendChild(link);
+          link.click();
+          document.body.removeChild(link);
+        } else if (button.text === "Apply Now") {
+          const formSection = document.getElementById("application-form");
+          if (formSection) {
+            formSection.scrollIntoView({ behavior: "smooth" });
+          }
+        }
+      }}
+    >
+      {button.text}
+      {button.icon && <button.icon className="ml-2 h-5 w-5" />}
+    </Button>
+  ))}
+</div>
 
-              {/* <div className="flex flex-col sm:flex-row gap-4">
-                {heroSection.buttons.map((button, index) => (
-                  <Button
-                    key={index}
-                    size="lg"
-                    variant={"outline"}
-                    className={button.className}
-                  >
-                    {button.text}{" "}
-                    {button.icon && <button.icon className="ml-2 h-5 w-5" />}
-                  </Button>
-                ))}
-              </div> */}
 
               <div className="grid grid-cols-2 sm:w-full md:w-1/2 pt-4">
                 {heroSection.stats.map((stat, index) => (
-                  <div key={index} >
+                  <div key={index}>
                     <div className="text-3xl font-bold">{stat.value}</div>
                     <div className="text-blue-200 text-sm">{stat.label}</div>
                   </div>
@@ -283,7 +297,10 @@ export default function FreshersPage() {
       </section>
 
       {/* Application Form Section */}
-      <section className="py-20 bg-gradient-to-r from-sky-400 via-blue-500 to-cyan-500 text-white">
+      <section
+        id="application-form"
+        className="py-20 bg-gradient-to-r from-sky-400 via-blue-500 to-cyan-500 text-white"
+      >
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <motion.div

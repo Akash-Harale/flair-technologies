@@ -630,7 +630,7 @@ export const freshersPage = {
       {
         text: "Download Brochure",
         className:
-          "border-white text-white hover:bg-white hover:text-blue-600 text-lg px-8 bg-transparent",
+          "border border-white text-white hover:bg-white hover:text-blue-600 text-lg px-8 bg-transparent",
         variant: "outline",
       },
     ],
@@ -1143,6 +1143,154 @@ export const contactPage = {
     ],
   },
 };
+
+
+
+// export const freshersPage = {
+//   heroSection: {
+//     badge: "Fresher Programs",
+//     title: "Launch Your Tech Career with Our <br /> Fresher Programs",
+//     description:
+//       "Join our industry-focused training programs designed to transform fresh graduates into job-ready professionals.",
+//     image: "/fresher-hero.jpg",
+//     imageAlt: "Fresher Program Hero",
+//     buttons: [
+//       {
+//         text: "Apply Now",
+//         className:
+//           "bg-white text-sky-600 hover:bg-gray-100 text-lg px-8 py-3",
+//         icon: ArrowRight,
+//       },
+//       {
+//         text: "Download Brochure",
+//         className:
+//           "border-white text-white hover:bg-white hover:text-blue-600 text-lg px-8 py-3 bg-transparent",
+//         variant: "outline",
+//       },
+//     ],
+//     stats: [
+//       { value: "1000+", label: "Students Trained" },
+//       { value: "90%", label: "Placement Rate" },
+//     ],
+//   },
+//   statsSection: [
+//     {
+//       icon: Calendar,
+//       value: "6+",
+//       label: "Months of Training",
+//     },
+//     {
+//       icon: CheckCircle,
+//       value: "90%",
+//       label: "Placement Success",
+//     },
+//     // Add other stats as needed
+//   ],
+//   programsSection: {
+//     badge: "Our Programs",
+//     title: "Explore Our Fresher Training Programs",
+//     description:
+//       "Our programs are designed to equip you with the skills and knowledge needed to excel in the tech industry.",
+//     programs: [
+//       {
+//         id: "full-stack",
+//         title: "Full Stack Development",
+//         description:
+//           "Master front-end and back-end technologies to build modern web applications.",
+//         image: "/full-stack.jpg", // Image in public folder
+//         category: "Development",
+//         rating: 4.8,
+//         duration: "6 Months",
+//         mode: "Online",
+//         students: "500+ Students",
+//         level: "Beginner to Advanced",
+//         placement: "90%",
+//         courses: [
+//           "HTML, CSS, JavaScript",
+//           "React & Node.js",
+//           "Database Management",
+//           "API Development",
+//         ],
+//       },
+//       {
+//         id: "data-science",
+//         title: "Data Science & AI",
+//         description:
+//           "Learn data analysis, machine learning, and AI to become a data-driven professional.",
+//         image: "/data-science.jpg", // Image in public folder
+//         category: "Data Science",
+//         rating: 4.7,
+//         duration: "5 Months",
+//         mode: "Hybrid",
+//         students: "300+ Students",
+//         level: "Intermediate",
+//         placement: "85%",
+//         courses: [
+//           "Python for Data Science",
+//           "Machine Learning",
+//           "Data Visualization",
+//           "Deep Learning Basics",
+//         ],
+//       },
+//       {
+//         id: "cloud-computing",
+//         title: "Cloud Computing",
+//         description:
+//           "Gain expertise in cloud platforms like AWS, Azure, and Google Cloud.",
+//         image: "/cloud-computing.jpg", // Image in public folder
+//         category: "Cloud",
+//         rating: 4.9,
+//         duration: "4 Months",
+//         mode: "Online",
+//         students: "200+ Students",
+//         level: "Beginner",
+//         placement: "88%",
+//         courses: [
+//           "AWS Fundamentals",
+//           "Azure Administration",
+//           "Cloud Security",
+//           "DevOps Basics",
+//         ],
+//       },
+//     ],
+//   },
+//   testimonialsSection: {
+//     badge: "Success Stories",
+//     title: "What Our Students Say",
+//     description:
+//       "Hear from our graduates who have successfully launched their tech careers.",
+//     testimonials: [
+//       // Testimonials data remains unchanged
+//     ],
+//   },
+//   applicationFormSection: {
+//     badge: "Apply Now",
+//     title: "Take the First Step Towards Your Tech Career",
+//     description:
+//       "Fill out the form below to apply for our fresher programs and start your journey.",
+//     features: [
+//       "Personalized career guidance",
+//       "Hands-on projects",
+//       "Industry-recognized certification",
+//     ],
+//     form: {
+//       title: "Application Form",
+//       description: "Submit your details to enroll in our fresher programs.",
+//       fields: [
+//         // Form fields remain unchanged
+//       ],
+//       submitButton: {
+//         text: "Submit Application",
+//         className:
+//           "w-full bg-sky-600 hover:bg-sky-700 text-white text-sm font-medium px-4 py-2",
+//         icon: ArrowRight,
+//       },
+//       disclaimer:
+//         "By submitting this form, you agree to our terms and conditions.",
+//     },
+//   },
+// };
+
 
 // Footer constants
 export const footer = {
