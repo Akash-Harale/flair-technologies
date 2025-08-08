@@ -17,11 +17,13 @@ export function Footer() {
             className="space-y-4"
           >
             <div className="flex items-center space-x-2">
-             <img 
-             src="/flair-tech-logo-2.png"
-              alt="Flair Technologies Logo"
-              className=" h-16"
-             />
+              <Link href="/" aria-label="Go to Home">
+                <img
+                  src="/flair-o-logo.jpeg"
+                  alt="Flair Technologies Logo"
+                  className="h-20 cursor-pointer"
+                />
+              </Link>
             </div>
             <p className="text-gray-300">{footer.companyInfo.description}</p>
             <div className="flex space-x-4">
@@ -93,7 +95,9 @@ export function Footer() {
                   <info.icon className={info.iconClass} />
                   <div>
                     <p className="text-gray-300">{info.title}:</p>
-                    <p className="text-sm text-gray-400">{info.address || info.value}</p>
+                    <p className="text-sm text-gray-400">
+                      {info.address || info.value}
+                    </p>
                   </div>
                 </div>
               ))}
