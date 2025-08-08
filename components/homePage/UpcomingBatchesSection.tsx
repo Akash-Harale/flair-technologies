@@ -1,11 +1,18 @@
 "use client";
+import { useState } from "react";
 import { motion } from "framer-motion";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
 import { homePage } from "@/app/constant";
 import { EnrollDialog } from "../EnrollDialog";
 
 export default function UpcomingBatchesSection() {
+  // State to manage the selected background color
+  const [selectedColor, setSelectedColor] = useState("#d1fae5"); // Default to teal-100 equivalent
+
+  // Handle color change from the color picker with typed event
+  const handleColorChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setSelectedColor(event.target.value);
+  };
+
   return (
     <section className="py-20 bg-gray-50">
       <div className="container mx-auto px-4">
@@ -19,6 +26,20 @@ export default function UpcomingBatchesSection() {
             {homePage.upcomingBatchesSection.title}
           </h2>
         </motion.div>
+
+        {/* Color Picker */}
+        <div className="mb-6 flex justify-center">
+          <label className="flex items-center gap-3">
+            <span className="text-gray-700 font-medium">Select Table Color:</span>
+            <input
+              type="color"
+              value={selectedColor}
+              onChange={handleColorChange}
+              className="w-10 h-10 rounded-md border-2 border-gray-300 cursor-pointer hover:border-gray-900 transition-all duration-200"
+            />
+          </label>
+        </div>
+
         <div className="overflow-x-auto rounded-lg shadow-lg bg-white">
           <table className="min-w-full text-sm text-left text-gray-700">
             <thead className="background text-white">
@@ -33,11 +54,8 @@ export default function UpcomingBatchesSection() {
               </tr>
             </thead>
             <tbody className="divide-y divide-gray-200">
-              {homePage.upcomingBatchesSection.batches.map((batch, index) => (
-                <tr
-                  key={batch.id}
-                  className={index % 2 === 0 ? "bg-white" : "bg-gray-100"}
-                >
+              {homePage.upcomingBatchesSection.batches.map((batch) => (
+                <tr key={batch.id} style={{ backgroundColor: selectedColor }}>
                   <td className="px-4 py-3">{batch.id}</td>
                   <td className="px-4 py-3 font-medium">{batch.name}</td>
                   <td className="px-4 py-3">{batch.mode}</td>
@@ -55,7 +73,7 @@ export default function UpcomingBatchesSection() {
                     <EnrollDialog
                       formHeading="Enroll in Course"
                       buttonText="Enroll Now"
-                      className="bg-sky-600 border border-sky-600 text-white hover:bg-sky-700 hover:text-white  font-medium px-4 "
+                      className="bg-sky-600 border border-sky-600 text-white hover:bg-sky-700 hover:text-white font-medium px-4"
                     />
                   </td>
                 </tr>
