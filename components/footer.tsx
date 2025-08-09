@@ -8,7 +8,7 @@ export function Footer() {
   return (
     <footer className="bg-gray-900 text-white">
       <div className="container mx-auto px-4 py-16">
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-7 gap-8">
           {/* Company Info */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -81,22 +81,43 @@ export function Footer() {
             </ul>
           </motion.div>
 
-          {/* Contact Info */}
+          {/* Contact Details (Col 5) */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="space-y-4"
+          >
+            <h3 className="text-lg font-semibold">Contact Us</h3>
+            <div className="space-y-3">
+              {footer.contacts.map((contact, index) => (
+                <div key={index} className="flex items-start space-x-3">
+                  <contact.icon className={contact.iconClass} />
+                  <div>
+                    <p className="text-gray-300">{contact.title}:</p>
+                    <p className="text-sm text-gray-400">{contact.value}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </motion.div>
+
+          {/* Locations (Col 4) */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="space-y-4"
+            className="space-y-4 lg:col-span-3"
           >
-            <h3 className="text-lg font-semibold">Contact Info</h3>
+            <h3 className="text-lg font-semibold">Our Locations</h3>
             <div className="space-y-3">
-              {footer.contactInfo.map((info, index) => (
+              {footer.locations.map((loc, index) => (
                 <div key={index} className="flex items-start space-x-3">
-                  <info.icon className={info.iconClass} />
+                  <loc.icon className={loc.iconClass} />
                   <div>
-                    <p className="text-gray-300">{info.title}:</p>
-                    <p className="text-sm text-gray-400">
-                      {info.address || info.value}
+                    <p className="text-gray-300">{loc.title}:</p>
+                    <p className="text-sm text-gray-400 whitespace-pre-line">
+                      {loc.address}
                     </p>
                   </div>
                 </div>

@@ -60,7 +60,10 @@ export interface OutsourcingAdditionalInfo {
 }
 
 // Union type for additionalInfo
-type AdditionalInfo = TrainingAdditionalInfo | ConsultingAdditionalInfo | OutsourcingAdditionalInfo;
+type AdditionalInfo =
+  | TrainingAdditionalInfo
+  | ConsultingAdditionalInfo
+  | OutsourcingAdditionalInfo;
 
 interface ServiceData {
   title: string;
@@ -74,17 +77,22 @@ interface ServiceData {
 export const servicesData: Record<string, ServiceData> = {
   "it-training": {
     title: "IT Training",
-    description: "Empower your skills with hands-on IT training from certified instructors.",
+    description:
+      "Empower your skills with hands-on IT training from certified instructors.",
     highlights: [
       "Live sessions by industry experts",
       "Access to recorded content",
       "Certifications included",
     ],
-    image: "https://www.extnoc.com/blog/wp-content/uploads/2023/01/The-Importance-of-Ongoing-Training-for-IT-Support-Professionals-2.jpg",
+    image:
+      "https://www.extnoc.com/blog/wp-content/uploads/2023/01/The-Importance-of-Ongoing-Training-for-IT-Support-Professionals-2.jpg",
     additionalInfo: {
-      intro: "Flair Technologies has over 10 years of experience in the Training and Development industry. Flair Technologies built and re-built training, and developed innovative technology-based learning solutions across all departments within small, medium, and large corporate structures.",
-      methodology: "Flair Technologies unique training methodology is designed to provide the complete spectrum skills in a very interactive and easy to learn manner. Training is delivered by highly core and certified professionals. Our faculty is always with their high spirit to deliver their best. Our training methodology seeks to deal with the whole gamut of new skills and techniques the IT industry requires. Our training methodology is unique and diverse and focuses on every aspect of an individual. We concentrate on every area towards overall development of an individual.",
-      qualityStandards: "We believe, in offering the finest standards of quality and processes that are constantly updated and adapted to the changing global scenario. We are dedicated to guide the industry professionals and students to competently compete and confirm to international standards of quality, employee efficiency and productivity.",
+      intro:
+        "Flair Technologies has over 10 years of experience in the Training and Development industry. Flair Technologies built and re-built training, and developed innovative technology-based learning solutions across all departments within small, medium, and large corporate structures.",
+      methodology:
+        "Flair Technologies unique training methodology is designed to provide the complete spectrum skills in a very interactive and easy to learn manner. Training is delivered by highly core and certified professionals. Our faculty is always with their high spirit to deliver their best. Our training methodology seeks to deal with the whole gamut of new skills and techniques the IT industry requires. Our training methodology is unique and diverse and focuses on every aspect of an individual. We concentrate on every area towards overall development of an individual.",
+      qualityStandards:
+        "We believe, in offering the finest standards of quality and processes that are constantly updated and adapted to the changing global scenario. We are dedicated to guide the industry professionals and students to competently compete and confirm to international standards of quality, employee efficiency and productivity.",
       coursesOffered: [
         "Python (Django / Selenium)",
         "Azure Admin with Azure DevOps",
@@ -99,22 +107,28 @@ export const servicesData: Record<string, ServiceData> = {
         "C & Network Protocol",
         "Web Development",
       ],
-      innovation: "Flair Technologies is a leading training organization that caters to the latest technology and innovation. We are also pioneers in providing training in diverse Software fields like Python, Azure Admin, Azure DevOps, DevOps & AWS, Microsoft Power BI, Azure Data Factory, Alteryx, Microsoft Excel (VBA), Power Apps & Automate, Tableau, Testing Tools, C & Network Protocol, Web Development etc… We believe, in offering the finest standards of quality and processes that are constantly updated and adapted to the changing global scenario. We are dedicated to guiding industry professionals and students to competently compete and confirm international standards of quality employee efficiency and productivity.",
-      contact: "Do you have a question about a training course? We can deliver a wide range of training courses on-site, off-site, or virtually. Send us a message!",
+      innovation:
+        "Flair Technologies is a leading training organization that caters to the latest technology and innovation. We are also pioneers in providing training in diverse Software fields like Python, Azure Admin, Azure DevOps, DevOps & AWS, Microsoft Power BI, Azure Data Factory, Alteryx, Microsoft Excel (VBA), Power Apps & Automate, Tableau, Testing Tools, C & Network Protocol, Web Development etc… We believe, in offering the finest standards of quality and processes that are constantly updated and adapted to the changing global scenario. We are dedicated to guiding industry professionals and students to competently compete and confirm international standards of quality employee efficiency and productivity.",
+      contact:
+        "Do you have a question about a training course? We can deliver a wide range of training courses on-site, off-site, or virtually. Send us a message!",
     },
   },
   "it-consulting": {
     title: "IT Consulting",
-    description: "Professional guidance to streamline your IT infrastructure and processes.",
+    description:
+      "Professional guidance to streamline your IT infrastructure and processes.",
     highlights: [
       "Tailored IT strategies",
       "On-demand expert advice",
       "Technology transformation support",
     ],
-    image: "https://www.enterpriseitworld.com/wp-content/uploads/2023/08/IT-Consulting-Company.jpg",
+    image:
+      "https://www.enterpriseitworld.com/wp-content/uploads/2023/08/IT-Consulting-Company.jpg",
     additionalInfo: {
-      intro: "If you are a small to medium sized company, identifying the right staffing solutions for your organization is crucial to the success of your business. Our cross-industry consulting services help you to build strategies, solving problems to the extent of producing results, expert work done on behalf of a client, project planning and launching across the organization. The first offering of Flair Technologies is looking and listening; observing and understanding. Our consultants appreciate the situation and the environment in order to forecast the opportunities and risks.",
-      benefits: "So, seeking our services will benefit you on all counts. Get in touch with us to leverage our expertise in formulating the right outsourcing solution for you.",
+      intro:
+        "If you are a small to medium sized company, identifying the right staffing solutions for your organization is crucial to the success of your business. Our cross-industry consulting services help you to build strategies, solving problems to the extent of producing results, expert work done on behalf of a client, project planning and launching across the organization. The first offering of Flair Technologies is looking and listening; observing and understanding. Our consultants appreciate the situation and the environment in order to forecast the opportunities and risks.",
+      benefits:
+        "So, seeking our services will benefit you on all counts. Get in touch with us to leverage our expertise in formulating the right outsourcing solution for you.",
       portfolio: [
         "Business Analysis",
         "Process Consultancy",
@@ -122,23 +136,26 @@ export const servicesData: Record<string, ServiceData> = {
         "Data Visualization",
         "Software quality assurance and testing",
       ],
-      permanentHire: "Our Permanent and Direct Hire services leverage the breadth of our HR experience to assess, attract and appoint the best talent. Corporations rely on permanent hires to grow and replenish their resources internally as well as for project-based work. This is because an organization that is equipped with quality and dedicated permanent staff has a greater chance of surviving and succeeding in the long run. We have developed several effective strategies to connect you to the most talented professionals by adopting a methodical process in staffing.",
-      contractStaffing: "Flair Technologies offers flexible, effective and short/long-term contract staffing solutions for those companies seeking to access talent with specialized skills only on an as-needed or project basis. Flair Technologies has a contractual staffing model in place where it helps you to acquire the proficiency needed for the precise time frame of a particular job and save money & manpower resources. If your projects need immediate resources, count on us for quality, quick time line, with no employee-related costs.",
-      screening: "Our screening policies are well defined and mature and our experience in current technologies gives us an understanding of the complex, varied consulting needs of our clients. Want to have a hard working and talented employee? Well, you can rely on us. Each and every candidate that we select for you has to go through a long screening process to ensure that the candidate is fit for the position and can perform well.",
-      temporaryStaffing: "Temporary staffing solutions at Flair Technologies are customized to meet specific client needs. Short-term projects require highly specialized skills and benefit from an infusion of the latest technical abilities. In the same way, we do care for the candidates and help them getting a better placement with good package.",
+      permanentHire:
+        "Our Permanent and Direct Hire services leverage the breadth of our HR experience to assess, attract and appoint the best talent. Corporations rely on permanent hires to grow and replenish their resources internally as well as for project-based work. This is because an organization that is equipped with quality and dedicated permanent staff has a greater chance of surviving and succeeding in the long run. We have developed several effective strategies to connect you to the most talented professionals by adopting a methodical process in staffing.",
+      contractStaffing:
+        "Flair Technologies offers flexible, effective and short/long-term contract staffing solutions for those companies seeking to access talent with specialized skills only on an as-needed or project basis. Flair Technologies has a contractual staffing model in place where it helps you to acquire the proficiency needed for the precise time frame of a particular job and save money & manpower resources. If your projects need immediate resources, count on us for quality, quick time line, with no employee-related costs.",
+      screening:
+        "Our screening policies are well defined and mature and our experience in current technologies gives us an understanding of the complex, varied consulting needs of our clients. Want to have a hard working and talented employee? Well, you can rely on us. Each and every candidate that we select for you has to go through a long screening process to ensure that the candidate is fit for the position and can perform well.",
+      temporaryStaffing:
+        "Temporary staffing solutions at Flair Technologies are customized to meet specific client needs. Short-term projects require highly specialized skills and benefit from an infusion of the latest technical abilities. In the same way, we do care for the candidates and help them getting a better placement with good package.",
     },
   },
   "it-outsourcing": {
     title: "IT Outsourcing",
-    description: "Reduce costs and focus on core business while we manage your IT services.",
-    highlights: [
-      "End-to-end support",
-      "24/7 monitoring",
-      "Scalable resources",
-    ],
-    image: "https://www.feedough.com/wp-content/uploads/2020/12/outsourcing.webp",
+    description:
+      "Reduce costs and focus on core business while we manage your IT services.",
+    highlights: ["End-to-end support", "24/7 monitoring", "Scalable resources"],
+    image:
+      "https://www.feedough.com/wp-content/uploads/2020/12/outsourcing.webp",
     additionalInfo: {
-      intro: "Flair Technologies offers the best offshore software Training and development services that deliver robust, scalable, and cost-effective software solutions. Our clients realize an increase in productivity for offshore software development projects while improving their business performance through the changing demands of their marketplace.",
+      intro:
+        "Flair Technologies offers the best offshore software Training and development services that deliver robust, scalable, and cost-effective software solutions. Our clients realize an increase in productivity for offshore software development projects while improving their business performance through the changing demands of their marketplace.",
       services: [
         "Offshore Application Development",
         "Offshore Application Maintenance",
@@ -146,12 +163,17 @@ export const servicesData: Record<string, ServiceData> = {
         "Offshore Delivery Model",
       ],
       differentiators: {
-        totalOutsourcing: "Total Outsourcing: IT, Process Strategy Formulation, IT Portfolio Management, Transition Management.",
-        globalDelivery: "Global Delivery Model: Division of project into components, Logical separation and execution, Execution at different geographies and time zones, Lower costs and higher quality products, Reporting & Project management.",
-        flexibleDelivery: "Flexible Delivery Models: Staff augmentation model, Special team model, Co-source model, Project model, Portfolio model-end to end engagement model.",
+        totalOutsourcing:
+          "Total Outsourcing: IT, Process Strategy Formulation, IT Portfolio Management, Transition Management.",
+        globalDelivery:
+          "Global Delivery Model: Division of project into components, Logical separation and execution, Execution at different geographies and time zones, Lower costs and higher quality products, Reporting & Project management.",
+        flexibleDelivery:
+          "Flexible Delivery Models: Staff augmentation model, Special team model, Co-source model, Project model, Portfolio model-end to end engagement model.",
       },
-      businessGrowth: "It’s a well known fact that ability business increase. Getting the correct people in the opportune place with the correct abilities is urgent for your prosperity.",
-      recruitingSupport: "Driven by the need to assemble that channel of qualified candidates numerous spotters invest the greater part of their energy sourcing applicant, and little time truly selecting. Flair Technologies can free up your spotters to do what they excel at select. Our group can deal with the whole enrolling/enlisting methodology from employment profiling through the on-boarding of the new draw in, including staff, innovation, and strategy and announcing. Our customers have experienced decrease so as to contract, enhanced nature of the applicant pool, undeniable competitors measurements, diminished cost and enhanced consistence.",
+      businessGrowth:
+        "It’s a well known fact that ability business increase. Getting the correct people in the opportune place with the correct abilities is urgent for your prosperity.",
+      recruitingSupport:
+        "Driven by the need to assemble that channel of qualified candidates numerous spotters invest the greater part of their energy sourcing applicant, and little time truly selecting. Flair Technologies can free up your spotters to do what they excel at select. Our group can deal with the whole enrolling/enlisting methodology from employment profiling through the on-boarding of the new draw in, including staff, innovation, and strategy and announcing. Our customers have experienced decrease so as to contract, enhanced nature of the applicant pool, undeniable competitors measurements, diminished cost and enhanced consistence.",
     },
   },
 };
@@ -1144,8 +1166,6 @@ export const contactPage = {
   },
 };
 
-
-
 // export const freshersPage = {
 //   heroSection: {
 //     badge: "Fresher Programs",
@@ -1291,7 +1311,6 @@ export const contactPage = {
 //   },
 // };
 
-
 // Footer constants
 export const footer = {
   companyInfo: {
@@ -1304,30 +1323,10 @@ export const footer = {
     description:
       "Empowering careers through cutting-edge IT training and 100% placement assistance. Transform your future with industry-relevant skills.",
     socialLinks: [
-      {
-        href: "#",
-        icon: Facebook,
-        className: "text-gray-400 hover:text-sky-400 transition-colors",
-        size: "h-5 w-5",
-      },
-      {
-        href: "#",
-        icon: Twitter,
-        className: "text-gray-400 hover:text-sky-400 transition-colors",
-        size: "h-5 w-5",
-      },
-      {
-        href: "#",
-        icon: Instagram,
-        className: "text-gray-400 hover:text-sky-400 transition-colors",
-        size: "h-5 w-5",
-      },
-      {
-        href: "#",
-        icon: Linkedin,
-        className: "text-gray-400 hover:text-sky-400 transition-colors",
-        size: "h-5 w-5",
-      },
+      { href: "#", icon: Facebook, className: "text-gray-400 hover:text-sky-400 transition-colors", size: "h-5 w-5" },
+      { href: "#", icon: Twitter, className: "text-gray-400 hover:text-sky-400 transition-colors", size: "h-5 w-5" },
+      { href: "#", icon: Instagram, className: "text-gray-400 hover:text-sky-400 transition-colors", size: "h-5 w-5" },
+      { href: "#", icon: Linkedin, className: "text-gray-400 hover:text-sky-400 transition-colors", size: "h-5 w-5" },
     ],
   },
   quickLinks: [
@@ -1345,32 +1344,36 @@ export const footer = {
     "Tableau",
     "Network Protocol",
   ],
-  contactInfo: [
+
+  // Phone / Email / Website
+  contacts: [
+    { icon: Phone, title: "Phone", value: "+91 974 974 9596", iconClass: "h-5 w-5 text-sky-400" },
+    { icon: Mail, title: "Email", value: "info@flairtechnologies.in", iconClass: "h-5 w-5 text-sky-400" },
+    { icon: Globe, title: "Website", value: "www.flairtechnologies.in", iconClass: "h-5 w-5 text-sky-400" },
+  ],
+
+  // Locations
+  locations: [
     {
       icon: MapPin,
-      title: "Bangalore Center",
-      address: "Koramangala, Bangalore - 560034",
+      title: "Bangalore",
+      address: `FLAIR TECHNOLOGIES #05, Vivekananda Layout, Marathahalli, Bangalore, Karnataka – 560037, India. Landmark: Opp: Innovative Multiplex, Behind Biryani Zone.`,
       iconClass: "h-5 w-5 text-sky-400 mt-0.5",
     },
     {
       icon: MapPin,
-      title: "Hyderabad Center",
-      address: "HITEC City, Hyderabad - 500081",
+      title: "Hyderabad",
+      address: `FLAIR TECHNOLOGIES 501, Sumedh Pride, Vijay Nagar Colony, Kukatpally, Hyderabad – 500072. Landmark: Opp: Srikari Natyakala Peetam.`,
       iconClass: "h-5 w-5 text-sky-400 mt-0.5",
     },
     {
-      icon: Phone,
-      title: "Phone",
-      value: "+91 9749749596",
-      iconClass: "h-5 w-5 text-sky-400",
-    },
-    {
-      icon: Mail,
-      title: "Email",
-      value: "info@flairtechnologies.in",
-      iconClass: "h-5 w-5 text-sky-400",
+      icon: MapPin,
+      title: "London",
+      address: `FLAIR TECHNOLOGIES – DATA ARTISANS 297, Suite 2, High Street North, London, E12 6SL. Landmark: Opp: Star Lettings.`,
+      iconClass: "h-5 w-5 text-sky-400 mt-0.5",
     },
   ],
-  copyright:
-    "© 2024 Flair Technologies. All rights reserved. | Privacy Policy | Terms of Service",
+
+  copyright: `© ${new Date().getFullYear()} Flair Technologies. All rights reserved. | Privacy Policy | Terms of Service`,
 };
+
