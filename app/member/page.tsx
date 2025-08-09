@@ -109,7 +109,7 @@ export default function MentorPage() {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-r from-sky-400 via-blue-500 to-cyan-500 text-white">
+      <section className="pt-24 relative overflow-hidden bg-gradient-to-r from-sky-400 via-blue-500 to-cyan-500 text-white">
         <div className="absolute inset-0 bg-black/20" />
         <div className="relative container mx-auto px-4 py-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -164,9 +164,9 @@ export default function MentorPage() {
               className="relative"
             >
               <img
-                src="https://media.licdn.com/dms/image/v2/D4E12AQEntY-HYP5bkw/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1702652374533?e=2147483647&v=beta&t=h8Aihfs4wJE-5GH1N90gQUac4UYUaz-kNwfDJIYvsME"
+                src="https://tibet.net/wp-content/uploads/2020/06/1-1-1024x585.jpg"
                 alt={heroSection.imageAlt}
-                className="rounded-2xl shadow-2xl lg:w-[750px] lg:h-[500px]"
+                className="rounded-2xl shadow-2xl lg:w-[650px] lg:h-[350px]"
               />
             </motion.div>
           </div>
