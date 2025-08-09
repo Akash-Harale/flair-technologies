@@ -22,7 +22,9 @@ import {
 import { Navigation } from "@/components/navigation";
 import { Footer } from "@/components/footer";
 import { freshersPage } from "@/app/constant";
-import { ArrowRight, Calendar, CheckCircle, Star } from "lucide-react";
+import { ArrowRight, Calendar, CheckCircle, Star, Clock, Monitor, Users } from "lucide-react";
+import { EnrollDialog } from "@/components/EnrollDialog"; // Assuming EnrollDialog is imported
+import Link from "next/link";
 
 export default function FreshersPage() {
   const {
@@ -61,34 +63,32 @@ export default function FreshersPage() {
                 </p>
               </div>
               <div className="flex flex-col sm:flex-row gap-4">
-  {heroSection.buttons.map((button, index) => (
-    <Button
-      key={index}
-      size="lg"
-      className={button.className}
-      onClick={() => {
-        if (button.text === "Download Brochure") {
-          const link = document.createElement("a");
-          link.href = "/my-course.pdf"; // file in public folder
-          link.download = "my-course.pdf";
-          document.body.appendChild(link);
-          link.click();
-          document.body.removeChild(link);
-        } else if (button.text === "Apply Now") {
-          const formSection = document.getElementById("application-form");
-          if (formSection) {
-            formSection.scrollIntoView({ behavior: "smooth" });
-          }
-        }
-      }}
-    >
-      {button.text}
-      {button.icon && <button.icon className="ml-2 h-5 w-5" />}
-    </Button>
-  ))}
-</div>
-
-
+                {heroSection.buttons.map((button, index) => (
+                  <Button
+                    key={index}
+                    size="lg"
+                    className={button.className}
+                    onClick={() => {
+                      if (button.text === "Download Brochure") {
+                        const link = document.createElement("a");
+                        link.href = "/my-course.pdf";
+                        link.download = "my-course.pdf";
+                        document.body.appendChild(link);
+                        link.click();
+                        document.body.removeChild(link);
+                      } else if (button.text === "Apply Now") {
+                        const formSection = document.getElementById("application-form");
+                        if (formSection) {
+                          formSection.scrollIntoView({ behavior: "smooth" });
+                        }
+                      }
+                    }}
+                  >
+                    {button.text}
+                    {button.icon && <button.icon className="ml-2 h-5 w-5" />}
+                  </Button>
+                ))}
+              </div>
               <div className="grid grid-cols-2 sm:w-full md:w-1/2 pt-4">
                 {heroSection.stats.map((stat, index) => (
                   <div key={index}>
@@ -164,61 +164,76 @@ export default function FreshersPage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {programsSection.programs.map((program, index) => (
               <motion.div
-                key={program.title}
+                key={program.id || program.title} // Use id if available, fallback to title
                 initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 whileHover={{ y: -5 }}
                 className="group"
               >
-                <Card className="h-full border-0 shadow-lg hover:shadow-2xl transition-all duration-300">
-                  <CardHeader>
-                    <div className="flex items-center justify-between mb-2">
-                      <Badge className="bg-green-500 text-white">
-                        {program.placement} Placement
+                <Card className="h-full overflow-hidden border-0 shadow-lg hover:shadow-2xl transition-all duration-300">
+                  <div className="relative overflow-hidden">
+                    <img
+                      src={program.image || "/placeholder.svg"}
+                      alt={program.title}
+                      className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                    <div className="absolute top-4 left-4">
+                      <Badge className="bg-sky-500 text-white">
+                        {program.category || "IT Training"} {/* Default category */}
                       </Badge>
-                      {/* <div className="text-2xl font-bold text-green-600">
-                        {program.price}
-                      </div> */}
                     </div>
-                    <CardTitle className="text-xl group-hover:text-green-600 transition-colors">
+                    <div className="absolute top-4 right-4">
+                      <Badge className="bg-green-500 text-white">
+                        ★ {program.rating || "4.5"} {/* Default rating */}
+                      </Badge>
+                    </div>
+                  </div>
+
+                  <CardHeader>
+                    <CardTitle className="text-xl group-hover:text-sky-600 transition-colors">
                       {program.title}
                     </CardTitle>
                     <CardDescription className="text-gray-600">
                       {program.description}
                     </CardDescription>
                   </CardHeader>
+
                   <CardContent className="space-y-4">
-                    <div className="flex items-center justify-between text-sm text-gray-500">
+                    <div className="grid grid-cols-2 gap-4 text-sm text-gray-500">
                       <div className="flex items-center gap-1">
-                        <Calendar className="h-4 w-4" />
+                        <Clock className="h-4 w-4" />
                         {program.duration}
                       </div>
-                      <div className="text-green-600 font-semibold">
-                        {program.courses.length} Modules
+                      <div className="flex items-center gap-1">
+                        <Monitor className="h-4 w-4" />
+                        {program.mode || "Online"} {/* Default mode */}
+                      </div>
+                      <div className="flex items-center gap-1">
+                        <Users className="h-4 w-4" />
+                        {program.students || "100+ Students"} {/* Default students */}
+                      </div>
+                      <div className="text-sm">
+                        {program.level || "Beginner to Advanced"} {/* Default level */}
                       </div>
                     </div>
 
-                    <div className="space-y-2">
-                      <h4 className="font-semibold text-gray-900">
-                        What You'll Learn:
-                      </h4>
-                      <div className="space-y-1">
-                        {program.courses.map((course, courseIndex) => (
-                          <div
-                            key={courseIndex}
-                            className="flex items-center gap-2 text-sm"
-                          >
-                            <CheckCircle className="h-4 w-4 text-green-500" />
-                            <span className="text-gray-700">{course}</span>
-                          </div>
-                        ))}
-                      </div>
+                    <div className="flex items-center justify-between pt-4">
+                      <EnrollDialog
+                        formHeading="Enroll Now"
+                        buttonText="Enroll Now"
+                        className="icon-button-color hover:from-sky-600 hover:to-blue-700 hover:bg-sky-600 hover:text-white text-sm font-medium px-4 py-2"
+                        size="lg"
+                      />
+                      <Link href={`/courses/${program.id || program.title.toLowerCase().replace(/\s+/g, "-")}`}>
+                        <Button
+                          className="border border-sky-600 text-sky-600 hover:bg-sky-600 hover:text-white bg-transparent text-sm font-medium px-4 py-2"
+                          size="lg"
+                        >
+                          Learn More <ArrowRight className="ml-2 h-4 w-4" />
+                        </Button>
+                      </Link>
                     </div>
-
-                    <Button className="w-full icon-button-color hover:from-sky-600 hover:to-blue-700">
-                      Apply Now <ArrowRight className="ml-2 h-4 w-4" />
-                    </Button>
                   </CardContent>
                 </Card>
               </motion.div>
@@ -317,7 +332,7 @@ export default function FreshersPage() {
                   {applicationFormSection.title}
                 </h2>
                 <p className="description">
-                  {applicationFormSection.description}
+                  {applicationFormSection.form.description}
                 </p>
               </div>
 
@@ -405,7 +420,7 @@ export default function FreshersPage() {
                   >
                     {applicationFormSection.form.submitButton.text}
                     {applicationFormSection.form.submitButton.icon && (
-                      <applicationFormSection.form.submitButton.icon className="ml-2 h-5 w-5" />
+                      <applicationFormSection.form.submitButton.icon />
                     )}
                   </Button>
                   <p className="text-xs text-gray-500 text-center">

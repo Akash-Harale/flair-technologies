@@ -670,45 +670,46 @@ export const freshersPage = {
       "Specially designed programs for fresh graduates with zero experience. Start from basics and become job-ready in months.",
     programs: [
       {
-        title: "Full-Stack Development Track",
+        id: "python-fullstack",
+        title: "Python Full-Stack Development",
+        description:
+          "Master Django, React, and modern web development with hands-on projects",
         duration: "6 months",
-        courses: [
-          "Python Fundamentals",
-          "Web Development",
-          "Database Management",
-          "Deployment",
-        ],
+        mode: "Online/Offline",
+        level: "Beginner to Advanced",
         price: "₹45,000",
-        placement: "100%",
-        description: "Complete full-stack development program for freshers",
+        category: "Development",
+        students: "500+",
+        rating: 4.8,
+        image: "/placeholder.svg?height=200&width=300",
       },
       {
-        title: "Data Analytics Track",
+        id: "power-bi",
+        title: "Power BI & Data Analytics",
+        description:
+          "Transform data into actionable business insights with Microsoft Power BI",
+        duration: "3 months",
+        mode: "Online/Offline",
+        level: "Beginner to Intermediate",
+        price: "₹25,000",
+        category: "Analytics",
+        students: "300+",
+        rating: 4.7,
+        image: "/placeholder.svg?height=200&width=300",
+      },
+      {
+        id: "azure-devops",
+        title: "Azure DevOps",
+        description:
+          "Master cloud deployment, CI/CD pipelines, and Azure services CI/CD pipelines, and Azure services",
         duration: "4 months",
-        courses: [
-          "Excel & Statistics",
-          "Power BI",
-          "Python for Data",
-          "Tableau",
-        ],
-        price: "₹30,000",
-        placement: "95%",
-        description:
-          "Transform data into insights with comprehensive analytics training",
-      },
-      {
-        title: "Cloud & DevOps Track",
-        duration: "5 months",
-        courses: [
-          "Linux Basics",
-          "AWS Fundamentals",
-          "Docker & Kubernetes",
-          "CI/CD",
-        ],
-        price: "₹40,000",
-        placement: "98%",
-        description:
-          "Master cloud technologies and modern deployment practices",
+        mode: "Online/Offline",
+        level: "Intermediate to Advanced",
+        price: "₹35,000",
+        category: "Cloud",
+        students: "250+",
+        rating: 4.9,
+        image: "/placeholder.svg?height=200&width=300",
       },
     ],
   },
@@ -794,7 +795,7 @@ export const freshersPage = {
         text: "Submit Application",
         className:
           "w-full icon-button-color hover:from-sky-600 hover:to-blue-700 text-lg py-6",
-        icon: ArrowRight,
+        icon: "ArrowRight",
       },
       disclaimer:
         "By submitting this form, you agree to our Terms of Service and Privacy Policy",
@@ -1323,10 +1324,30 @@ export const footer = {
     description:
       "Empowering careers through cutting-edge IT training and 100% placement assistance. Transform your future with industry-relevant skills.",
     socialLinks: [
-      { href: "#", icon: Facebook, className: "text-gray-400 hover:text-sky-400 transition-colors", size: "h-5 w-5" },
-      { href: "#", icon: Twitter, className: "text-gray-400 hover:text-sky-400 transition-colors", size: "h-5 w-5" },
-      { href: "#", icon: Instagram, className: "text-gray-400 hover:text-sky-400 transition-colors", size: "h-5 w-5" },
-      { href: "#", icon: Linkedin, className: "text-gray-400 hover:text-sky-400 transition-colors", size: "h-5 w-5" },
+      {
+        href: "#",
+        icon: Facebook,
+        className: "text-gray-400 hover:text-sky-400 transition-colors",
+        size: "h-5 w-5",
+      },
+      {
+        href: "#",
+        icon: Twitter,
+        className: "text-gray-400 hover:text-sky-400 transition-colors",
+        size: "h-5 w-5",
+      },
+      {
+        href: "#",
+        icon: Instagram,
+        className: "text-gray-400 hover:text-sky-400 transition-colors",
+        size: "h-5 w-5",
+      },
+      {
+        href: "#",
+        icon: Linkedin,
+        className: "text-gray-400 hover:text-sky-400 transition-colors",
+        size: "h-5 w-5",
+      },
     ],
   },
   quickLinks: [
@@ -1347,9 +1368,24 @@ export const footer = {
 
   // Phone / Email / Website
   contacts: [
-    { icon: Phone, title: "Phone", value: "+91 974 974 9596", iconClass: "h-5 w-5 text-sky-400" },
-    { icon: Mail, title: "Email", value: "info@flairtechnologies.in", iconClass: "h-5 w-5 text-sky-400" },
-    { icon: Globe, title: "Website", value: "www.flairtechnologies.in", iconClass: "h-5 w-5 text-sky-400" },
+    {
+      icon: Phone,
+      title: "Phone",
+      value: "+91 974 974 9596",
+      iconClass: "h-5 w-5 text-sky-400",
+    },
+    {
+      icon: Mail,
+      title: "Email",
+      value: "info@flairtechnologies.in",
+      iconClass: "h-5 w-5 text-sky-400",
+    },
+    {
+      icon: Globe,
+      title: "Website",
+      value: "www.flairtechnologies.in",
+      iconClass: "h-5 w-5 text-sky-400",
+    },
   ],
 
   // Locations
@@ -1376,4 +1412,3 @@ export const footer = {
 
   copyright: `© ${new Date().getFullYear()} Flair Technologies. All rights reserved. | Privacy Policy | Terms of Service`,
 };
-
