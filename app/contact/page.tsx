@@ -30,7 +30,7 @@ export default function ContactPage() {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="background text-white py-20">
+      <section className="background text-white py-32">
         <div className="container mx-auto px-4 text-center">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
             <Badge className="mb-4 bg-white text-sky-600">{heroSection.badge}</Badge>
