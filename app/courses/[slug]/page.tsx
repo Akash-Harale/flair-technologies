@@ -1212,7 +1212,7 @@ export default function CoursePage({ params }: { params: { slug: string } }) {
     return (
       <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
         <Navigation />
-        <div className="container mx-auto px-4 py-20 text-center">
+        <div className="container mx-auto px-4 py-32 text-center">
           <h1 className="heading">Course Not Found</h1>
           <p className="text-gray-600 mb-8">
             The course you're looking for doesn't exist.
@@ -1231,7 +1231,7 @@ export default function CoursePage({ params }: { params: { slug: string } }) {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="background text-white py-20">
+      <section className="background text-white py-32">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <motion.div
